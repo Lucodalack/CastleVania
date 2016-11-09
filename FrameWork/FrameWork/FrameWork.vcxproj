@@ -16,6 +16,8 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GObject.h" />
     <ClInclude Include="GCamera.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="SweptAABB.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Simon.h" />
     <ClInclude Include="Surface.h" />
@@ -33,6 +35,8 @@
     <ClCompile Include="GObject.cpp" />
     <ClCompile Include="Simon.cpp" />
     <ClCompile Include="GCamera.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="SweptAABB.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Surface.cpp" />
     <ClCompile Include="Windows.cpp" />

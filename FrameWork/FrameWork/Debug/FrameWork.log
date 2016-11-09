@@ -1,26 +1,5 @@
-﻿Build started 11/9/2016 16:08:35.
-     1>Project "C:\Users\tient_000\Documents\Visual Studio 2013\Projects\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt State.cpp
-         State.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tient_000\Documents\Visual Studio 2013\Projects\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\tient_000\Documents\Visual Studio 2013\Projects\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\tient_000\Documents\Visual Studio 2013\Projects\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\GameConfig.obj
-         Debug\Graphics.obj
-         Debug\KeyBoard.obj
-         Debug\Source.obj
-         Debug\Game.obj
-         Debug\GObject.obj
-         Debug\Simon.obj
-         Debug\GCamera.obj
-         Debug\State.obj
-         Debug\Surface.obj
-         Debug\Windows.obj
-         Debug\GSprite.obj
-         Debug\GTexture.obj
-         FrameWork.vcxproj -> C:\Users\tient_000\Documents\Visual Studio 2013\Projects\FrameWork\Debug\FrameWork.exe
-     1>Done Building Project "C:\Users\tient_000\Documents\Visual Studio 2013\Projects\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
+﻿Build started 11/9/2016 17:23:02.
 
 Build succeeded.
 
-Time Elapsed 00:00:03.79
+Time Elapsed 00:00:00.07

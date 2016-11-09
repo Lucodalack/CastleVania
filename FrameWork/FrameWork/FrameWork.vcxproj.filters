@@ -43,6 +43,9 @@
     <Filter Include="State">
       <UniqueIdentifier>{6bcc2ced-358c-43d2-8427-a50df0d9d665}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Collision">
+      <UniqueIdentifier>{a1454df3-a261-44af-9782-d4797c560975}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -80,6 +83,12 @@
     </ClInclude>
     <ClInclude Include="State.h">
       <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Framework\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="SweptAABB.h">
+      <Filter>Framework\Collision</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +130,12 @@
     </ClCompile>
     <ClCompile Include="State.cpp">
       <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Framework\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="SweptAABB.cpp">
+      <Filter>Framework\Collision</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
