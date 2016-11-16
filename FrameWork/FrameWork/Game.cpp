@@ -1,7 +1,7 @@
 ﻿#include "Game.h"
 
 
-#define SIMON_SPRITE L"simon.png"
+
 #define BACKGROUND_FILE L"191_173110_5a4c1.jpg"
 Game* Game::_game = 0;
 Game * Game::getCurGame()
@@ -28,16 +28,16 @@ void Game::GameLoad()
 	//GSprite tamp(backgroundTT,10);
 	_mybackground = new GSprite(backgroundTT, 10);
 	/*map = new Map(L"Image\\Map.png");*/
-	GTexture* simonTT = new GTexture(SIMON_SPRITE, 2, 1, 2);
+	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
 	//GSprite tamp(backgroundTT,10);
-	Simon::getCurrentSimon()->_leftSprite = new GSprite(simonTT, 10);
+	Simon::getCurrentSimon()->_sptrite = new GSprite(simonTT, 10);
 	//GCamera::getCurrentCamera()->Follow();
 }
 
-void Game::GameRun()
+void Game::GameRun(float deltatime)
 {
 	KeyBoard::getCurrentKeyBoard()->UpdateKeyboard();
-	handleSimon(); 
+	Simon::getCurrentSimon()->Update(deltatime); 
 	if (Simon::getCurrentSimon()->_x > 250) GCamera::getCurrentCamera()->Follow();
 	else
 	{
@@ -53,22 +53,10 @@ void Game::GameDraw()
 	//GameDrawParameter();
 	GCamera::getCurrentCamera()->SetTransform();
 	//_mybackground->Draw(0, 0);
+	
 	State::getCurrentState()->draw();
-	Simon::getCurrentSimon()->draw();
+	Simon::getCurrentSimon()->Draw();
 }
-
-void Game::handleSimon(){
-	if (KeyBoard::getCurrentKeyBoard()->keyLeft())
-		Simon::getCurrentSimon()->run(-5, 0);
-	else if (KeyBoard::getCurrentKeyBoard()->keyRight())
-		Simon::getCurrentSimon()->run(5, 0);
-	else if (KeyBoard::getCurrentKeyBoard()->keyUp())
-		Simon::getCurrentSimon()->run(0, -5);
-	else if (KeyBoard::getCurrentKeyBoard()->keyDown())
-		Simon::getCurrentSimon()->run(0, 5);
-}
-
-
 
 
 void Game::GameDrawParameter()

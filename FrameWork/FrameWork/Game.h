@@ -8,6 +8,9 @@
 #include "State.h"
 #include <string>
 using namespace std;
+
+#define SIMON_SPRITE L"simon.png"
+
 class Game
 {
 	static Game* _game;
@@ -21,10 +24,8 @@ public:
 
 	void GameInit();
 	void GameLoad();
-	void GameRun();
+	void GameRun(float deltatime);
 	void GameDraw();
-
-	void handleSimon();
 
 	void GameDrawParameter();
 	Game(int screen_width, int screen_height);

@@ -13,8 +13,8 @@ int WINAPI WinMain(
 	myGame->GameLoad();
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
+	
 	DWORD frame_start = GetTickCount();
-
 	DWORD count_per_frame = 1000 / FRAME_RATE;
 
 	while (true)
@@ -29,10 +29,19 @@ int WINAPI WinMain(
 		else
 		{
 			DWORD now = GetTickCount();
+			float deltaTime = now - frame_start;
 			if (now - frame_start >= count_per_frame)
+
+			if (deltaTime >= count_per_frame)
 			{
+				//frameStart = now;
+				frame_start = now;
+				//float delta_time = (float)deltaTime / 1000;
+				if (deltaTime > count_per_frame)
+					deltaTime = count_per_frame;
+
 				KeyBoard::getCurrentKeyBoard()->PollKeyboard();
-				myGame->GameRun();
+				myGame->GameRun(deltaTime);
 				Graphics::getCurGraphics()->BeginGraphics();
 				myGame->GameDraw();
 				Graphics::getCurGraphics()->EndGraphics();

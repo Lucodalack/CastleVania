@@ -1,9 +1,11 @@
-#ifndef __SIMON_H__
+﻿#ifndef __SIMON_H__
 #define __SIMON_H__
 
 
 #include "GObject.h"
 #include "GSprite.h"
+
+
 
 #define SIMON_WIDTH			32
 #define SIMON_HEIGHT		64
@@ -12,21 +14,44 @@
 #define SIMON_ANIMATE_RATE	7
 #define SIMON_ATTACK_RATE	10
 #define TYPE 2
+#define SIMON_JUMPMAX 64
+
+enum STATE
+{
+	IS_STANDING = 1, // đứng
+	IS_JOGGING = 2, //đi bộ
+	IS_SITTING = 3, // NGỒI
+	IS_JUMPING = 4, //NHẢY 
+	IS_UPING = 5, // LÊN CẦU THANG
+	IS_DOWNING = 6, // XUỐNG CẦU THANG
+	IS_FIGHTING = 7, // ĐÁNH
+	IS_JUMPFIGH = 8, //NHẢY LÊN ĐÁNH
+	IS_SITFIGHT = 9, // NGỒI ĐÁNH
+	IS_UPFIGHT = 10, //LÊN CẦU THANG VỪA ĐÁH
+	IS_DOWNFIGHT =11, // VỪA XUỐNG CẦU THANG VỪA ĐÁNH.
+	IS_PASSGATE =12 // QUA MANF.
+};
 
 class Simon : public GObject {
 private:
 
 	static Simon* _simon;
 
+	int _stateCurrent; //trạng thái hiện tại
+	bool _isMoveleft; // quay qua trái hay k
+	bool _isMoveright;
+	bool _isOnStair; // dang o tren cau thang hay k
+	bool _isJumping; //dang nhay
+
 public:
-	GSprite* _upSprite;
-	GSprite* _downSprite;
-	GSprite* _leftSprite;
-	GSprite* _rightSprite;
+	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
 	Simon(int x, int y);
-	void run(int x, int y);
-	void draw();
+	void MoveUpdate(float deltatime);
+	void SetFrame(float deltattime);
+	void InputUpdate(float deltatime);
+	void Update(float deltatime);
+	void Draw();
 	Simon();
 	~Simon();
 };
