@@ -46,6 +46,9 @@
     <Filter Include="Framework\Collision">
       <UniqueIdentifier>{a1454df3-a261-44af-9782-d4797c560975}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Brick">
+      <UniqueIdentifier>{a6836d34-472d-495a-95af-ed5dbb023a4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -89,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="SweptAABB.h">
       <Filter>Framework\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Brick.h">
+      <Filter>GameObject\Brick</Filter>
+    </ClInclude>
+    <ClInclude Include="Bricks.h">
+      <Filter>GameObject\Brick</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +145,12 @@
     </ClCompile>
     <ClCompile Include="SweptAABB.cpp">
       <Filter>Framework\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Brick.cpp">
+      <Filter>GameObject\Brick</Filter>
+    </ClCompile>
+    <ClCompile Include="Bricks.cpp">
+      <Filter>GameObject\Brick</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

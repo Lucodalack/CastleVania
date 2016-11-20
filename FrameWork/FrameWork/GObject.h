@@ -6,8 +6,8 @@
 #include <d3d9.h>
 #include <d3dx9.h>
 #include "GSprite.h"
-
-#define GRAVITY			-0.0022f
+#include "Box.h"
+#define GRAVITY			0.2f
 
 
 
@@ -28,6 +28,8 @@ public:
 
 	RECT _bound;
 
+	Box _box;
+
 
 
 	GObject::GObject(int type, int x, int y, int width, int height);
@@ -37,7 +39,7 @@ public:
 	virtual void Render();
 	virtual void Damaged(int damage, int x, int y);*/
 
-
+	GObject();
 
 	void UpdatePosition(int time);
 	//void FixPositionCollid(G_OBJECT * o, int CollidPos);

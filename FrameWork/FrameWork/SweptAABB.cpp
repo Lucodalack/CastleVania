@@ -1,4 +1,4 @@
-#include "SweptAABB.h"
+﻿#include "SweptAABB.h"
 
 
 CSweptAABB::CSweptAABB()
@@ -103,6 +103,8 @@ float CSweptAABB::SweptAABB(Box b1, Box b2, float& normalx, float& normaly)
 		// return the time of collision
 		return entryTime;
 	}
+
+	
 }
 Box CSweptAABB::GetSweptBroadphaseBox(Box b)
 {

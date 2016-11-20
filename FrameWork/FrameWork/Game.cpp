@@ -19,7 +19,7 @@ void Game::GameInit()
 	Graphics::getCurGraphics()->initDirectX3D();
 	Graphics::getCurGraphics()->initDirect3DDevice();
 	KeyBoard::getCurrentKeyBoard()->InputKeyBoard();
-	
+	swepyAABB = new CSweptAABB();
 }
 
 void Game::GameLoad()
@@ -31,8 +31,24 @@ void Game::GameLoad()
 	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
 	//GSprite tamp(backgroundTT,10);
 	Simon::getCurrentSimon()->_sptrite = new GSprite(simonTT, 10);
+	_bricks = new Bricks(0, 300, 300, 32);
 	//GCamera::getCurrentCamera()->Follow();
 }
+void Game::Collision()
+{
+	float x, y;
+	if (Simon::getCurrentSimon()->_box.y> 200)
+		int a = 0;
+	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y);
+	if (x == 0 && y == -1)
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+	else if (Simon::getCurrentSimon()->GetState()==STATE::IS_JOGGING)
+	{
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
+	}
+	
+}
+
 
 void Game::GameRun(float deltatime)
 {
@@ -44,6 +60,7 @@ void Game::GameRun(float deltatime)
 		GCamera::getCurrentCamera()->Unfollow();
 	}
 	GCamera::getCurrentCamera()->Update();
+	Collision();
 	//map->run();
 }
 
@@ -56,6 +73,7 @@ void Game::GameDraw()
 	
 	State::getCurrentState()->draw();
 	Simon::getCurrentSimon()->Draw();
+	_bricks->draw();
 }
 
 

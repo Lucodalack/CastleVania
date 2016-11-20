@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "State.h"
+#include "Brick.h"
 int WINAPI WinMain(
 	HINSTANCE hInstance,
 	HINSTANCE hPrevInstace,
@@ -7,7 +8,6 @@ int WINAPI WinMain(
 	int nShowCmd)
 {
 	
-
 	Game* myGame = new Game(SCREEN_WIDTH, SCREEN_HEIGHT);
 	myGame->GameInit();
 	myGame->GameLoad();

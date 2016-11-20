@@ -30,3 +30,7 @@ GObject::~GObject()
 {
 
 }
+GObject::GObject()
+{
+
+}

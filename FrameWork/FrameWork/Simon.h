@@ -29,7 +29,8 @@ enum STATE
 	IS_SITFIGHT = 9, // NGỒI ĐÁNH
 	IS_UPFIGHT = 10, //LÊN CẦU THANG VỪA ĐÁH
 	IS_DOWNFIGHT =11, // VỪA XUỐNG CẦU THANG VỪA ĐÁNH.
-	IS_PASSGATE =12 // QUA MANF.
+	IS_PASSGATE =12, // QUA MANF.
+	IS_FALLING =13 // DANG ROI XUONG.
 };
 
 class Simon : public GObject {
@@ -42,6 +43,7 @@ private:
 	bool _isMoveright;
 	bool _isOnStair; // dang o tren cau thang hay k
 	bool _isJumping; //dang nhay
+	bool _isFalling;// dang roi xuong
 
 public:
 	GSprite* _sptrite;
@@ -51,6 +53,10 @@ public:
 	void SetFrame(float deltattime);
 	void InputUpdate(float deltatime);
 	void Update(float deltatime);
+	void ChangeState(int state);
+	int GetState(){
+		return _stateCurrent;
+	}
 	void Draw();
 	Simon();
 	~Simon();
