@@ -11,7 +11,7 @@
 #include <string>
 using namespace std;
 
-#define SIMON_SPRITE L"E:/CastleVania/CastleVania/FrameWork/FrameWork/simon.png"
+#define SIMON_SPRITE L"simon.png"
 
 class Game
 {
