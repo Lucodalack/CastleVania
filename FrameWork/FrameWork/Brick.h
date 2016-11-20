@@ -8,7 +8,7 @@
 
 #define BRICK_WIDTH 32
 #define BRICK_HEIGHT 32
-#define BRICK_SPRITE L"E:/CastleVania/CastleVania/FrameWork/FrameWork/ground/2-2.png"
+#define BRICK_SPRITE L"ground/2-2.png"
 
 class Brick : public GObject {
 public:
