@@ -19,7 +19,7 @@ enum TypeGame {
 	Enemy_Medusahead = 6,
 	Enemy_Merman = 7,
 	Enemy_Panther = 8,
-	Enemy_Spearguar = 9,
+	Enemy_Spearguard = 9,
 	Enemy_Zombie = 10,
 	Ground_Brick = 11,
 	Ground_Fireandle = 12,

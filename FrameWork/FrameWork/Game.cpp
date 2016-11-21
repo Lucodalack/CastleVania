@@ -33,6 +33,10 @@ void Game::GameLoad()
 	Simon::getCurrentSimon()->_sptrite = new GSprite(simonTT, 10);
 	_bricks = new Bricks(0, 300, 300, 32);
 	//GCamera::getCurrentCamera()->Follow();
+
+	_mghost = new Ghost(0, 302, 300, 302);
+	_mspearguard = new Spearguard(100, 302, 300, 302);
+	_mbat = new Bat(50, 280, 400, 280);
 }
 void Game::Collision()
 {
@@ -40,8 +44,10 @@ void Game::Collision()
 	if (Simon::getCurrentSimon()->_box.y> 200)
 		int a = 0;
 	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y);
-	if (x == 0 && y == -1)
+	if (x == 0 && y == -1){
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+		_mbat->Awake();
+	}
 	else if (Simon::getCurrentSimon()->GetState()==STATE::IS_JOGGING)
 	{
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
@@ -62,6 +68,10 @@ void Game::GameRun(float deltatime)
 	GCamera::getCurrentCamera()->Update();
 	Collision();
 	//map->run();
+
+	_mghost->Update(deltatime);
+	_mspearguard->Update(deltatime);
+	_mbat->Update(deltatime);
 }
 
 void Game::GameDraw()
@@ -74,6 +84,10 @@ void Game::GameDraw()
 	State::getCurrentState()->draw();
 	Simon::getCurrentSimon()->Draw();
 	_bricks->draw();
+
+	_mghost->Draw();
+	_mspearguard->Draw();
+	_mbat->Draw();
 }
 
 

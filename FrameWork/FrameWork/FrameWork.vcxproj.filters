@@ -49,9 +49,6 @@
     <Filter Include="GameObject\Brick">
       <UniqueIdentifier>{a6836d34-472d-495a-95af-ed5dbb023a4a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Quadtree">
-      <UniqueIdentifier>{b75eb64b-bbba-48b5-9e89-47ab846b817f}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -101,15 +98,6 @@
     </ClInclude>
     <ClInclude Include="Bricks.h">
       <Filter>GameObject\Brick</Filter>
-    </ClInclude>
-    <ClInclude Include="Rect.h">
-      <Filter>Framework\Quadtree</Filter>
-    </ClInclude>
-    <ClInclude Include="Quadtree.h">
-      <Filter>Framework\Quadtree</Filter>
-    </ClInclude>
-    <ClInclude Include="Quadnode.h">
-      <Filter>Framework\Quadtree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -163,15 +151,6 @@
     </ClCompile>
     <ClCompile Include="Bricks.cpp">
       <Filter>GameObject\Brick</Filter>
-    </ClCompile>
-    <ClCompile Include="Rect.cpp">
-      <Filter>Framework\Quadtree</Filter>
-    </ClCompile>
-    <ClCompile Include="Quadtree.cpp">
-      <Filter>Framework\Quadtree</Filter>
-    </ClCompile>
-    <ClCompile Include="Quadnode.cpp">
-      <Filter>Framework\Quadtree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
