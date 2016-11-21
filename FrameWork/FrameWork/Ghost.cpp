@@ -15,7 +15,7 @@ GObject(TYPE, x, y, _WIDTH, _HEIGHT)
 	_activeArea.right = x2;
 	_activeArea.bottom = y2;
 	GTexture* ghosttt = new GTexture(GHOST_SPRITE, 2, 1, 2);
-	_sprite = new GSprite(ghosttt, 10);
+	_sprite = new GSprite(ghosttt, _ANIMATE_RATE);
 }
 
 void Ghost::MoveUpdate(float deltaTime)

@@ -16,32 +16,37 @@ GObject(TYPE, x, y, _WIDTH, _HEIGHT)
 	_activeArea.bottom = y2;
 	GTexture* texture = new GTexture(BAT_SPRITE, 4, 1, 4);
 	_sprite = new GSprite(texture, _ANIMATE_RATE);
-	_starty = y;
 }
 
 void Bat::MoveUpdate(float deltaTime)
 {
 #pragma region __XU_LY_CHUYEN_DONG__
+	int ynek = Simon::getCurrentSimon()->_y ;
+
 	if (this->_isSleep){
 		return;
 	}
-
+	if (this->_y <= ynek){
+		_vy = 2*_SPEED;
+		this->_y += int(deltaTime*_vy);
+		return; // con nay ddang roi xuong 1 doan cho bang thang simon roi moi bay
+	}
 	if (_isMoveleft){
 		if (_x <= _activeArea.left ){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
-			this->_y = this->_starty;
+			this->_y = ynek;
 		}
 	}
 	else{
 		if (_x >= _activeArea.right){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
-			this->_y = this->_starty;
+			this->_y = ynek;
 		}
 	}
 	this->_x += int(this->_vx * deltaTime);
-	this->_y += int(7 * sin(float(_x)));
+	this->_y += int(8 * sin(float(_x)));
 #pragma endregion
 	_box.x = _x;
 	_box.y = _y;

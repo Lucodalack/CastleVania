@@ -14,8 +14,8 @@ GObject(TYPE, x, y, _WIDTH, _HEIGHT)
 	_activeArea.left = x;
 	_activeArea.right = x2;
 	_activeArea.bottom = y2;
-	GTexture* ghosttt = new GTexture(SPEARGUARD_SPRITE, 4, 1, 4);
-	_sprite = new GSprite(ghosttt, _ANIMATE_RATE);
+	GTexture* texture = new GTexture(SPEARGUARD_SPRITE, 4, 1, 4);
+	_sprite = new GSprite(texture, _ANIMATE_RATE);
 	this->SetFrame(0);
 }
 

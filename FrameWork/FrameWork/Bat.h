@@ -3,6 +3,7 @@
 
 
 #include "GObject.h"
+#include "Simon.h"
 
 #define _WIDTH	32
 #define _HEIGHT	64
@@ -23,7 +24,6 @@ private:
 	bool _isSleep; // dang dung im tren tuong.
 	bool _isMoveleft;
 	RECT _activeArea; // ô chữ nhật mà con này chạy trong đó.
-	int _starty;
 public:
 	GSprite* _sprite;
 	Bat(int x, int y, int x2, int y2);
