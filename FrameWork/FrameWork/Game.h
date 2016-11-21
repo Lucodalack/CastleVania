@@ -11,6 +11,7 @@
 #include <string>
 #include "Ghost.h"
 #include "Spearguard.h"
+#include "Bat.h"
 using namespace std;
 
 #define SIMON_SPRITE L"simon.png"
@@ -26,6 +27,7 @@ class Game
 
 	Ghost* _mghost;
 	Spearguard *_mspearguard;
+	Bat* _mbat;
 
 public:
 	static Game* getCurGame();

@@ -1,5 +1,6 @@
 c:\users\ta\documents\castlevania\framework\framework\debug\vc120.pdb
 c:\users\ta\documents\castlevania\framework\framework\debug\vc120.idb
+c:\users\ta\documents\castlevania\framework\framework\debug\bat.obj
 c:\users\ta\documents\castlevania\framework\framework\debug\brick.obj
 c:\users\ta\documents\castlevania\framework\framework\debug\bricks.obj
 c:\users\ta\documents\castlevania\framework\framework\debug\gameconfig.obj
@@ -19,8 +20,6 @@ c:\users\ta\documents\castlevania\framework\framework\debug\surface.obj
 c:\users\ta\documents\castlevania\framework\framework\debug\windows.obj
 c:\users\ta\documents\castlevania\framework\framework\debug\gsprite.obj
 c:\users\ta\documents\castlevania\framework\framework\debug\gtexture.obj
-c:\users\ta\documents\castlevania\framework\debug\framework.ilk
-c:\users\ta\documents\castlevania\framework\debug\framework.exe
 c:\users\ta\documents\castlevania\framework\debug\framework.pdb
 c:\users\ta\documents\castlevania\framework\framework\debug\framework.tlog\cl.command.1.tlog
 c:\users\ta\documents\castlevania\framework\framework\debug\framework.tlog\cl.read.1.tlog
