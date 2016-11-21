@@ -43,11 +43,17 @@
     <Filter Include="State">
       <UniqueIdentifier>{6bcc2ced-358c-43d2-8427-a50df0d9d665}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Quadtree">
+      <UniqueIdentifier>{6bcc2ced-358c-43d2-8427-a50df0d9d665}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Framework\Collision">
       <UniqueIdentifier>{a1454df3-a261-44af-9782-d4797c560975}</UniqueIdentifier>
     </Filter>
     <Filter Include="GameObject\Brick">
       <UniqueIdentifier>{a6836d34-472d-495a-95af-ed5dbb023a4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Enemy">
+      <UniqueIdentifier>{1f13f5bb-d61b-4f13-9cf4-29ee943757cf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +104,24 @@
     </ClInclude>
     <ClInclude Include="Bricks.h">
       <Filter>GameObject\Brick</Filter>
+    </ClInclude>
+    <ClInclude Include="Ghost.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Spearguard.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Bat.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Quadtree.h">
+      <Filter>Framework\Quadtree</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Framework\Quadtree</Filter>
+    </ClInclude>
+    <ClInclude Include="Quadnode.h">
+      <Filter>Framework\Quadtree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +175,25 @@
     </ClCompile>
     <ClCompile Include="Bricks.cpp">
       <Filter>GameObject\Brick</Filter>
+    </ClCompile>
+      <ClCompile Include="Ghost.cpp">
+      <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Spearguard.cpp">
+      <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Bat.cpp">
+      <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Quadtree.cpp">
+      <Filter>Framework\Quadtree</Filter>
+    </ClCompile>
+    
+    <ClCompile Include="Rect.cpp">
+      <Filter>Framework\Quadtree</Filter>
+    </ClCompile>
+    <ClCompile Include="Quadnode.cpp">
+      <Filter>Framework\Quadtree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
