@@ -25,9 +25,7 @@ class Game
 	Bricks* _bricks;
 	CSweptAABB* swepyAABB;
 
-	Ghost* _mghost;
-	Spearguard *_mspearguard;
-	Bat* _mbat;
+	GObject *_mbat, *_mspearguard, *_mghost;
 
 public:
 	static Game* getCurGame();

@@ -46,7 +46,7 @@ void Game::Collision()
 	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y);
 	if (x == 0 && y == -1){
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
-		_mbat->Awake();
+		_mbat->ChangeState(BATSATE::IsAwake);
 	}
 	else if (Simon::getCurrentSimon()->GetState()==STATE::IS_JOGGING)
 	{

@@ -77,8 +77,14 @@ void Bat::Draw(){
 		this->_sprite->Draw(_x, _y);
 	}
 }
-void Bat::Awake(){
-	this->_isSleep = false;
+void Bat::ChangeState(int state){
+	if (state == BATSATE::IsSleep){
+		this->_isSleep = true;
+	}
+	else
+	if (state == BATSATE::IsAwake){
+		this->_isSleep = false;
+	}
 }
 Bat::~Bat(){
 	if (_sprite != NULL){

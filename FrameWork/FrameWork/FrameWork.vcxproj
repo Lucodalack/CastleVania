@@ -21,7 +21,13 @@
     <ClInclude Include="GCamera.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bricks.h" />
+
+    <ClInclude Include="Quadnode.h" />
+    <ClInclude Include="Quadtree.h" />
+    <ClInclude Include="Rect.h" />
+
     <ClInclude Include="Spearguard.h" />
+
     <ClInclude Include="SweptAABB.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Simon.h" />
@@ -45,7 +51,13 @@
     <ClCompile Include="Simon.cpp" />
     <ClCompile Include="GCamera.cpp" />
     <ClCompile Include="Box.cpp" />
+
+    <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="Quadtree.cpp" />
+    <ClCompile Include="Quadnode.cpp" />
+
     <ClCompile Include="Spearguard.cpp" />
+
     <ClCompile Include="SweptAABB.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Surface.cpp" />
