@@ -9,6 +9,8 @@
 #include "Bricks.h"
 #include "SweptAABB.h"
 #include <string>
+#include "Ghost.h"
+#include "Spearguard.h"
 using namespace std;
 
 #define SIMON_SPRITE L"simon.png"
@@ -21,6 +23,9 @@ class Game
 	GSprite* _mybackground;
 	Bricks* _bricks;
 	CSweptAABB* swepyAABB;
+
+	Ghost* _mghost;
+	Spearguard *_mspearguard;
 
 public:
 	static Game* getCurGame();

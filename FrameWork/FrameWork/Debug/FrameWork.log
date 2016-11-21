@@ -1,36 +1,5 @@
-﻿Build started 11/20/2016 13:07:15.
-     1>Project "E:\CastleVania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Simon.cpp
-         Simon.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\castlevania\castlevania\framework\framework\simon.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\simon.cpp(65): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>e:\castlevania\castlevania\framework\framework\simon.cpp(75): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\simon.cpp(76): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\simon.cpp(227): warning C4305: '=' : truncation from 'double' to 'float'
-     1>e:\castlevania\castlevania\framework\framework\simon.cpp(265): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Brick.obj
-         Debug\Bricks.obj
-         Debug\GameConfig.obj
-         Debug\Graphics.obj
-         Debug\KeyBoard.obj
-         Debug\Source.obj
-         Debug\Game.obj
-         Debug\GObject.obj
-         Debug\Simon.obj
-         Debug\GCamera.obj
-         Debug\Box.obj
-         Debug\SweptAABB.obj
-         Debug\State.obj
-         Debug\Surface.obj
-         Debug\Windows.obj
-         Debug\GSprite.obj
-         Debug\GTexture.obj
-         FrameWork.vcxproj -> E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.exe
-     1>Done Building Project "E:\CastleVania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
+﻿Build started 11/21/2016 3:20:05 PM.
 
 Build succeeded.
 
-Time Elapsed 00:00:02.44
+Time Elapsed 00:00:00.06

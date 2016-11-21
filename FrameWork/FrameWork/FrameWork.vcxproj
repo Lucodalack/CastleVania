@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Brick.h" />
+    <ClInclude Include="Ghost.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="GameConfig.h" />
     <ClInclude Include="Game.h" />
@@ -19,6 +20,7 @@
     <ClInclude Include="GCamera.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bricks.h" />
+    <ClInclude Include="Spearguard.h" />
     <ClInclude Include="SweptAABB.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Simon.h" />
@@ -32,6 +34,7 @@
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Bricks.cpp" />
     <ClCompile Include="GameConfig.cpp" />
+    <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -40,6 +43,7 @@
     <ClCompile Include="Simon.cpp" />
     <ClCompile Include="GCamera.cpp" />
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Spearguard.cpp" />
     <ClCompile Include="SweptAABB.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Surface.cpp" />
