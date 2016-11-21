@@ -71,6 +71,8 @@ public:
 
 
 	GObject::GObject(int type, int x, int y, int width, int height);
+	virtual void Update(float deltatime){}
+	virtual void Draw(){}
 
 	/*virtual void LoadResource();
 	virtual void Update(int Delta);
