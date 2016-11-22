@@ -1,11 +1,12 @@
-#include "Item.h"
+﻿#include "Item.h"
 
 
 Item::Item(int type, int x, int y, int x2, int y2) :
 GObject(type, x, y, _WIDTH, _HEIGHT)
 {
 	_isOnGround = false;
-	_lifeTime = 0;
+	//_lifeTime = -1;
+	_lifeTime = 0; //cái này để test thôi.
 	_vy = GRAVITY;
 	_vx = 0;
 	_activeArea.top = y;
@@ -18,6 +19,9 @@ GObject(type, x, y, _WIDTH, _HEIGHT)
 void Item::MoveUpdate(float deltaTime)
 {
 #pragma region __XU_LY_CHUYEN_DONG__
+	if (this->_lifeTime < 0){
+		return;// neu chua xuat hien.
+	}
 	this->_lifeTime += deltaTime;
 	if (this->_isOnGround){
 		return;
@@ -50,6 +54,9 @@ void Item::Update(float deltatime){
 }
 
 void Item::Draw(){
+	if (this->_lifeTime < 0){
+		return; //chua xuat hien.
+	}
 	if (this->_lifeTime >= _LIFETIME){
 		return;
 	}
@@ -58,6 +65,15 @@ void Item::Draw(){
 	}
 }
 
+void Item::ChangeState(int state){
+	if (state == ItemState::_ItemHidding){
+		this->_lifeTime = -1;
+	}
+	else{
+		if (this->_lifeTime<=0)
+			this->_lifeTime = 0;
+	}
+}
 Item::~Item(){
 	if (_sprite != NULL){
 		delete _sprite;

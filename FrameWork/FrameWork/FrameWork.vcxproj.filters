@@ -168,6 +168,9 @@
     <ClInclude Include="DoubleShot.h">
       <Filter>GameObject\Item</Filter>
     </ClInclude>
+    <ClInclude Include="ItemNone.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
@@ -279,6 +282,9 @@
       <Filter>GameObject\Item</Filter>
     </ClCompile>
     <ClCompile Include="DoubleShot.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemNone.cpp">
       <Filter>GameObject\Item</Filter>
     </ClCompile>
   </ItemGroup>

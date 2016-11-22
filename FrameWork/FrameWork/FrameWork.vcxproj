@@ -27,6 +27,7 @@
     <ClInclude Include="Bricks.h" />
     <ClInclude Include="HolyWater.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemNone.h" />
     <ClInclude Include="Knife.h" />
     <ClInclude Include="MoneyBag.h" />
     <ClInclude Include="MorningStar.h" />
@@ -61,6 +62,7 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="HolyWater.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemNone.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Knife.cpp" />
     <ClCompile Include="MoneyBag.cpp" />

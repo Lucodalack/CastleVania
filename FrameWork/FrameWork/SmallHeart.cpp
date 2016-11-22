@@ -13,6 +13,9 @@ Item(TYPE, x, y, x2, y2)
 void SmallHeart::MoveUpdate(float deltaTime)
 {
 #pragma region __XU_LY_CHUYEN_DONG__
+	if (this->_lifeTime < 0){
+		return;
+	}
 	this->_lifeTime += deltaTime;
 	if (this->_isOnGround){
 		return;
