@@ -20,6 +20,7 @@ void Game::GameInit()
 	Graphics::getCurGraphics()->initDirect3DDevice();
 	KeyBoard::getCurrentKeyBoard()->InputKeyBoard();
 	swepyAABB = new CSweptAABB();
+
 }
 
 void Game::GameLoad()
@@ -31,12 +32,13 @@ void Game::GameLoad()
 	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
 	//GSprite tamp(backgroundTT,10);
 	Simon::getCurrentSimon()->_sptrite = new GSprite(simonTT, 10);
-	_bricks = new Bricks(0, 300, 300, 32);
+	_bricks = new Bricks(0, 300, 2000, 32);
+	Quadtree::getCurrentQuadtree()->load();
 	//GCamera::getCurrentCamera()->Follow();
 
-	_mghost = new Ghost(0, 302, 300, 302);
+	/*_mghost = new Ghost(0, 302, 300, 302);
 	_mspearguard = new Spearguard(100, 302, 300, 302);
-	_mbat = new Bat(50, 280, 400, 280);
+	_mbat = new Bat(50, 280, 400, 280);*/
 }
 void Game::Collision()
 {
@@ -46,7 +48,7 @@ void Game::Collision()
 	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y);
 	if (x == 0 && y == -1){
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
-		_mbat->Awake();
+		//_mbat->ChangeState(BATSATE::IsAwake);
 	}
 	else if (Simon::getCurrentSimon()->GetState()==STATE::IS_JOGGING)
 	{
@@ -67,11 +69,12 @@ void Game::GameRun(float deltatime)
 	}
 	GCamera::getCurrentCamera()->Update();
 	Collision();
+	
 	//map->run();
 
-	_mghost->Update(deltatime);
+	/*_mghost->Update(deltatime);
 	_mspearguard->Update(deltatime);
-	_mbat->Update(deltatime);
+	_mbat->Update(deltatime);*/
 }
 
 void Game::GameDraw()
@@ -83,11 +86,15 @@ void Game::GameDraw()
 	
 	State::getCurrentState()->draw();
 	Simon::getCurrentSimon()->Draw();
-	_bricks->draw();
-
-	_mghost->Draw();
+	_bricks->Draw();
+	listObject.clear();
+	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
+	for each(GObject* tamp in listObject){
+		tamp->Draw();
+	}
+	/*_mghost->Draw();
 	_mspearguard->Draw();
-	_mbat->Draw();
+	_mbat->Draw();*/
 }
 
 

@@ -1,5 +1,6 @@
 #include"Rect.h"
 #include"GObject.h"
+#include"Simon.h"
 #include <vector>
 using namespace std;
 class QuadNode{
@@ -14,6 +15,8 @@ public:
 	vector<GObject*> listObject;
 	int id;
 	Rect* bound;
+	bool IsContain();
+	void Retrieve(vector<GObject*>& listGObject);
 	QuadNode();
 	~QuadNode();
 };

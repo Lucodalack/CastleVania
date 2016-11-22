@@ -59,20 +59,26 @@ void Quadtree::loadObject(){
 	_listObject = new GObject*[count];
 	for (int i = 0; i < count; i++){
 		
-		int x, y, width, height, type = 0;
-		myfile >> type;
+		int x, y, width, height, type,id = 0;
+		myfile >> id;
 		myfile >> type;
 		myfile >> x;
 		myfile >> y;
 		myfile >> width;
 		myfile >> height;
-		_listObject[i] = new GObject(type,x,y,width,height);
-		int tamp;
+		if (type>10&&type<23)
+		_listObject[i] =getObject(type,x,y,width,height);
+		
+		
 
-		myfile >> tamp;
-		myfile >> tamp;
-		myfile >> tamp;
-		myfile >> tamp;
+		myfile >> x;
+		myfile >> y;
+		myfile >> width;
+		myfile >> height;
+		if (type <= 10 || type >= 23){
+			_listObject[i] = getObject(type, x, y, width, height);
+		}
+		_listObject[i]->_id = id;
 	}
 }
  Quadtree* Quadtree::getCurrentQuadtree(){
@@ -82,3 +88,17 @@ void Quadtree::loadObject(){
 	}
 	return _currentQuadtree;
 }
+ GObject* Quadtree::getObject(int type, int x, int y, int width, int height)
+ {
+	 GObject* tamp=0;
+	 switch (type){
+	 case TypeGame::Enemy_Bat: tamp = new Bat(x, y, width, height); break;
+	 case TypeGame::Ground_Brick: tamp = new Bricks(x, y, width, height); break;
+	 case TypeGame::Enemy_Spearguard: tamp = new Spearguard(x, y, width, height); break;
+	 case TypeGame::Enemy_Ghost: tamp = new Ghost(x, y, width, height); break;
+	 }
+	 return tamp;
+ }
+
+
+ 

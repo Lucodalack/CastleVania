@@ -5,19 +5,27 @@
 #include "Rect.h"
 #include "Quadnode.h"
 #include "GObject.h"
+#include "Simon.h"
+
+#include "Bat.h"
+#include "Spearguard.h"
+#include "Bricks.h"
+#include "Ghost.h"
 
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <vector>
 class Quadtree{
 private:
-	QuadNode* _root;
 	GObject** _listObject;
 	static Quadtree* _currentQuadtree;
 public:
 	Quadtree();
 	~Quadtree();
+	QuadNode* _root;
 	static Quadtree* getCurrentQuadtree();
 	void load();
 	void loadObject();
+	GObject* getObject(int type, int x, int y, int width, int height);
 };

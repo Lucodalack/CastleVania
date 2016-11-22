@@ -29,7 +29,7 @@ Bricks::Bricks(int x, int y, int w, int h)
 	}
 	_box = Box(x, y, w, h, 0, 0);
 }
-void Bricks::draw(){
+void Bricks::Draw(){
 
 	for each (Brick * b in _listBrick)
 		b->Draw();

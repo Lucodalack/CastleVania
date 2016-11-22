@@ -12,6 +12,9 @@
 #include "Ghost.h"
 #include "Spearguard.h"
 #include "Bat.h"
+#include "Quadtree.h"
+#include "GObject.h"
+#include <vector>
 using namespace std;
 
 #define SIMON_SPRITE L"simon.png"
@@ -24,15 +27,14 @@ class Game
 	GSprite* _mybackground;
 	Bricks* _bricks;
 	CSweptAABB* swepyAABB;
+	
 
-	Ghost* _mghost;
-	Spearguard *_mspearguard;
-	Bat* _mbat;
+	GObject *_mbat, *_mspearguard, *_mghost;
 
 public:
 	static Game* getCurGame();
 
-
+	vector<GObject*> listObject;
 	void GameInit();
 	void GameLoad();
 	void GameRun(float deltatime);

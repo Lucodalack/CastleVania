@@ -17,6 +17,7 @@ GObject::GObject(int type, int x, int y, int width, int height)
 	_bound.bottom = _y + height;
 }
 
+
 void GObject::UpdatePosition(int time)
 {
 	_vy += _gravity * time;

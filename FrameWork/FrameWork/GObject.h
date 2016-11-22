@@ -57,6 +57,7 @@ public:
 	int _y;
 	int _width;
 	int _height;
+	int _id;
 
 	float _vx;
 	float _vy;
@@ -73,6 +74,7 @@ public:
 	GObject::GObject(int type, int x, int y, int width, int height);
 	virtual void Update(float deltatime){}
 	virtual void Draw(){}
+	virtual void ChangeState(int state){}
 
 	/*virtual void LoadResource();
 	virtual void Update(int Delta);

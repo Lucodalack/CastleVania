@@ -10,9 +10,12 @@
 #define _ANIMATE_RATE	7
 #define _ATTACK_RATE	10
 #define BAT_SPRITE L"enemy/0.png"
-
 #define TYPE TypeGame::Enemy_Bat
 
+enum BATSATE{
+	IsSleep = 0,
+	IsAwake = 1
+};
 class Bat : public GObject {
 private:
 
@@ -28,7 +31,7 @@ public:
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
 	void Draw();
-	void Awake();
+    void ChangeState(int state);
 	Bat();
 	~Bat();
 };
