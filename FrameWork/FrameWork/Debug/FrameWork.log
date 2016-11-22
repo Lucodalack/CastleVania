@@ -1,14 +1,13 @@
-﻿Build started 11/22/2016 10:10:59 AM.
+﻿Build started 11/22/2016 11:25:42 AM.
      1>Project "C:\Users\Ta\Documents\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Item.cpp
-         Item.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MedusaHead.cpp
+         MedusaHead.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\ta\documents\castlevania\framework\framework\item.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\ta\documents\castlevania\framework\framework\item.cpp(34): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\ta\documents\castlevania\framework\framework\item.cpp(37): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\ta\documents\castlevania\framework\framework\item.cpp(38): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\ta\documents\castlevania\framework\framework\item.cpp(53): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\documents\castlevania\framework\framework\medusahead.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\documents\castlevania\framework\framework\medusahead.cpp(41): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\documents\castlevania\framework\framework\medusahead.cpp(42): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\documents\castlevania\framework\framework\medusahead.cpp(57): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ta\Documents\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ta\Documents\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ta\Documents\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\Bat.obj
@@ -17,6 +16,7 @@
          Debug\Bricks.obj
          Debug\Cross.obj
          Debug\DoubleShot.obj
+         Debug\Enemy.obj
          Debug\GameConfig.obj
          Debug\Ghost.obj
          Debug\Graphics.obj
@@ -25,6 +25,7 @@
          Debug\ItemNone.obj
          Debug\KeyBoard.obj
          Debug\Knife.obj
+         Debug\MedusaHead.obj
          Debug\MoneyBag.obj
          Debug\MorningStar.obj
          Debug\Roast.obj
@@ -53,4 +54,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.40
+Time Elapsed 00:00:01.32
