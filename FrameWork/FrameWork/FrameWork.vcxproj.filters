@@ -159,6 +159,15 @@
     <ClInclude Include="SpiritBall.h">
       <Filter>GameObject\Item</Filter>
     </ClInclude>
+    <ClInclude Include="BigHeart.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="SmallHeart.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleShot.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
@@ -261,6 +270,15 @@
       <Filter>GameObject\Item</Filter>
     </ClCompile>
     <ClCompile Include="SpiritBall.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="BigHeart.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallHeart.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleShot.cpp">
       <Filter>GameObject\Item</Filter>
     </ClCompile>
   </ItemGroup>

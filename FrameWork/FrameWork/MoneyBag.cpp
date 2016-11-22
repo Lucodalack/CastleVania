@@ -7,7 +7,7 @@ Item(TYPE, x, y, x2, y2)
 {
 	GTexture* texture = new GTexture(_SPRITE, 3, 1, 3);
 	_sprite = new GSprite(texture, _ANIMATE_RATE);
-	this->_moneycolor = MoneyColor::Red; // mặc định màu đỏ
+	this->_moneycolor = (int)(100*time(NULL)) % 3; //randome mau
 }
 void MoneyBag::SetFrame(float deltaTime)
 {
