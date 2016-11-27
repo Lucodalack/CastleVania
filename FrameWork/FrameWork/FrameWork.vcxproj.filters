@@ -58,6 +58,9 @@
     <Filter Include="GameObject\Item">
       <UniqueIdentifier>{3eb15c86-30c6-4f13-b39b-e43d328c4857}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Ground">
+      <UniqueIdentifier>{ec0eeacf-d09b-4062-9d81-d79bd7997da4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -176,6 +179,27 @@
     </ClInclude>
     <ClInclude Include="MedusaHead.h">
       <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fireandle.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Firetower.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Trap.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Brickmoving.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Brickhidden.h">
+      <Filter>GameObject\Ground</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +322,27 @@
     </ClCompile>
     <ClCompile Include="MedusaHead.cpp">
       <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Fireandle.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Ground.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Firetower.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Trap.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Brickmoving.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Brickhidden.cpp">
+      <Filter>GameObject\Ground</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
