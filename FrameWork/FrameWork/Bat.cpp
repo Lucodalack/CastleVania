@@ -2,46 +2,44 @@
 
 
 Bat::Bat(int x, int y, int x2, int y2) :
-GObject(TYPE, x, y, _WIDTH, _HEIGHT)
+Enemy(TYPE, x, y, x2, y2)
 {
-	_isMoveleft = false;
-	_isDead = false;
 	_isSleep = true;
-	_vy = GRAVITY;
-	_vx = _SPEED;
-	_box = Box(x, y, _WIDTH, _HEIGHT, _vx, _vy);
-	_activeArea.top = y;
-	_activeArea.left = x;
-	_activeArea.right = x2;
-	_activeArea.bottom = y2;
+	_vx = _batSPEED;
+	_box = Box(x, y, _batWIDTH, _batHEIGHT, _vx, _vy);
 	GTexture* texture = new GTexture(BAT_SPRITE, 4, 1, 4);
 	_sprite = new GSprite(texture, _ANIMATE_RATE);
-	_starty = y;
 }
 
 void Bat::MoveUpdate(float deltaTime)
 {
 #pragma region __XU_LY_CHUYEN_DONG__
+	int ynek = Simon::getCurrentSimon()->_y ;
+
 	if (this->_isSleep){
 		return;
 	}
-
+	if (this->_y <= ynek){
+		_vy = 2*_batSPEED;
+		this->_y += int(deltaTime*_vy);
+		return; // con nay ddang roi xuong 1 doan cho bang thang simon roi moi bay
+	}
 	if (_isMoveleft){
 		if (_x <= _activeArea.left ){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
-			this->_y = this->_starty;
+			this->_y = ynek;
 		}
 	}
 	else{
 		if (_x >= _activeArea.right){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
-			this->_y = this->_starty;
+			this->_y = ynek;
 		}
 	}
 	this->_x += int(this->_vx * deltaTime);
-	this->_y += int(7 * sin(float(_x)));
+	this->_y += int(8 * sin(float(_x)));
 #pragma endregion
 	_box.x = _x;
 	_box.y = _y;
@@ -69,14 +67,6 @@ void Bat::Update(float deltatime){
 	this->_sprite->Update(deltatime);
 }
 
-void Bat::Draw(){
-	if (!this->_isMoveleft){
-		this->_sprite->DrawFlipX(_x, _y);
-	}
-	else{
-		this->_sprite->Draw(_x, _y);
-	}
-}
 void Bat::ChangeState(int state){
 	if (state == BATSATE::IsSleep){
 		this->_isSleep = true;

@@ -1,27 +1,123 @@
-﻿Build started 11/22/2016 15:16:39.
+﻿Build started 11/22/2016 15:21:44.
      1>Project "E:\CastleVania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Axe.cpp Bat.cpp BigHeart.cpp Cross.cpp DoubleShot.cpp Enemy.cpp Ghost.cpp HolyWater.cpp Item.cpp ItemNone.cpp Knife.cpp MedusaHead.cpp MoneyBag.cpp MorningStar.cpp Roast.cpp Rosary.cpp SmallHeart.cpp Source.cpp Game.cpp Quadtree.cpp Spearguard.cpp SpiritBall.cpp StopWatch.cpp
+         StopWatch.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         SpiritBall.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Spearguard.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         SmallHeart.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\smallheart.cpp(28): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\smallheart.cpp(32): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\smallheart.cpp(33): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\smallheart.cpp(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Rosary.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Roast.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         MorningStar.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         MoneyBag.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\moneybag.cpp(39): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         MedusaHead.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\medusahead.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\medusahead.cpp(41): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\medusahead.cpp(42): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\medusahead.cpp(57): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Knife.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         ItemNone.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Item.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\item.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\item.cpp(34): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\item.cpp(37): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\item.cpp(38): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\item.cpp(53): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         HolyWater.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Ghost.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Enemy.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\enemy.cpp(10): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\enemy.cpp(36): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\enemy.cpp(37): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\enemy.cpp(51): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         DoubleShot.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Cross.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         BigHeart.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Bat.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bat.cpp(9): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\bat.cpp(44): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\bat.cpp(45): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\bat.cpp(67): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Axe.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Generating Code...
+         Compiling...
+         Quadtree.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bat.h(12) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
          Game.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\castlevania\castlevania\framework\framework\ghost.h(17): warning C4005: 'TYPE' : macro redefinition
+     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
                  e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\spearguard.h(12): warning C4005: '_SPEED' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\ghost.h(12) : see previous definition of '_SPEED'
-     1>e:\castlevania\castlevania\framework\framework\spearguard.h(17): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\ghost.h(17) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\bat.h(9): warning C4005: '_SPEED' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\spearguard.h(12) : see previous definition of '_SPEED'
-     1>e:\castlevania\castlevania\framework\framework\bat.h(13): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\spearguard.h(17) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
+         Source.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\source.cpp(32): warning C4244: 'initializing' : conversion from 'unsigned long' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\source.cpp(41): warning C4244: '=' : conversion from 'DWORD' to 'float', possible loss of data
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Bat.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
+         Debug\Bat.obj
+         Debug\BigHeart.obj
          Debug\Brick.obj
          Debug\Bricks.obj
+         Debug\Cross.obj
+         Debug\DoubleShot.obj
+         Debug\Enemy.obj
          Debug\GameConfig.obj
          Debug\Ghost.obj
          Debug\Graphics.obj
+         Debug\HolyWater.obj
+         Debug\Item.obj
+         Debug\ItemNone.obj
          Debug\KeyBoard.obj
+         Debug\Knife.obj
+         Debug\MedusaHead.obj
+         Debug\MoneyBag.obj
+         Debug\MorningStar.obj
+         Debug\Roast.obj
+         Debug\Rosary.obj
+         Debug\SmallHeart.obj
          Debug\Source.obj
          Debug\Game.obj
          Debug\GObject.obj
@@ -32,6 +128,8 @@
          Debug\Quadtree.obj
          Debug\Quadnode.obj
          Debug\Spearguard.obj
+         Debug\SpiritBall.obj
+         Debug\StopWatch.obj
          Debug\SweptAABB.obj
          Debug\State.obj
          Debug\Surface.obj
@@ -43,4 +141,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.83
+Time Elapsed 00:00:46.49
