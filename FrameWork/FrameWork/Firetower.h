@@ -6,7 +6,7 @@
 #include "Ground.h"
 #define _smallWIDTH	16
 #define _smallHEIGHT	32
-#define _SPRITE L"ground/1.png"
+#define _SPRITE L"ground/0.png"
 #define TYPE TypeGame::Ground_Firetower
 
 class Firetower : public Ground {

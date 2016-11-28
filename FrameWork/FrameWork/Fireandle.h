@@ -6,7 +6,7 @@
 #include "Ground.h"
 #define _WIDTH	32
 #define _HEIGHT	64
-#define _SPRITE L"ground/0.png"
+#define _SPRITE L"ground/1.png"
 #define TYPE TypeGame::Ground_Fireandle
 
 class Fireandle : public Ground {

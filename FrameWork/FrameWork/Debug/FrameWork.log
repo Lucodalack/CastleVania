@@ -1,13 +1,334 @@
-﻿Build started 11/22/2016 15:21:44.
+﻿Build started 11/28/2016 10:52:23.
      1>Project "E:\CastleVania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Axe.cpp Bat.cpp BigHeart.cpp Cross.cpp DoubleShot.cpp Enemy.cpp Ghost.cpp HolyWater.cpp Item.cpp ItemNone.cpp Knife.cpp MedusaHead.cpp MoneyBag.cpp MorningStar.cpp Roast.cpp Rosary.cpp SmallHeart.cpp Source.cpp Game.cpp Quadtree.cpp Spearguard.cpp SpiritBall.cpp StopWatch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Axe.cpp Bat.cpp BigHeart.cpp Brick.cpp Bricks.cpp Brickhidden.cpp Brickmoving.cpp Fireandle.cpp Cross.cpp DoubleShot.cpp Enemy.cpp Firetower.cpp GameConfig.cpp Ghost.cpp Graphics.cpp Ground.cpp HolyWater.cpp Item.cpp ItemNone.cpp KeyBoard.cpp Knife.cpp MedusaHead.cpp MoneyBag.cpp MorningStar.cpp Roast.cpp Rosary.cpp SmallHeart.cpp Source.cpp Game.cpp GObject.cpp Simon.cpp GCamera.cpp Box.cpp Rect.cpp Quadtree.cpp Quadnode.cpp Spearguard.cpp SpiritBall.cpp Stair.cpp StopWatch.cpp SweptAABB.cpp State.cpp Surface.cpp Trap.cpp Windows.cpp GSprite.cpp GTexture.cpp
+         GTexture.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         GSprite.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\gsprite.cpp(89): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\gsprite.cpp(91): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\gsprite.cpp(109): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\gsprite.cpp(128): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\gsprite.cpp(163): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\gsprite.cpp(164): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Windows.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Trap.cpp
+         Surface.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         State.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         SweptAABB.cpp
          StopWatch.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Stair.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\stair.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
          SpiritBall.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
          Spearguard.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Quadnode.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Quadtree.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bat.h(12) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\medusahead.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\ground.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(10) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\ground.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(11) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\medusahead.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.h(10): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickhidden.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickhidden.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(8): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickmoving.h(10) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickmoving.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\firetower.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\firetower.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\stair.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\firetower.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\stair.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\firetower.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(8) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\item.h(11): warning C4005: '_SPEED' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(12) : see previous definition of '_SPEED'
+     1>e:\castlevania\castlevania\framework\framework\axe.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\stair.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\axe.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\stair.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bigheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\axe.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\bigheart.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\axe.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\cross.h(8): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bigheart.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\cross.h(9): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bigheart.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\doubleshot.h(8): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\cross.h(9) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\holywater.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\cross.h(8) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\holywater.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\doubleshot.h(8) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\itemnone.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\holywater.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\itemnone.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\holywater.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\knife.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\itemnone.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\knife.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\itemnone.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\moneybag.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\knife.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\moneybag.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\knife.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\morningstar.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\moneybag.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\morningstar.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\moneybag.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\roast.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\morningstar.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\roast.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\morningstar.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\rosary.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\roast.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\rosary.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\roast.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\smallheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\rosary.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\smallheart.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\rosary.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spiritball.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\smallheart.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\spiritball.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\smallheart.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\stopwatch.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spiritball.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\stopwatch.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spiritball.h(7) : see previous definition of 'TYPE'
+         Rect.cpp
+         Box.cpp
+         GCamera.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\gcamera.cpp(14): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\gcamera.cpp(35): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+         Simon.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\simon.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\simon.cpp(65): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>e:\castlevania\castlevania\framework\framework\simon.cpp(75): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\simon.cpp(76): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\simon.cpp(227): warning C4305: '=' : truncation from 'double' to 'float'
+     1>e:\castlevania\castlevania\framework\framework\simon.cpp(265): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         GObject.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Game.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\ground.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(10) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\ground.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(11) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bat.h(12) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.h(10): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickhidden.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickhidden.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(8): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickmoving.h(10) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickmoving.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\firetower.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\firetower.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\stair.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\firetower.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\stair.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\firetower.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(8) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\item.h(11): warning C4005: '_SPEED' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(12) : see previous definition of '_SPEED'
+     1>e:\castlevania\castlevania\framework\framework\axe.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\stair.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\axe.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\stair.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bigheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\axe.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\bigheart.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\axe.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\cross.h(8): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bigheart.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\cross.h(9): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bigheart.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\doubleshot.h(8): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\cross.h(9) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\holywater.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\cross.h(8) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\holywater.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\doubleshot.h(8) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\itemnone.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\holywater.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\itemnone.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\holywater.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\knife.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\itemnone.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\knife.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\itemnone.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\moneybag.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\knife.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\moneybag.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\knife.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\morningstar.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\moneybag.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\morningstar.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\moneybag.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\roast.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\morningstar.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\roast.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\morningstar.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\rosary.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\roast.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\rosary.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\roast.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\smallheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\rosary.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\smallheart.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\rosary.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spiritball.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\smallheart.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\spiritball.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\smallheart.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\stopwatch.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spiritball.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\stopwatch.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spiritball.h(7) : see previous definition of 'TYPE'
+         Source.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\ground.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(10) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\ground.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(11) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bat.h(12) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.h(10): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickhidden.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.h(11): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickhidden.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(8): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickmoving.h(10) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\brickmoving.h(11) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\firetower.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\firetower.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\stair.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\firetower.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\stair.h(10): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\firetower.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\fireandle.h(8) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\item.h(11): warning C4005: '_SPEED' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\enemy.h(12) : see previous definition of '_SPEED'
+     1>e:\castlevania\castlevania\framework\framework\axe.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\stair.h(9) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\axe.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\stair.h(10) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\bigheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\axe.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\bigheart.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\axe.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\cross.h(8): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bigheart.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\cross.h(9): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\bigheart.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\doubleshot.h(8): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\cross.h(9) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\holywater.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\cross.h(8) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\holywater.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\doubleshot.h(8) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\itemnone.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\holywater.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\itemnone.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\holywater.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\knife.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\itemnone.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\knife.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\itemnone.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\moneybag.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\knife.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\moneybag.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\knife.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\morningstar.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\moneybag.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\morningstar.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\moneybag.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\roast.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\morningstar.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\roast.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\morningstar.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\rosary.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\roast.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\rosary.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\roast.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\smallheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\rosary.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\smallheart.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\rosary.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\spiritball.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\smallheart.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\spiritball.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\smallheart.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\stopwatch.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spiritball.h(6) : see previous definition of '_SPRITE'
+     1>e:\castlevania\castlevania\framework\framework\stopwatch.h(7): warning C4005: 'TYPE' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\spiritball.h(7) : see previous definition of 'TYPE'
+     1>e:\castlevania\castlevania\framework\framework\source.cpp(32): warning C4244: 'initializing' : conversion from 'unsigned long' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\source.cpp(41): warning C4244: '=' : conversion from 'DWORD' to 'float', possible loss of data
+         Generating Code...
+         Compiling...
          SmallHeart.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>e:\castlevania\castlevania\framework\framework\smallheart.cpp(28): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
@@ -31,6 +352,8 @@
      1>e:\castlevania\castlevania\framework\framework\medusahead.cpp(57): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
          Knife.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         KeyBoard.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
          ItemNone.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
          Item.cpp
@@ -42,8 +365,20 @@
      1>e:\castlevania\castlevania\framework\framework\item.cpp(53): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
          HolyWater.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Ground.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\ground.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\ground.cpp(23): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Graphics.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\graphics.cpp(41): warning C4101: 'result' : unreferenced local variable
          Ghost.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         GameConfig.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Firetower.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\firetower.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
          Enemy.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>e:\castlevania\castlevania\framework\framework\enemy.cpp(10): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
@@ -53,6 +388,31 @@
          DoubleShot.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
          Cross.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Fireandle.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.h(8): warning C4005: '_HEIGHT' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>e:\castlevania\castlevania\framework\framework\fireandle.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
+         Compiling...
+         Brickmoving.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.cpp(34): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.cpp(35): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\castlevania\castlevania\framework\framework\brickmoving.cpp(51): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Brickhidden.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 e:\castlevania\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>e:\castlevania\castlevania\framework\framework\brickhidden.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Bricks.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\castlevania\castlevania\framework\framework\bricks.cpp(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Brick.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
          BigHeart.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
@@ -67,46 +427,23 @@
          Axe.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
          Generating Code...
-         Compiling...
-         Quadtree.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\bat.h(12) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
-         Game.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
-         Source.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\simon.h(16) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\bat.h(12): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\source.cpp(32): warning C4244: 'initializing' : conversion from 'unsigned long' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\source.cpp(41): warning C4244: '=' : conversion from 'DWORD' to 'float', possible loss of data
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\Bat.obj
          Debug\BigHeart.obj
          Debug\Brick.obj
          Debug\Bricks.obj
+         Debug\Brickhidden.obj
+         Debug\Brickmoving.obj
+         Debug\Fireandle.obj
          Debug\Cross.obj
          Debug\DoubleShot.obj
          Debug\Enemy.obj
+         Debug\Firetower.obj
          Debug\GameConfig.obj
          Debug\Ghost.obj
          Debug\Graphics.obj
+         Debug\Ground.obj
          Debug\HolyWater.obj
          Debug\Item.obj
          Debug\ItemNone.obj
@@ -129,10 +466,12 @@
          Debug\Quadnode.obj
          Debug\Spearguard.obj
          Debug\SpiritBall.obj
+         Debug\Stair.obj
          Debug\StopWatch.obj
          Debug\SweptAABB.obj
          Debug\State.obj
          Debug\Surface.obj
+         Debug\Trap.obj
          Debug\Windows.obj
          Debug\GSprite.obj
          Debug\GTexture.obj
@@ -141,4 +480,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:46.49
+Time Elapsed 00:01:09.67

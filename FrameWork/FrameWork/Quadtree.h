@@ -11,6 +11,29 @@
 #include "Spearguard.h"
 #include "Bricks.h"
 #include "Ghost.h"
+#include "MedusaHead.h"
+
+#include "Brickhidden.h"
+#include "Brickmoving.h"
+#include "Fireandle.h"
+#include "Firetower.h"
+#include "Stair.h"
+
+#include "Axe.h"
+#include "BigHeart.h"
+#include "Cross.h"
+#include "DoubleShot.h"
+#include "HolyWater.h"
+#include "Item.h"
+#include "ItemNone.h"
+#include "Knife.h"
+#include "MoneyBag.h"
+#include "MorningStar.h"
+#include "Roast.h"
+#include "Rosary.h"
+#include "SmallHeart.h"
+#include "SpiritBall.h"
+#include "StopWatch.h"
 
 #include <string>
 #include <iostream>

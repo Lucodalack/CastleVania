@@ -69,7 +69,11 @@ void Game::GameRun(float deltatime)
 	}
 	GCamera::getCurrentCamera()->Update();
 	Collision();
-	
+	listObject.clear();
+	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
+	for each(GObject* tamp in listObject){
+		tamp->Update(deltatime);
+	}
 	//map->run();
 
 	/*_mghost->Update(deltatime);

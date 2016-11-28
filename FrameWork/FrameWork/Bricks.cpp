@@ -19,11 +19,11 @@ Bricks::Bricks(int x, int y, int w, int h)
 	{
 		int size = h / BRICK_HEIGHT;
 		for (int i = 0; i < size; i++){
-			Brick* tamp = new Brick(x + i*BRICK_HEIGHT, y);
+			Brick* tamp = new Brick(x, y + i*BRICK_HEIGHT);
 			_listBrick.push_back(tamp);
 		}
 		if ((h%BRICK_HEIGHT) != 0){
-			Brick* tamp = new Brick(x + size*BRICK_HEIGHT + (h%BRICK_HEIGHT) - BRICK_HEIGHT, y);
+			Brick* tamp = new Brick(x, y + size*BRICK_HEIGHT + (h%BRICK_HEIGHT) - BRICK_HEIGHT);
 			_listBrick.push_back(tamp);
 		}
 	}
