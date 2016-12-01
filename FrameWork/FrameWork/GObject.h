@@ -46,7 +46,10 @@ enum TypeGame {
 	Item_roast = 33,
 	Item_rosary = 34,
 	Item_spirit_ball = 35,
-	Item_none = 36
+	Item_none = 36,
+
+
+	Other_kill = 37
 };
 
 class GObject {
@@ -57,6 +60,7 @@ public:
 	int _y;
 	int _width;
 	int _height;
+	int _id;
 
 	float _vx;
 	float _vy;
@@ -74,7 +78,6 @@ public:
 	virtual void Update(float deltatime){}
 	virtual void Draw(){}
 	virtual void ChangeState(int state){}
-
 
 	/*virtual void LoadResource();
 	virtual void Update(int Delta);

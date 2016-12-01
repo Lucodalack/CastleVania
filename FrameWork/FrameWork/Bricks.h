@@ -1,3 +1,5 @@
+#ifndef __BRICKS_H__
+#define __BRICKS_H__
 #include <d3d9.h>
 #include <d3dx9.h>
 #include <stdio.h>
@@ -13,6 +15,7 @@ private:
 public:
 	Bricks();
 	Bricks(int x, int y, int w, int h);
-	void draw();
+	void Draw();
 	~Bricks();
 };
+#endif
