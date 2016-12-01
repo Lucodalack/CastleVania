@@ -12,6 +12,21 @@
 #include "Ghost.h"
 #include "Spearguard.h"
 #include "Bat.h"
+#include "Cross.h"
+#include "Axe.h"
+#include "Knife.h"
+#include "HolyWater.h"
+#include "StopWatch.h"
+#include "MorningStar.h"
+#include "Roast.h"
+#include "Rosary.h"
+#include "MoneyBag.h"
+#include "SpiritBall.h"
+#include "BigHeart.h"
+#include "SmallHeart.h"
+#include "DoubleShot.h"
+#include "ItemNone.h"
+#include "MedusaHead.h"
 using namespace std;
 
 #define SIMON_SPRITE L"simon.png"
@@ -25,7 +40,7 @@ class Game
 	Bricks* _bricks;
 	CSweptAABB* swepyAABB;
 
-	GObject *_mbat, *_mspearguard, *_mghost;
+	GObject *_mbat, *_mspearguard, *_mghost,*_item,*_enemy;
 
 public:
 	static Game* getCurGame();

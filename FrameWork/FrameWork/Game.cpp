@@ -36,7 +36,9 @@ void Game::GameLoad()
 
 	_mghost = new Ghost(0, 302, 300, 302);
 	_mspearguard = new Spearguard(100, 302, 300, 302);
-	_mbat = new Bat(50, 280, 400, 280);
+	_mbat = new Bat(50, 100, 400, 280);
+	_item = new SmallHeart(150, 50, 300, 302);
+	_enemy = new MedusaHead(0, 200, 500, 280);
 }
 void Game::Collision()
 {
@@ -47,6 +49,7 @@ void Game::Collision()
 	if (x == 0 && y == -1){
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
 		_mbat->ChangeState(BATSATE::IsAwake);
+		_item->ChangeState(ItemState::_ItemShowing);
 	}
 	else if (Simon::getCurrentSimon()->GetState()==STATE::IS_JOGGING)
 	{
@@ -72,6 +75,8 @@ void Game::GameRun(float deltatime)
 	_mghost->Update(deltatime);
 	_mspearguard->Update(deltatime);
 	_mbat->Update(deltatime);
+	_item->Update(deltatime);
+	_enemy->Update(deltatime);
 }
 
 void Game::GameDraw()
@@ -88,6 +93,8 @@ void Game::GameDraw()
 	_mghost->Draw();
 	_mspearguard->Draw();
 	_mbat->Draw();
+	_item->Draw();
+	_enemy->Draw();
 }
 
 
