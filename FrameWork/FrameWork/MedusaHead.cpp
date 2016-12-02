@@ -7,7 +7,7 @@ Enemy(TYPE, x, y, x2, y2)
 	_vx = _medusaheadSPEED;
 	_box = Box(x, y, _medusaheadWIDTH, _medusaheadHEIGHT, _vx, _vy);
 	GTexture* texture = new GTexture(MEDUSAHEAD_SPRITE, 2, 1, 2);
-	_sprite = new GSprite(texture, _ANIMATE_RATE);
+	_sprite = new GSprite(texture, ANIMATIONRATE);
 	this->SetFrame(0);
 }
 

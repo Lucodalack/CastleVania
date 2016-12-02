@@ -29,9 +29,6 @@ void Game::GameLoad()
 	//GSprite tamp(backgroundTT,10);
 	_mybackground = new GSprite(backgroundTT, 10);
 	/*map = new Map(L"Image\\Map.png");*/
-	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
-	//GSprite tamp(backgroundTT,10);
-	Simon::getCurrentSimon()->_sptrite = new GSprite(simonTT, 10);
 	_bricks = new Bricks(0, 300, 2000, 32);
 	Quadtree::getCurrentQuadtree()->load();
 	//GCamera::getCurrentCamera()->Follow();

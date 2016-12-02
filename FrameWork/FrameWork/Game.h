@@ -14,7 +14,6 @@
 #include <vector>
 using namespace std;
 
-#define SIMON_SPRITE L"simon.png"
 
 class Game
 {

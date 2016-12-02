@@ -201,6 +201,9 @@
     <ClInclude Include="Brickhidden.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude>
+    <ClInclude Include="Whip.h">
+      <Filter>GameObject\Simon</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
@@ -343,6 +346,9 @@
     </ClCompile>
     <ClCompile Include="Brickhidden.cpp">
       <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Whip.cpp">
+      <Filter>GameObject\Simon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

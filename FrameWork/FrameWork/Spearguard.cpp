@@ -5,7 +5,7 @@ Spearguard::Spearguard(int x, int y, int x2, int y2) :
 Enemy(TYPE, x, y, x2, y2)
 {
 	GTexture* tt = new GTexture(SPEARGAURD_SPRITE, 4, 1, 4);
-	_sprite = new GSprite(tt, _ANIMATE_RATE);
+	_sprite = new GSprite(tt, ANIMATIONRATE);
 	this->_vx = _guardSPEED;
 	this->SetFrame(0);
 }

@@ -9,7 +9,6 @@
 #define _WIDTH	32
 #define _HEIGHT	32
 #define _SPEED	0.113f
-#define _ANIMATE_RATE	7
 #define _ATTACK_RATE	10
 #define _LIFETIME 3000
 enum ItemState{
