@@ -8,7 +8,7 @@ Enemy(TYPE, x, y, x2, y2)
 	_vx = _batSPEED;
 	_box = Box(x, y, _batWIDTH, _batHEIGHT, _vx, _vy);
 	GTexture* texture = new GTexture(BAT_SPRITE, 4, 1, 4);
-	_sprite = new GSprite(texture, _ANIMATE_RATE);
+	_sprite = new GSprite(texture, ANIMATIONRATE);
 }
 
 void Bat::MoveUpdate(float deltaTime)

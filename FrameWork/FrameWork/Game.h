@@ -9,15 +9,12 @@
 #include "Bricks.h"
 #include "SweptAABB.h"
 #include <string>
-#include "Ghost.h"
-#include "Spearguard.h"
-#include "Bat.h"
 #include "Quadtree.h"
 #include "GObject.h"
+#include"KeyBoard.h"
 #include <vector>
 using namespace std;
 
-#define SIMON_SPRITE L"simon.png"
 
 class Game
 {
@@ -29,7 +26,7 @@ class Game
 	CSweptAABB* swepyAABB;
 	
 
-	GObject *_mbat, *_mspearguard, *_mghost;
+	GObject *_mbat, *_mspearguard, *_mghost,*_item,*_enemy;
 
 public:
 	static Game* getCurGame();
@@ -40,8 +37,11 @@ public:
 	void GameRun(float deltatime);
 	void GameDraw();
 	void Collision(float deltatime);
-
+	void _ProcessKeyBoard();
 	void GameDrawParameter();
+
+	void OnKeyDown(int KeyCode);
+	void OnKeyUp(int KeyCode){}
 	Game(int screen_width, int screen_height);
 	Game();
 	~Game();

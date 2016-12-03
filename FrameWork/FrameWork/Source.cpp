@@ -30,8 +30,9 @@ int WINAPI WinMain(
 		{
 			DWORD now = GetTickCount();
 			float deltaTime = now - frame_start;
-			if (now - frame_start >= count_per_frame)
+			
 
+			myGame->_ProcessKeyBoard();
 			if (deltaTime >= count_per_frame)
 			{
 				//frameStart = now;

@@ -6,12 +6,13 @@
 #include "GSprite.h"
 
 
+#define SIMON_SPRITE L"simon.png"
 
 #define SIMON_WIDTH			32
 #define SIMON_HEIGHT		64
+
 #define SIMON_SPEED			2.0f
 #define SIMON_JUMP_SPEED	7.0f
-#define SIMON_ANIMATE_RATE	7
 #define SIMON_ATTACK_RATE	10
 #define TYPE 2
 #define SIMON_JUMPMAX 64
@@ -54,6 +55,7 @@ public:
 	void InputUpdate(float deltatime);
 	void Update(float deltatime);
 	void ChangeState(int state);
+	void Jump();
 	int GetState(){
 		return _stateCurrent;
 	}

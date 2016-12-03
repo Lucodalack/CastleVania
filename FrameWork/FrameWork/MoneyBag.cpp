@@ -6,7 +6,7 @@ MoneyBag::MoneyBag(int x, int y, int x2, int y2) :
 Item(TYPE, x, y, x2, y2)
 {
 	GTexture* texture = new GTexture(_SPRITE, 3, 1, 3);
-	_sprite = new GSprite(texture, _ANIMATE_RATE);
+	_sprite = new GSprite(texture, ANIMATIONRATE);
 	this->_moneycolor = (int)(100*time(NULL)) % 3; //randome mau
 }
 void MoneyBag::SetFrame(float deltaTime)

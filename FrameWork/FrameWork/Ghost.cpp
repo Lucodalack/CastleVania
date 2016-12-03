@@ -4,7 +4,7 @@ Ghost::Ghost(int x, int y,int x2,int y2) :
 Enemy(TYPE,x, y, x2, y2)
 {
 	GTexture* ghosttt = new GTexture(GHOST_SPRITE, 2, 1, 2);
-	_sprite = new GSprite(ghosttt, _ANIMATE_RATE);
+	_sprite = new GSprite(ghosttt, ANIMATIONRATE);
 	this->_vx = _ghostSPEED;
 }
 

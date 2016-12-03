@@ -6,7 +6,7 @@ SpiritBall::SpiritBall(int x, int y, int x2, int y2) :
 Item(TYPE, x, y, x2, y2)
 {
 	GTexture* texture = new GTexture(_SPRITE, 2, 1, 2);
-	_sprite = new GSprite(texture, _ANIMATE_RATE);
+	_sprite = new GSprite(texture, ANIMATIONRATE);
 	this->SetFrame(0);
 }
 void SpiritBall::SetFrame(float deltaTime)

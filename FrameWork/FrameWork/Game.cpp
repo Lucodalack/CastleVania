@@ -29,26 +29,23 @@ void Game::GameLoad()
 	//GSprite tamp(backgroundTT,10);
 	_mybackground = new GSprite(backgroundTT, 10);
 	/*map = new Map(L"Image\\Map.png");*/
-	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
-	//GSprite tamp(backgroundTT,10);
-	Simon::getCurrentSimon()->_sptrite = new GSprite(simonTT, 10);
+	
 	_bricks = new Bricks(0, 250, 2000, 32);
 	Quadtree::getCurrentQuadtree()->load();
 	GCamera::getCurrentCamera()->Follow();
 
-	/*_mghost = new Ghost(0, 302, 300, 302);
-	_mspearguard = new Spearguard(100, 302, 300, 302);
-	_mbat = new Bat(50, 280, 400, 280);*/
 }
+
 void Game::Collision(float deltatime)
 {
 	float x, y;
+	
 	if (Simon::getCurrentSimon()->_box.y> 70)
 		int a = 0;
+	
 	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y, deltatime);
 	if (x == 0 && y == -1){
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
-		//_mbat->ChangeState(BATSATE::IsAwake);
 	}
 	else if (Simon::getCurrentSimon()->GetState()==STATE::IS_JOGGING)
 	{
@@ -56,8 +53,40 @@ void Game::Collision(float deltatime)
 	}
 	
 }
+void Game::_ProcessKeyBoard()
+{
+	// Collect all key states first
+	
+	KeyBoard::getCurrentKeyBoard()->_inputDevice->GetDeviceState(
+		sizeof(KeyBoard::getCurrentKeyBoard()->_keyStates),
+		KeyBoard::getCurrentKeyBoard()->_keyStates);
 
 
+
+	// Collect all buffered events
+	DWORD dwElements = KEYBOARD_BUFFER_SIZE;
+	HRESULT hr = KeyBoard::getCurrentKeyBoard()->_inputDevice->GetDeviceData(sizeof(DIDEVICEOBJECTDATA),
+		KeyBoard::getCurrentKeyBoard()->_KeyEvents, &dwElements, 0);
+
+	// Scan through all data, check if the key is pressed or released
+	for (DWORD i = 0; i < dwElements; i++)
+	{
+		int KeyCode = KeyBoard::getCurrentKeyBoard()->_KeyEvents[i].dwOfs;
+		int KeyState = KeyBoard::getCurrentKeyBoard()->_KeyEvents[i].dwData;
+		if ((KeyState & 0x80) > 0)
+			OnKeyDown(KeyCode);
+		else
+			OnKeyUp(KeyCode);
+	}
+}
+void Game::OnKeyDown(int KeyCode)
+{
+	switch (KeyCode)
+	{
+	case DIK_SPACE:
+  		Simon::getCurrentSimon()->Jump(); break;
+	}
+}
 void Game::GameRun(float deltatime)
 {
 	KeyBoard::getCurrentKeyBoard()->UpdateKeyboard();
@@ -68,17 +97,13 @@ void Game::GameRun(float deltatime)
 		GCamera::getCurrentCamera()->Unfollow();
 	}*/
 	GCamera::getCurrentCamera()->Update();
+
 	Collision(deltatime);
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
 	for each(GObject* tamp in listObject){
 		tamp->Update(deltatime);
 	}
-	//map->run();
-
-	/*_mghost->Update(deltatime);
-	_mspearguard->Update(deltatime);
-	_mbat->Update(deltatime);*/
 }
 
 void Game::GameDraw()
@@ -96,9 +121,6 @@ void Game::GameDraw()
 	for each(GObject* tamp in listObject){
 		tamp->Draw();
 	}
-	/*_mghost->Draw();
-	_mspearguard->Draw();
-	_mbat->Draw();*/
 }
 
 

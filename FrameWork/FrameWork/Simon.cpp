@@ -14,6 +14,9 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 	_stateCurrent = STATE::IS_FALLING;
 	_vy = GRAVITY;
 	_box = Box(x, y, SIMON_WIDTH, SIMON_HEIGHT,_vx,_vy);
+	
+	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
+	_sptrite = new GSprite(simonTT, ANIMATIONRATE);
 }
 
 void Simon::MoveUpdate(float deltaTime)
@@ -62,7 +65,7 @@ void Simon::MoveUpdate(float deltaTime)
 			this->_y += int(this->_vy * deltaTime);
 			this->_x += int(this->_vx * deltaTime);
 			if (_vy < 0)
-				_vy += 0.05;
+				_vy += 0.5f;
 			else {
 				this->_stateCurrent = STATE::IS_FALLING;
 				_isFalling = true;
@@ -163,7 +166,17 @@ void Simon::SetFrame(float deltaTime)
 	}
 #pragma endregion
 }
-
+void Simon::Jump(){
+	if (!_isJumping){
+		this->_stateCurrent = STATE::IS_JUMPING;
+		_vy = -3.0f;
+		_isJumping = true;
+		if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_RIGHT))
+			this->_vx = SIMON_SPEED;
+		if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_LEFT))
+			this->_vx = -SIMON_SPEED;
+	}
+}
 void Simon::InputUpdate(float deltaTime)
 {
 #pragma region __KHONG_CO_SU_KIEN_PHIM__
@@ -186,52 +199,9 @@ void Simon::InputUpdate(float deltaTime)
 
 
 #pragma region __XU_LY_PHIM_NHAY__
-	//if (m_keyDown == DIK_X)
-	//{
-	//	if (this->m_stateCurrent != ON_GROUND::IS_FALL)
-	//	{
-	//		if (!this->m_isUnderWater)
-	//		{
-	//			if (!CInput::GetInstance()->IsKeyDown(DIK_DOWN) || this->m_stateCurrent == ON_GROUND::IS_JUMPING)
-	//			{
-	//				this->m_stateCurrent = ON_GROUND::IS_JUMPING;
-	//				//Duoc phep nhay
-	//				if (!this->m_isJumping)
-	//				{
-	//					this->m_isJumping = true;
-	//					this->m_vy = this->m_vyDefault;
-	//				}
-	//			}
-	//			else
-	//			{
-	//				if (this->m_allowFall)
-	//				{
-	//					//this->m_elapseTimeChangeFrame = 0.0f;
-	//					this->m_stateCurrent = ON_GROUND::IS_FALL;
-	//					//Duoc phep nhay, kiem tra them va cham voi doi tuong nen dat cho phep nhay
-	//					if (!this->m_isJumping)
-	//					{
-	//						this->m_pos.y -= 20; //Vuot qua va cham voi mat dat
-	//						this->m_isJumping = true;
-	//						this->m_vy = 0;
-	//					}
-	//				}
-	//			}
-	//		}
-	//	}
-	//}
 	if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_SPACE) )
 	{
-		if (!_isJumping){
-			this->_stateCurrent = STATE::IS_JUMPING;
-			_vy = -0.3;
-			_isJumping = true;
-			if (_isMoveright)
-				this->_vx = SIMON_SPEED;
-			if (_isMoveleft)
-				this->_vx = -SIMON_SPEED;
-
-		}
+		
 		
 	}
 #pragma endregion
