@@ -32,11 +32,15 @@ void State::draw(){
 			RECT srect;
 			srect.left = index*SIZE;
 			srect.top = 0;
-			srect.right = srect.left + SIZE;
+			srect.right = srect.left + SIZE ;
 			srect.bottom = srect.top + SIZE;
 
 			D3DXVECTOR3 position(float(j * SIZE), float(i * SIZE), 0.0f);
-
+			/*D3DXMATRIX mat;
+			D3DXVECTOR2 center((float)(j * SIZE * 2 + SIZE), (float)(i * SIZE * 2 + SIZE));
+			D3DXVECTOR2 scale = D3DXVECTOR2(2.0f, 2.0f);
+			D3DXMatrixTransformation2D(&mat, &center, 0.0f, &scale, NULL, 0.0f, NULL);
+			Graphics::getCurGraphics()->_sprite->SetTransform(&mat);*/
 			Graphics::getCurGraphics()->_sprite->Draw(
 				_bgTexture->Texture,
 				&srect,

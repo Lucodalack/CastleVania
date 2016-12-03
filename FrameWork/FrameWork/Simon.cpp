@@ -60,7 +60,7 @@ void Simon::MoveUpdate(float deltaTime)
 			this->_y += int(this->_vy * deltaTime);
 			this->_x += int(this->_vx * deltaTime);
 			if (_vy < 0)
-				_vy += 0.05;
+				_vy += 0.5f;
 			else {
 				this->_stateCurrent = STATE::IS_FALLING;
 				_isFalling = true;
@@ -162,7 +162,17 @@ void Simon::SetFrame(float deltaTime)
 	}
 #pragma endregion
 }
-
+void Simon::Jump(){
+	if (!_isJumping){
+		this->_stateCurrent = STATE::IS_JUMPING;
+		_vy = -3.0f;
+		_isJumping = true;
+		if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_RIGHT))
+			this->_vx = SIMON_SPEED;
+		if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_LEFT))
+			this->_vx = -SIMON_SPEED;
+	}
+}
 void Simon::InputUpdate(float deltaTime)
 {
 #pragma region __KHONG_CO_SU_KIEN_PHIM__
@@ -199,7 +209,7 @@ void Simon::InputUpdate(float deltaTime)
 #pragma region __XU_LY_PHIM_NHAY__
 	if (KeyBoard::getCurrentKeyBoard()->keySpace())
 	{
-		if (!_isJumping){
+		/*if (!_isJumping){
 			this->_stateCurrent = STATE::IS_JUMPING;
 			_vy = -0.3;
 			_isJumping = true;
@@ -207,8 +217,7 @@ void Simon::InputUpdate(float deltaTime)
 				this->_vx = SIMON_SPEED;
 			if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_LEFT))
 				this->_vx = -SIMON_SPEED;
-		}
-
+		}*/
 	}
 #pragma endregion
 

@@ -11,8 +11,8 @@
 
 #define SIMON_WIDTH			32
 #define SIMON_HEIGHT		64
-#define SIMON_SPEED			0.2f
-#define SIMON_JUMP_SPEED	0.7f
+#define SIMON_SPEED			2.0f
+#define SIMON_JUMP_SPEED	7.0f
 #define SIMON_ATTACK_RATE	100
 #define TYPE TypeGame::Boss_Simon
 #define SIMON_JUMPMAX 64
@@ -31,7 +31,7 @@ enum STATE
 	IS_UPFIGHT = 10, //LÊN CẦU THANG VỪA ĐÁH
 	IS_DOWNFIGHT =11, // VỪA XUỐNG CẦU THANG VỪA ĐÁNH.
 	IS_PASSGATE =12, // QUA MANF.
-	IS_FALLING =13
+	IS_FALLING = 13
 };
 
 class Simon : public GObject {
@@ -59,6 +59,7 @@ public:
 	void InputUpdate(float deltatime);
 	void Update(float deltatime);
 	void ChangeState(int state);
+	void Jump();
 	int GetState(){
 		return _stateCurrent;
 	}

@@ -4,9 +4,13 @@
 #include <InitGuid.h>
 
 #define KEYBOARD_BUFFER_SIZE 1024
+
 class KeyBoard
 {
 	static KeyBoard* _keyboard;
+	
+public:
+
 	LPDIRECTINPUT8 _input;
 	LPDIRECTINPUTDEVICE8 _inputDevice;
 	BYTE  _keyStates[256];
@@ -15,6 +19,8 @@ class KeyBoard
 	
 public:
 
+	DIDEVICEOBJECTDATA _KeyEvents[KEYBOARD_BUFFER_SIZE];
+
 	static KeyBoard* getCurrentKeyBoard();
 	
 	int InputKeyBoard();
@@ -22,7 +28,6 @@ public:
 	void PollKeyboard();
 	bool IsKeyDown(BYTE keyCode);
 	bool IsKeyUp(BYTE keyCode);
-
 
 	bool keyLeft();
 	bool keyRight();

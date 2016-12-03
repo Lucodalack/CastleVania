@@ -90,6 +90,8 @@ void KeyBoard::PollKeyboard()
 
 }
 
+
+
 bool KeyBoard::IsKeyDown(BYTE keyCode)
 {
 	return (_keyStates[keyCode] & 0x80) > 0;

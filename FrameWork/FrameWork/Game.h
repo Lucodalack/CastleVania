@@ -11,6 +11,7 @@
 #include <string>
 #include "Quadtree.h"
 #include "GObject.h"
+#include"KeyBoard.h"
 #include <vector>
 using namespace std;
 
@@ -35,9 +36,12 @@ public:
 	void GameLoad();
 	void GameRun(float deltatime);
 	void GameDraw();
-	void Collision();
-
+	void Collision(float deltatime);
+	void _ProcessKeyBoard();
 	void GameDrawParameter();
+
+	void OnKeyDown(int KeyCode);
+	void OnKeyUp(int KeyCode){}
 	Game(int screen_width, int screen_height);
 	Game();
 	~Game();

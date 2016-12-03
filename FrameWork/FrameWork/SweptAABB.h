@@ -21,7 +21,7 @@ public:
 	bool AABB(Box b1, Box b2, float& moveX, float& moveY);
 	// returns a box the spans both a current box and the destination box
 	Box GetSweptBroadphaseBox(Box b);
-	float SweptAABB(Box b1, Box b2, float& normalx, float& normaly);
+	float SweptAABB(Box b1, Box b2, float& normalx, float& normaly,float deltatime);
 	~CSweptAABB();
 };
 
