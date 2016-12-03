@@ -30,11 +30,6 @@ void Simon::MoveUpdate(float deltaTime)
 	else
 	{
 		
-
-		/*
-		}*/
-		
-		
 		if (this->_stateCurrent == STATE::IS_STANDING)
 		{
 			this->_vx = 0;
@@ -86,10 +81,11 @@ void Simon::SetFrame(float deltaTime)
 #pragma region __XU_LY_CHUYEN_DOI_FRAME__
 	if (!this->_isOnStair) //dang o duoi dat
 	{
+		this->_sptrite->_start = 0;
+		this->_sptrite->_end = 0;
 		switch (this->_stateCurrent)
 		{
 		case STATE::IS_STANDING:
-		case STATE::IS_FALLING:
 		{
 								   this->_sptrite->_start = 0;
 								   this->_sptrite->_end = 0;
@@ -170,26 +166,38 @@ void Simon::SetFrame(float deltaTime)
 void Simon::InputUpdate(float deltaTime)
 {
 #pragma region __KHONG_CO_SU_KIEN_PHIM__
+	
+	/*if (this->_isFighting){
+		this->_tmp += deltaTime;
+		if (this->_tmp < SIMON_ATTACK_RATE)
+			return;
+		else{
+			this->_tmp = 0;
+			this->_isFighting = false;
+		}
+	}*/
+	this->_keyDown = KeyBoard::getCurrentKeyBoard()->GetKeyDown();
+	this->_keyUp = KeyBoard::getCurrentKeyBoard()->GetKeyUp();
 	if (!this->_isJumping)
 	{
 		this->_vx = 0;
 		//this->_vy = 0;
-		
+
 		if (!this->_isOnStair)
 		{
 			//this->_stateCurrent = STATE::IS_FALLING;
 		}
 		else
 		{
-			
+
 		}
-		if (this->_stateCurrent != STATE::IS_FALLING) _stateCurrent = STATE::IS_STANDING;
+		if (this->_stateCurrent != STATE::IS_FALLING && !this->_isFighting)
+			_stateCurrent = STATE::IS_STANDING;
 	}
 #pragma endregion
 
-
 #pragma region __XU_LY_PHIM_NHAY__
-	if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_SPACE) )
+	if (KeyBoard::getCurrentKeyBoard()->keySpace())
 	{
 		if (!_isJumping){
 			this->_stateCurrent = STATE::IS_JUMPING;
@@ -200,16 +208,16 @@ void Simon::InputUpdate(float deltaTime)
 			if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_LEFT))
 				this->_vx = -SIMON_SPEED;
 		}
-		
+
 	}
 #pragma endregion
 
 #pragma region __XU_LY_PHIM_DI_QUA_TRAI_HOAC_PHAI__
-	if ((KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_LEFT) || KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_RIGHT))
+	if ((KeyBoard::getCurrentKeyBoard()->keyLeft() || KeyBoard::getCurrentKeyBoard()->keyRight())
 		&& this->_stateCurrent != STATE::IS_JUMPING&& this->_stateCurrent != STATE::IS_FALLING)
 	{
- 		this->_stateCurrent = STATE::IS_JOGGING;
-		if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_RIGHT))
+		this->_stateCurrent = STATE::IS_JOGGING;
+		if (KeyBoard::getCurrentKeyBoard()->keyRight())
 		{
 			this->_isMoveright = true;
 			this->_isMoveleft = false;
@@ -224,13 +232,60 @@ void Simon::InputUpdate(float deltaTime)
 	}
 #pragma endregion
 
+	//this->_stateCurrent = STATE::IS_FIGHTING;
+
+#pragma region __XU_LY_PHIM_DI_LEN_ XUONG__
+	if (KeyBoard::getCurrentKeyBoard()->keyUp()){
+		//chua lam
+	}
+	if (KeyBoard::getCurrentKeyBoard()->keyDown()){
+		if (_isOnStair){
+			this->_stateCurrent = STATE::IS_DOWNING;
+		}
+		else{
+			this->_stateCurrent = STATE::IS_SITTING;
+		}
+	}
+#pragma endregion
+
+#pragma region __XU_LY_PHIM_DANH__
+	if (KeyBoard::getCurrentKeyBoard()->keyC()){
+		switch (this->_stateCurrent)
+		{
+		case STATE::IS_JUMPING :
+			this->_stateCurrent = STATE::IS_JUMPFIGH;
+			break;
+		case STATE::IS_SITTING:
+			this->_stateCurrent = STATE::IS_SITFIGHT;
+			break;
+		case STATE::IS_DOWNING:
+			this->_stateCurrent = STATE::IS_DOWNFIGHT;
+			break;
+		case STATE::IS_UPING:
+			this->_stateCurrent = STATE::IS_UPFIGHT;
+			break;
+		default:
+			this->_stateCurrent = STATE::IS_FIGHTING;
+			break;
+		}
+		this->_isFighting = true;
+	}
+#pragma endregion
+
 }
 
 void Simon::Update(float deltatime){
+	/*_isFighting = (_stateCurrent == STATE::IS_FIGHTING || _stateCurrent == STATE::IS_JUMPFIGH || _stateCurrent == STATE::IS_DOWNFIGHT
+		|| _stateCurrent == STATE::IS_SITFIGHT || _stateCurrent == STATE::IS_UPFIGHT);
+*/
 	this->InputUpdate(deltatime);
-	this->MoveUpdate(deltatime);
 	this->SetFrame(deltatime);
+	this->MoveUpdate(deltatime);
+	
 	this->_sptrite->Update(deltatime);
+	if (_isFighting){
+		Whip::getCurrentWhip()->Update(deltatime);
+	}
 }
 
 void Simon::Draw(){
@@ -240,6 +295,7 @@ void Simon::Draw(){
 	else{
 		this->_sptrite->Draw(_x, _y);
 	}
+	Whip::getCurrentWhip()->Draw();
 }
 void Simon::ChangeState(int state){
 	this->_stateCurrent = state;

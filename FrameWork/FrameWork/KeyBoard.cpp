@@ -55,8 +55,15 @@ void KeyBoard::UpdateKeyboard()
 	for (int i = 0; i < 256; i++)
 	{
 		_keyStates[i] = keys[i];
+		if ((_keyStates[i] & 0x80) > 0){
+			_keyDown = i;
+		}
+		else{
+			_keyUp = i;
+		}
 	}
 }
+
 void KeyBoard::PollKeyboard()
 {
 	//_inputDevice->Poll();
