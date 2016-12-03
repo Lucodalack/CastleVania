@@ -7,7 +7,7 @@
 #include <d3dx9.h>
 #include "GSprite.h"
 #include "Box.h"
-#define GRAVITY			0.2f
+#define GRAVITY			2.0f
 
 enum TypeGame {
 	Boss_Bat = 0,

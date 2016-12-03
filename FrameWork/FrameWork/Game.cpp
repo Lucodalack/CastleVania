@@ -32,20 +32,20 @@ void Game::GameLoad()
 	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
 	//GSprite tamp(backgroundTT,10);
 	Simon::getCurrentSimon()->_sptrite = new GSprite(simonTT, 10);
-	_bricks = new Bricks(0, 300, 2000, 32);
+	_bricks = new Bricks(0, 250, 2000, 32);
 	Quadtree::getCurrentQuadtree()->load();
-	//GCamera::getCurrentCamera()->Follow();
+	GCamera::getCurrentCamera()->Follow();
 
 	/*_mghost = new Ghost(0, 302, 300, 302);
 	_mspearguard = new Spearguard(100, 302, 300, 302);
 	_mbat = new Bat(50, 280, 400, 280);*/
 }
-void Game::Collision()
+void Game::Collision(float deltatime)
 {
 	float x, y;
-	if (Simon::getCurrentSimon()->_box.y> 200)
+	if (Simon::getCurrentSimon()->_box.y> 70)
 		int a = 0;
-	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y);
+	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y, deltatime);
 	if (x == 0 && y == -1){
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
 		//_mbat->ChangeState(BATSATE::IsAwake);
@@ -63,12 +63,12 @@ void Game::GameRun(float deltatime)
 	KeyBoard::getCurrentKeyBoard()->UpdateKeyboard();
 	Simon::getCurrentSimon()->Update(deltatime); 
 	if (Simon::getCurrentSimon()->_x > 250) GCamera::getCurrentCamera()->Follow();
-	else
+	/*else
 	{
 		GCamera::getCurrentCamera()->Unfollow();
-	}
+	}*/
 	GCamera::getCurrentCamera()->Update();
-	Collision();
+	Collision(deltatime);
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
 	for each(GObject* tamp in listObject){

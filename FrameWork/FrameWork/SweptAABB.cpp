@@ -5,11 +5,12 @@ CSweptAABB::CSweptAABB()
 {
 }
 
-float CSweptAABB::SweptAABB(Box b1, Box b2, float& normalx, float& normaly)
+float CSweptAABB::SweptAABB(Box b1, Box b2, float& normalx, float& normaly, float deltatime)
 {
 	float xInvEntry, yInvEntry;
 	float xInvExit, yInvExit;
 
+	int a = 0;
 	// find the distance between the objects on the near and far sides for both x and y
 	if (b1.vx > 0.0f)
 	{
@@ -44,8 +45,8 @@ float CSweptAABB::SweptAABB(Box b1, Box b2, float& normalx, float& normaly)
 	}
 	else
 	{
-		xEntry = xInvEntry / b1.vx;
-		xExit = xInvExit / b1.vx;
+		xEntry = xInvEntry / (b1.vx*deltatime);
+		xExit = xInvExit / (b1.vx*deltatime);
 	}
 
 	if (b1.vy == 0.0f)
@@ -55,8 +56,8 @@ float CSweptAABB::SweptAABB(Box b1, Box b2, float& normalx, float& normaly)
 	}
 	else
 	{
-		yEntry = yInvEntry / b1.vy;
-		yExit = yInvExit / b1.vy;
+		yEntry = yInvEntry /( b1.vy*deltatime);
+		yExit = yInvExit / (b1.vy*deltatime);
 	}
 
 	// find the earliest/latest times of collision

@@ -15,7 +15,7 @@ int WINAPI WinMain(
 	ZeroMemory(&msg, sizeof(msg));
 	
 	DWORD frame_start = GetTickCount();
-	DWORD count_per_frame = 1000 / FRAME_RATE;
+	DWORD count_per_frame = 100 / FRAME_RATE;
 
 	while (true)
 	{

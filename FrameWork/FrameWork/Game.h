@@ -39,7 +39,7 @@ public:
 	void GameLoad();
 	void GameRun(float deltatime);
 	void GameDraw();
-	void Collision();
+	void Collision(float deltatime);
 
 	void GameDrawParameter();
 	Game(int screen_width, int screen_height);
