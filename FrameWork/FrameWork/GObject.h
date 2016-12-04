@@ -49,8 +49,9 @@ enum TypeGame {
 	Item_spirit_ball = 35,
 	Item_none = 36,
 
-
-	Other_kill = 37
+	
+	Other_kill = 37,
+	MxD = 38
 };
 
 class GObject {

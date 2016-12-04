@@ -4,17 +4,17 @@
 
 #include "GObject.h"
 #include "GSprite.h"
+#include "Whip.h"
 
 
 #define SIMON_SPRITE L"simon.png"
 
 #define SIMON_WIDTH			32
 #define SIMON_HEIGHT		64
-
 #define SIMON_SPEED			2.0f
 #define SIMON_JUMP_SPEED	7.0f
-#define SIMON_ATTACK_RATE	10
-#define TYPE 2
+#define SIMON_ATTACK_RATE	100
+#define TYPE TypeGame::Boss_Simon
 #define SIMON_JUMPMAX 64
 
 enum STATE
@@ -31,7 +31,7 @@ enum STATE
 	IS_UPFIGHT = 10, //LÊN CẦU THANG VỪA ĐÁH
 	IS_DOWNFIGHT =11, // VỪA XUỐNG CẦU THANG VỪA ĐÁNH.
 	IS_PASSGATE =12, // QUA MANF.
-	IS_FALLING =13 // DANG ROI XUONG.
+	IS_FALLING = 13
 };
 
 class Simon : public GObject {
@@ -45,6 +45,10 @@ private:
 	bool _isOnStair; // dang o tren cau thang hay k
 	bool _isJumping; //dang nhay
 	bool _isFalling;// dang roi xuong
+	bool _isFighting; // danh danh nhau nek
+	int _keyDown; // lưu phím vừa được nhấn.
+	int _keyUp;
+	float _tmp = 0;
 
 public:
 	GSprite* _sptrite;
@@ -60,6 +64,9 @@ public:
 		return _stateCurrent;
 	}
 	void Draw();
+	bool isFighting(){ return _isFighting; }
+	bool isMoveRight(){ return _isMoveright; }
+	bool isMoveLeft(){ return _isMoveleft; }
 	Simon();
 	~Simon();
 };
