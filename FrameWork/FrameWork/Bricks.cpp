@@ -1,6 +1,8 @@
 #include"Bricks.h"
 
-Bricks::Bricks(){}
+Bricks::Bricks(){
+	swepyAABB = new CSweptAABB();
+}
 Bricks::~Bricks(){}
 Bricks::Bricks(int x, int y, int w, int h)
 :GObject(11, x, y, w, h){
@@ -28,9 +30,21 @@ Bricks::Bricks(int x, int y, int w, int h)
 		}
 	}
 	_box = Box(x, y, w, h, 0, 0);
+	swepyAABB = new CSweptAABB();
 }
 void Bricks::Draw(){
 
 	for each (Brick * b in _listBrick)
 		b->Draw();
+}
+void Bricks::Collistion(float deltatime){
+	float x, y;
+	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, this->_box, x, y, deltatime);
+	if (x == 0 && y == -1){
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+	}
+	else if (Simon::getCurrentSimon()->GetState() == STATE::IS_JOGGING)
+	{
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
+	}
 }

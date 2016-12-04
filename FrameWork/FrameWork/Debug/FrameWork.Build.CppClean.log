@@ -1,6 +1,5 @@
 e:\castlevania\castlevania\framework\framework\debug\vc120.pdb
 e:\castlevania\castlevania\framework\framework\debug\vc120.idb
-e:\castlevania\castlevania\framework\framework\debug\source.obj
 e:\castlevania\castlevania\framework\framework\debug\game.obj
 e:\castlevania\castlevania\framework\framework\debug\gobject.obj
 e:\castlevania\castlevania\framework\framework\debug\simon.obj
@@ -17,10 +16,10 @@ e:\castlevania\castlevania\framework\framework\debug\sweptaabb.obj
 e:\castlevania\castlevania\framework\framework\debug\state.obj
 e:\castlevania\castlevania\framework\framework\debug\surface.obj
 e:\castlevania\castlevania\framework\framework\debug\trap.obj
+e:\castlevania\castlevania\framework\framework\debug\whip.obj
 e:\castlevania\castlevania\framework\framework\debug\windows.obj
 e:\castlevania\castlevania\framework\framework\debug\gsprite.obj
 e:\castlevania\castlevania\framework\framework\debug\gtexture.obj
-e:\castlevania\castlevania\framework\framework\debug\fireandle.obj
 e:\castlevania\castlevania\framework\framework\debug\cross.obj
 e:\castlevania\castlevania\framework\framework\debug\doubleshot.obj
 e:\castlevania\castlevania\framework\framework\debug\enemy.obj
@@ -40,6 +39,7 @@ e:\castlevania\castlevania\framework\framework\debug\morningstar.obj
 e:\castlevania\castlevania\framework\framework\debug\roast.obj
 e:\castlevania\castlevania\framework\framework\debug\rosary.obj
 e:\castlevania\castlevania\framework\framework\debug\smallheart.obj
+e:\castlevania\castlevania\framework\framework\debug\source.obj
 e:\castlevania\castlevania\framework\framework\debug\axe.obj
 e:\castlevania\castlevania\framework\framework\debug\bat.obj
 e:\castlevania\castlevania\framework\framework\debug\bigheart.obj
@@ -47,7 +47,7 @@ e:\castlevania\castlevania\framework\framework\debug\brick.obj
 e:\castlevania\castlevania\framework\framework\debug\bricks.obj
 e:\castlevania\castlevania\framework\framework\debug\brickhidden.obj
 e:\castlevania\castlevania\framework\framework\debug\brickmoving.obj
-e:\castlevania\castlevania\framework\framework\debug\whip.obj
+e:\castlevania\castlevania\framework\framework\debug\fireandle.obj
 e:\castlevania\castlevania\framework\debug\framework.ilk
 e:\castlevania\castlevania\framework\debug\framework.exe
 e:\castlevania\castlevania\framework\debug\framework.pdb

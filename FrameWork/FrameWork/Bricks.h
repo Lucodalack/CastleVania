@@ -7,14 +7,18 @@
 #include "GObject.h"
 #include "GSprite.h"
 #include "Brick.h"
+#include "Simon.h"
+#include "SweptAABB.h"
 using namespace std;
 class Bricks :public GObject{
 private:
 	vector<Brick*> _listBrick;
 
+	CSweptAABB* swepyAABB;
 public:
 	Bricks();
-	Bricks(int x, int y, int w, int h);
+	Bricks(int x, int y, int w, int h); 
+	void Collistion(float deltatime);
 	void Draw();
 	~Bricks();
 };

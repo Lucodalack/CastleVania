@@ -30,28 +30,18 @@ void Game::GameLoad()
 	_mybackground = new GSprite(backgroundTT, 10);
 	/*map = new Map(L"Image\\Map.png");*/
 	
-	_bricks = new Bricks(0, 250, 2000, 32);
+	//_bricks = new Bricks(0, 1570, 5000, 32);
 	Quadtree::getCurrentQuadtree()->load();
 	GCamera::getCurrentCamera()->Follow();
 
 }
 
 void Game::Collision(float deltatime)
-{
-	float x, y;
-	
-	if (Simon::getCurrentSimon()->_box.y> 70)
-		int a = 0;
-	
-	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, _bricks->_box, x, y, deltatime);
-	if (x == 0 && y == -1){
-		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
-	}
-	else if (Simon::getCurrentSimon()->GetState()==STATE::IS_JOGGING)
-	{
-		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
-	}
-	
+{	
+	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
+	for each(GObject* tamp in listObject){
+		tamp->Collistion(deltatime);
+	}	
 }
 void Game::_ProcessKeyBoard()
 {
@@ -98,12 +88,12 @@ void Game::GameRun(float deltatime)
 	}*/
 	GCamera::getCurrentCamera()->Update();
 
-	Collision(deltatime);
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
 	for each(GObject* tamp in listObject){
 		tamp->Update(deltatime);
 	}
+	Collision(deltatime);
 }
 
 void Game::GameDraw()
@@ -115,7 +105,7 @@ void Game::GameDraw()
 	
 	State::getCurrentState()->draw();
 	Simon::getCurrentSimon()->Draw();
-	_bricks->Draw();
+	//_bricks->Draw();
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
 	for each(GObject* tamp in listObject){
