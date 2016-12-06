@@ -2,7 +2,8 @@
 #define __ITEMNONE_H__
 
 #include "Item.h"
-
+#define _WIDTH	0
+#define _HEIGHT	0
 #define _SPRITE L"item/7.png"
 #define TYPE TypeGame::Item_none
 

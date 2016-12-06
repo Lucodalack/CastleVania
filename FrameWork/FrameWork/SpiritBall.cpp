@@ -8,6 +8,7 @@ Item(TYPE, x, y, x2, y2)
 	GTexture* texture = new GTexture(_SPRITE, 2, 1, 2);
 	_sprite = new GSprite(texture, ANIMATIONRATE);
 	this->SetFrame(0);
+	_box = Box(x, y, _WIDTH, _HEIGHT, _vx, _vy);
 }
 void SpiritBall::SetFrame(float deltaTime)
 {

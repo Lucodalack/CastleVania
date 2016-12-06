@@ -18,6 +18,7 @@ Item(TYPE, x, y, x2, y2)
 		_doubleshotcolor = DoubleShotColor::ShotRed;
 	}
 	this->SetFrame(0); // nếu chỉ có 1 ô hình thì quất thế này luôn cho nhanh.
+	_box = Box(x, y, _WIDTH, _HEIGHT, _vx, _vy);
 }
 
 DoubleShot::~DoubleShot(){

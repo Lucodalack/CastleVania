@@ -2,7 +2,8 @@
 #define __MONEYBAG_H__	
 
 #include "Item.h"
-
+#define _WIDTH	30
+#define _HEIGHT	30
 #define _SPRITE L"item/2.png"
 #define TYPE TypeGame::Item_money_bag
 

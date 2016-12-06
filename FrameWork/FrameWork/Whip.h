@@ -2,17 +2,18 @@
 #define __Whip_H__
 
 #include "Simon.h"
-#define _WIDTH 64
-#define _HEIGHT 64
-//#define _SPRITE L"morningstar.png"
-#define _SPRITE L"morningstar.png"
+//cai nay cung vay
+#define _WIDTH 160
+#define _HEIGHT 51
+#define _SPRITE_LEFT L"morningstar_left.png"
+#define _SPRITE_RIGHT L"morningstar_right.png"
 #define TYPE TypeGame::MxD
 class Whip : public GObject {
 private:
 	bool _turnlef;
 	static Whip* _whip;
 public:
-	GSprite* _sprite;
+	GSprite* _sprite_right, *_sprite_left;
 	Whip(int x, int y);
 	static Whip* getCurrentWhip();
 	void MoveUpdate(float deltatime);

@@ -76,6 +76,9 @@ void Game::OnKeyDown(int KeyCode)
 	{
 	case DIK_SPACE:
   		Simon::getCurrentSimon()->Jump(); break;
+	case DIK_C:
+		Simon::getCurrentSimon()->Fight();
+		break;
 	}
 }
 void Game::GameRun(float deltatime)

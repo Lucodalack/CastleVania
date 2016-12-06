@@ -2,7 +2,8 @@
 #define __BIGHEART_H__
 
 #include "Item.h"
-
+#define _WIDTH	24
+#define _HEIGHT	20
 #define _SPRITE L"item/1.png"
 #define TYPE TypeGame::Item_big_heart
 

@@ -2,7 +2,8 @@
 #define __AXE_H__
 
 #include "Item.h"
-
+#define _WIDTH	30
+#define _HEIGHT	28
 #define _SPRITE L"item/7.png"
 #define TYPE TypeGame::Item_axe
 

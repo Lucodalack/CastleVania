@@ -6,7 +6,7 @@
 #include "Simon.h"
 
 #define _batWIDTH	32
-#define _batHEIGHT	64
+#define _batHEIGHT	32
 #define _batSPEED	0.2f
 #define BAT_SPRITE L"enemy/0.png"
 #define TYPE TypeGame::Enemy_Bat

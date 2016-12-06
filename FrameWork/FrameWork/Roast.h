@@ -2,7 +2,8 @@
 #define __ROAST_H__	
 
 #include "Item.h"
-
+#define _WIDTH	32
+#define _HEIGHT	26
 #define _SPRITE L"item/10.png"
 #define TYPE TypeGame::Item_roast
 

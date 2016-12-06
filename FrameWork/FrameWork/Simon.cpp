@@ -6,7 +6,7 @@ Simon* Simon::_simon = 0;
 Simon::Simon(int x, int y) :
 GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 {
-	_isMoveleft = false;
+	_isMoveleft = true;
 	_isMoveright = false;
 	_isOnStair = false;
 	_isJumping = false;
@@ -16,12 +16,14 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 	_box = Box(x, y, SIMON_WIDTH, SIMON_HEIGHT,_vx,_vy);
 	
 	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
-	_sptrite = new GSprite(simonTT, ANIMATIONRATE);
+	_sptrite = new GSprite(simonTT, SIMON_Animation_RATE);
 }
 
 void Simon::MoveUpdate(float deltaTime)
 {
 #pragma region __XU_LY_CHUYEN_DONG__
+	if (this->_isFighting) return;
+
 	//Kiem tra doi tuong co nhay duoc hay ko
 	if (this->_isOnStair)
 	{
@@ -78,7 +80,9 @@ void Simon::MoveUpdate(float deltaTime)
 
 void Simon::SetFrame(float deltaTime)
 {
+
 #pragma region __XU_LY_CHUYEN_DOI_FRAME__
+
 	if (!this->_isOnStair) //dang o duoi dat
 	{
 		this->_sptrite->_start = 0;
@@ -164,7 +168,13 @@ void Simon::SetFrame(float deltaTime)
 }
 void Simon::Jump(){
 	if (!_isJumping){
-		this->_stateCurrent = STATE::IS_JUMPING;
+		if (this->_isFighting){
+			this->_stateCurrent = STATE::IS_JUMPFIGH;
+		}
+		else
+		{
+			this->_stateCurrent = STATE::IS_JUMPING;
+		}
 		_vy = -3.0f;
 		_isJumping = true;
 		if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_RIGHT))
@@ -173,19 +183,41 @@ void Simon::Jump(){
 			this->_vx = -SIMON_SPEED;
 	}
 }
+
+void Simon::Fight(){
+#pragma region __XU_LY_PHIM_DANH__
+	if (!this->_isFighting)
+	{
+		switch (this->_stateCurrent)
+		{
+		case STATE::IS_JUMPING:
+			this->_stateCurrent = STATE::IS_JUMPFIGH;
+			break;
+		case STATE::IS_SITTING:
+			this->_stateCurrent = STATE::IS_SITFIGHT;
+			break;
+		case STATE::IS_DOWNING:
+			this->_stateCurrent = STATE::IS_DOWNFIGHT;
+			break;
+		case STATE::IS_UPING:
+			this->_stateCurrent = STATE::IS_UPFIGHT;
+			break;
+		default:
+			this->_stateCurrent = STATE::IS_FIGHTING;
+			break;
+		}
+		this->_isFighting = true;
+	}
+#pragma endregion
+}
+
 void Simon::InputUpdate(float deltaTime)
 {
+	if (this->_isFighting){
+		return;
+	}
 #pragma region __KHONG_CO_SU_KIEN_PHIM__
 	
-	/*if (this->_isFighting){
-		this->_tmp += deltaTime;
-		if (this->_tmp < SIMON_ATTACK_RATE)
-			return;
-		else{
-			this->_tmp = 0;
-			this->_isFighting = false;
-		}
-	}*/
 	this->_keyDown = KeyBoard::getCurrentKeyBoard()->GetKeyDown();
 	this->_keyUp = KeyBoard::getCurrentKeyBoard()->GetKeyUp();
 	if (!this->_isJumping)
@@ -206,20 +238,6 @@ void Simon::InputUpdate(float deltaTime)
 	}
 #pragma endregion
 
-#pragma region __XU_LY_PHIM_NHAY__
-	if (KeyBoard::getCurrentKeyBoard()->keySpace())
-	{
-		/*if (!_isJumping){
-			this->_stateCurrent = STATE::IS_JUMPING;
-			_vy = -0.3;
-			_isJumping = true;
-			if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_RIGHT))
-				this->_vx = SIMON_SPEED;
-			if (KeyBoard::getCurrentKeyBoard()->IsKeyDown(DIK_LEFT))
-				this->_vx = -SIMON_SPEED;
-		}*/
-	}
-#pragma endregion
 
 #pragma region __XU_LY_PHIM_DI_QUA_TRAI_HOAC_PHAI__
 	if ((KeyBoard::getCurrentKeyBoard()->keyLeft() || KeyBoard::getCurrentKeyBoard()->keyRight())
@@ -257,36 +275,11 @@ void Simon::InputUpdate(float deltaTime)
 	}
 #pragma endregion
 
-#pragma region __XU_LY_PHIM_DANH__
-	if (KeyBoard::getCurrentKeyBoard()->keyC()){
-		switch (this->_stateCurrent)
-		{
-		case STATE::IS_JUMPING :
-			this->_stateCurrent = STATE::IS_JUMPFIGH;
-			break;
-		case STATE::IS_SITTING:
-			this->_stateCurrent = STATE::IS_SITFIGHT;
-			break;
-		case STATE::IS_DOWNING:
-			this->_stateCurrent = STATE::IS_DOWNFIGHT;
-			break;
-		case STATE::IS_UPING:
-			this->_stateCurrent = STATE::IS_UPFIGHT;
-			break;
-		default:
-			this->_stateCurrent = STATE::IS_FIGHTING;
-			break;
-		}
-		this->_isFighting = true;
-	}
-#pragma endregion
 
 }
 
 void Simon::Update(float deltatime){
-	/*_isFighting = (_stateCurrent == STATE::IS_FIGHTING || _stateCurrent == STATE::IS_JUMPFIGH || _stateCurrent == STATE::IS_DOWNFIGHT
-		|| _stateCurrent == STATE::IS_SITFIGHT || _stateCurrent == STATE::IS_UPFIGHT);
-*/
+
 	this->InputUpdate(deltatime);
 	this->SetFrame(deltatime);
 	this->MoveUpdate(deltatime);

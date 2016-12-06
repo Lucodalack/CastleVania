@@ -8,6 +8,7 @@ Item(TYPE, x, y, x2, y2)
 	GTexture* texture = new GTexture(_SPRITE, 3, 1, 3);
 	_sprite = new GSprite(texture, ANIMATIONRATE);
 	this->_moneycolor = (int)(100*time(NULL)) % 3; //randome mau
+	_box = Box(x, y, _WIDTH, _HEIGHT, _vx, _vy);
 }
 void MoneyBag::SetFrame(float deltaTime)
 {

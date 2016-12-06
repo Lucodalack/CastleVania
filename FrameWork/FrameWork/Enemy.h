@@ -4,13 +4,10 @@
 
 #include "GObject.h"
 #include "GSprite.h"
-
-
-
 #define _WIDTH	32
 #define _HEIGHT	64
 #define _SPEED	0.1f
-#define _ATTACK_RATE	10
+#define _ATTACK_RATE	33
 
 class Enemy : public GObject {
 protected:

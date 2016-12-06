@@ -8,6 +8,7 @@ GSprite::GSprite()
 	_timeAni = 0;
 	_index = 0;
 	_timeLocal = 0;
+	Done = -1;
 }
 
 GSprite::GSprite(const GSprite &sprite)
@@ -72,13 +73,14 @@ void GSprite::Update(int ellapseTime)
 	{
 		_timeLocal = 0;
 		this->Next();
+		Done = (Done + 1) % 3;
 	}
 }
 
 void GSprite::Draw(int X, int Y)
 {
 	RECT srect;
-
+	if (_index < _start) _index = _start;
 	srect.left = (_index % _texture->Cols)*(_texture->FrameWidth);// + 1;
 	srect.top = (_index / _texture->Cols)*(_texture->FrameHeight);// + 1;
 	srect.right = srect.left + _texture->FrameWidth;

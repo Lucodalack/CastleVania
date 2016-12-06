@@ -5,7 +5,7 @@
 #include "Enemy.h"
 
 #define _medusaheadWIDTH	32
-#define _medusaheadHEIGHT	64
+#define _medusaheadHEIGHT	32
 #define _medusaheadSPEED	0.2f
 #define MEDUSAHEAD_SPRITE L"enemy/6.png"
 #define TYPE TypeGame::Enemy_Bat

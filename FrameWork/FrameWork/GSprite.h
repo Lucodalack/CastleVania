@@ -15,6 +15,7 @@ public:
 	int _index;		//frame hiện tại
 	int _timeAni;	//thời gian chuyển frame
 	int _timeLocal;	//biến hỗ trợ đếm thời gian
+	int Done; //ho tro cai roi
 
 	GSprite();
 	GSprite(const GSprite &sprite);

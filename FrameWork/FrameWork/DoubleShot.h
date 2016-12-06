@@ -2,7 +2,8 @@
 #define __DOUBLESHOT_H__
 
 #include "Item.h"
-
+#define _WIDTH	42
+#define _HEIGHT	42
 #define _SPRITE_BLUE L"item/11.png" 
 #define _SPRITE_RED L"item/12.png" 
 #define TYPE TypeGame::Item_double_shot

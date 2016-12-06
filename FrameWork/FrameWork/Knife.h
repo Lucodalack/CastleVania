@@ -2,7 +2,8 @@
 #define __KNIFE_H__	
 
 #include "Item.h"
-
+#define _WIDTH	32
+#define _HEIGHT	18
 #define _SPRITE L"item/4.png"
 #define TYPE TypeGame::Item_knife
 

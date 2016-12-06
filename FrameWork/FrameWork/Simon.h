@@ -9,11 +9,11 @@
 
 #define SIMON_SPRITE L"simon.png"
 
-#define SIMON_WIDTH			32
-#define SIMON_HEIGHT		64
+#define SIMON_WIDTH			60
+#define SIMON_HEIGHT		66
 #define SIMON_SPEED			1.2f
 #define SIMON_JUMP_SPEED	5.0f
-#define SIMON_ATTACK_RATE	100
+#define SIMON_Animation_RATE	ANIMATIONRATE
 #define TYPE TypeGame::Boss_Simon
 #define SIMON_JUMPMAX 64
 
@@ -59,7 +59,9 @@ public:
 	void InputUpdate(float deltatime);
 	void Update(float deltatime);
 	void ChangeState(int state);
+	void ChangeState(float deltatime){ _isFighting = false; SetFrame(deltatime); }
 	void Jump();
+	void Fight();
 	int GetState(){
 		return _stateCurrent;
 	}

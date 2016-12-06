@@ -4,7 +4,8 @@
 #include "GObject.h"
 #include "GSprite.h"
 #include "Item.h"
-
+#define _WIDTH	30
+#define _HEIGHT	28
 #define _SPRITE L"item/8.png"
 #define TYPE TypeGame::Item_cross
 
