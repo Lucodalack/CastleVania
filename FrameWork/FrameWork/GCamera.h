@@ -12,13 +12,13 @@ private:
 	D3DXMATRIX orthographicMatrix;
 	D3DXMATRIX identityMatrix;
 	D3DXMATRIX viewMatrix;
-	int width;
-	int height;
 	Simon* following;
 public:
-	GCamera(int width, int height);
+	GCamera(int width, int height,int x,int y);
 
-
+	int x, y;
+	int width;
+	int height;
 	//Game Functions
 	void Update();
 	void Follow();

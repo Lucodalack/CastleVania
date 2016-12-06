@@ -32,7 +32,8 @@ void Game::GameLoad()
 	
 	//_bricks = new Bricks(0, 1570, 5000, 32);
 	Quadtree::getCurrentQuadtree()->load();
-	GCamera::getCurrentCamera()->Follow();
+	GCamera::getCurrentCamera()->x = 3584;
+	GCamera::getCurrentCamera()->y = 1248;
 
 }
 
@@ -81,7 +82,7 @@ void Game::GameRun(float deltatime)
 {
 	KeyBoard::getCurrentKeyBoard()->UpdateKeyboard();
 	Simon::getCurrentSimon()->Update(deltatime); 
-	if (Simon::getCurrentSimon()->_x > 250) GCamera::getCurrentCamera()->Follow();
+	//if (Simon::getCurrentSimon()->_x > 250) GCamera::getCurrentCamera()->Follow();
 	/*else
 	{
 		GCamera::getCurrentCamera()->Unfollow();

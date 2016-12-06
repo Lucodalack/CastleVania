@@ -1,6 +1,7 @@
 #include"Rect.h"
 #include"GObject.h"
 #include"Simon.h"
+#include "GCamera.h"
 #include <vector>
 using namespace std;
 class QuadNode{

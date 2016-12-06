@@ -5,10 +5,10 @@ QuadNode::QuadNode(){
 QuadNode::~QuadNode(){}
 bool QuadNode::IsContain(){
 
-	return !(Simon::getCurrentSimon()->_x + SIMON_WIDTH < bound->x ||
-		Simon::getCurrentSimon()->_y + SIMON_HEIGHT < bound->y ||
-		Simon::getCurrentSimon()->_x > bound->x + bound->witdh ||
-		Simon::getCurrentSimon()->_y > bound->y + bound->height);
+	return !(GCamera::getCurrentCamera()->x + 515 < bound->x ||
+		GCamera::getCurrentCamera()->y + 350 < bound->y ||
+		GCamera::getCurrentCamera()->x > bound->x + bound->witdh ||
+		GCamera::getCurrentCamera()->y > bound->y + bound->height);
 }
 void QuadNode::Retrieve(vector<GObject*>& listGObject){
 	if (_nodeTL){
