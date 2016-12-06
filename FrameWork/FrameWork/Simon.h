@@ -11,8 +11,8 @@
 
 #define SIMON_WIDTH			32
 #define SIMON_HEIGHT		64
-#define SIMON_SPEED			2.0f
-#define SIMON_JUMP_SPEED	7.0f
+#define SIMON_SPEED			1.2f
+#define SIMON_JUMP_SPEED	5.0f
 #define SIMON_ATTACK_RATE	100
 #define TYPE TypeGame::Boss_Simon
 #define SIMON_JUMPMAX 64

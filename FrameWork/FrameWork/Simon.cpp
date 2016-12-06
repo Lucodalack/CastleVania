@@ -33,7 +33,7 @@ void Simon::MoveUpdate(float deltaTime)
 		if (this->_stateCurrent == STATE::IS_STANDING)
 		{
 			this->_vx = 0;
-			//this->_vy = 0;
+			_vy = GRAVITY;
 		}
 		else
 		{
@@ -59,8 +59,8 @@ void Simon::MoveUpdate(float deltaTime)
 		if (this->_stateCurrent == STATE::IS_JUMPING){
 			this->_y += int(this->_vy * deltaTime);
 			this->_x += int(this->_vx * deltaTime);
-			if (_vy < 0)
-				_vy += 0.5f;
+			if (_vy < -0.3)
+				_vy += 0.2f;
 			else {
 				this->_stateCurrent = STATE::IS_FALLING;
 				_isFalling = true;

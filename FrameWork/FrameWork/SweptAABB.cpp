@@ -87,9 +87,9 @@ float CSweptAABB::SweptAABB(Box b1, Box b2, float& normalx, float& normaly, floa
 				normaly = 0.0f;
 			}
 		}
-		else
+		else if ((b1.x >= b2.x&&b1.x <= (b2.x + b2.w) || (((b1.x + b1.w) >= b2.x && (b1.x + b1.w) <= (b2.x + b2.w)))))
 		{
-			if (yInvEntry < 0.0f)
+			if ((yInvEntry < 0.0f))
 			{
 				normalx = 0.0f;
 				normaly = 1.0f;
