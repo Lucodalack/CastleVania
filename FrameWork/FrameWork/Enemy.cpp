@@ -12,6 +12,7 @@ GObject(type,x, y, _WIDTH, _HEIGHT)
 	_activeArea.left = x;
 	_activeArea.right = x2;
 	_activeArea.bottom = y2;
+	swepyAABB = new CSweptAABB();
 	this->SetFrame(0);
 }
 
@@ -32,6 +33,7 @@ void Enemy::MoveUpdate(float deltaTime)
 	}
 
 	this->_x += int(this->_vx * deltaTime);
+	int a = 0;
 #pragma endregion
 	_box.x = _x;
 	_box.y = _y;
@@ -47,9 +49,15 @@ void Enemy::SetFrame(float deltaTime)
 }
 
 void Enemy::Update(float deltatime){
+	if (_hp == 0) 
+		this->_isDead = true;
+	if (this->_isDead){
+		return;
+	}
 	this->MoveUpdate(deltatime);
 	this->_sprite->Update(deltatime);
 }
+
 
 void Enemy::Draw(){
 	if (this->_isDead){

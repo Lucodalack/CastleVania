@@ -3,8 +3,8 @@
 
 #include "Simon.h"
 //cai nay cung vay
-#define _WIDTH 160
-#define _HEIGHT 51
+#define _WIDTH 61
+#define _HEIGHT 49
 #define _SPRITE_LEFT L"morningstar_left.png"
 #define _SPRITE_RIGHT L"morningstar_right.png"
 #define TYPE TypeGame::MxD

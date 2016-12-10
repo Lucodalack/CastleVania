@@ -39,8 +39,20 @@ void Bricks::Draw(){
 }
 void Bricks::Collistion(float deltatime){
 	float x, y;
-	swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, this->_box, x, y, deltatime);
+	/*swepyAABB->SweptAABB(Simon::getCurrentSimon()->_box, this->_box, x, y, deltatime);
 	if (x == 0 && y == -1){
+		if (Simon::getCurrentSimon()->isFighting()){
+			Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
+		}
+		else{
+			Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+		}
+	}
+	else if (Simon::getCurrentSimon()->GetState() == STATE::IS_JOGGING)
+	{
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
+	}*/
+	if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
 		if (Simon::getCurrentSimon()->isFighting()){
 			Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
 		}

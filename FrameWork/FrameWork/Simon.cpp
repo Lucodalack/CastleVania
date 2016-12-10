@@ -312,7 +312,7 @@ void Simon::ChangeState(int state){
 
 Simon* Simon::getCurrentSimon(){
 	if (!_simon)
-		_simon = new Simon(3700, 1400);
+		_simon = new Simon(3850, 1299);
 	return _simon;
 }
 

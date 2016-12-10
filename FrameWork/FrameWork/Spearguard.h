@@ -3,10 +3,12 @@
 
 
 #include "Enemy.h"
+#include "Whip.h"
 
-#define _guardWIDTH	32
+#define _guardWIDTH	44
 #define _guardHEIGHT	64
-#define _guardSPEED	0.2f
+#define _guardSPEED	0.7f
+#define HP 1
 #define SPEARGAURD_SPRITE L"enemy/5.png"
 #define TYPE TypeGame::Enemy_Spearguard
 
@@ -16,6 +18,7 @@ private:
 public:
 	Spearguard(int x, int y, int x2, int y2);
 	void SetFrame(float deltaTime);
+	void Collistion(float deltatime);
 	Spearguard();
 	~Spearguard();
 };

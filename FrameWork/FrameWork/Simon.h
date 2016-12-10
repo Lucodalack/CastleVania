@@ -9,8 +9,8 @@
 
 #define SIMON_SPRITE L"simon.png"
 
-#define SIMON_WIDTH			60
-#define SIMON_HEIGHT		66
+#define SIMON_WIDTH			32
+#define SIMON_HEIGHT		64
 #define SIMON_SPEED			1.2f
 #define SIMON_JUMP_SPEED	5.0f
 #define SIMON_Animation_RATE	ANIMATIONRATE

@@ -5,9 +5,11 @@ Spearguard::Spearguard(int x, int y, int x2, int y2) :
 Enemy(TYPE, x, y, x2, y2)
 {
 	GTexture* tt = new GTexture(SPEARGAURD_SPRITE, 4, 1, 4);
-	_sprite = new GSprite(tt, ANIMATIONRATE);
+	_sprite = new GSprite(tt, 10);
 	this->_vx = _guardSPEED;
 	this->SetFrame(0);
+	_box = Box(x, y, _guardWIDTH, _guardHEIGHT, _vx, _vy);
+	_hp = HP;
 }
 
 void Spearguard::SetFrame(float deltaTime)
@@ -17,9 +19,26 @@ void Spearguard::SetFrame(float deltaTime)
 	this->_sprite->_end = 3;
 #pragma endregion
 }
-
+void Spearguard::Collistion(float deltaTime)
+{
+	float x, y;
+	if (Simon::getCurrentSimon()->isFighting()){
+		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+			_hp--;
+		}
+	}
+	////swepyAABB->SweptAABB(this->_box, Whip::getCurrentWhip()->_box, x, y, deltaTime);
+	//if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+	//	if (Simon::getCurrentSimon()->isFighting()){
+	//		//Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
+	//		_hp--;
+	//	}
+	//	
+	//}
+}
 Spearguard::~Spearguard(){
 	if (_sprite != NULL){
 		delete _sprite;
 	}
 }
+

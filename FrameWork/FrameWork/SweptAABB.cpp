@@ -74,7 +74,7 @@ float CSweptAABB::SweptAABB(Box b1, Box b2, float& normalx, float& normaly, floa
 	else // if there was a collision
 	{
 		// calculate normal of collided surface
-		if (xEntry > yEntry)
+		if ((xEntry > yEntry) && (b1.y >= b2.y&&b1.y <= (b2.y + b2.h) || (((b1.y + b1.h) >= b2.y && (b1.y + b1.h) <= (b2.y + b2.h)))))
 		{
 			if (xInvEntry < 0.0f)
 			{
