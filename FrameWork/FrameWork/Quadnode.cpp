@@ -11,6 +11,8 @@ bool QuadNode::IsContain(){
 		GCamera::getCurrentCamera()->y > bound->y + bound->height);
 }
 void QuadNode::Retrieve(vector<GObject*>& listGObject){
+	if (this->id == 12411)
+		int a = 0;
 	if (_nodeTL){
 		if (_nodeTL->IsContain())
 			_nodeTL->Retrieve(listGObject);

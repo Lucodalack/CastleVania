@@ -46,12 +46,15 @@ private:
 	bool _isOnStair; // dang o tren cau thang hay k
 	bool _isJumping; //dang nhay
 	bool _isFalling;// dang roi xuong
-	bool _isFighting; 
-	bool _canGoStair;// danh danh nhau nek
+	bool _isFighting; // danh danh nhau nek
+	bool _canGoStair;
+	bool _canGoRight;
+	bool _canGoLeft;
 	int _keyDown; // lưu phím vừa được nhấn.
 	int _keyUp;
 	float _tmp = 0;
 	int _currentLV;
+	int _lastState;
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
@@ -84,6 +87,10 @@ public:
 	void canGoStair(bool tamp){ _canGoStair = tamp; }
 	bool isOnStair(){ return _isOnStair; }
 	void isOnStair(bool tamp){ _isOnStair = tamp; }
+	bool canGoLeft(){ return _canGoLeft; }
+	void canGoLeft(bool tamp){ _canGoLeft = tamp; }
+	bool canGoRight(){ return _canGoRight; }
+	void canGoRight(bool tamp){ _canGoRight = tamp; }
 	Simon();
 	~Simon();
 };

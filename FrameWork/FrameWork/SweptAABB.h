@@ -1,9 +1,17 @@
 #pragma once
+#define NOMINMAX
 #include <cmath>
 #include <algorithm>
 #include <limits>
 #include "Box.h"
-
+#include "Simon.h"
+enum COLLIDE_STATE {
+	NONE = 0,
+	LEFT = 1,
+	RIGHT = 2,
+	TOP = 3,
+	BOTTOM = 4
+};
 class CSweptAABB
 {
 public:
@@ -22,6 +30,7 @@ public:
 	// returns a box the spans both a current box and the destination box
 	Box GetSweptBroadphaseBox(Box b);
 	float SweptAABB(Box b1, Box b2, float& normalx, float& normaly,float deltatime);
+	int CollideCheck(Box b1, Box b2, float& moveX, float& moveY);
 	~CSweptAABB();
 };
 

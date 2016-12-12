@@ -78,6 +78,7 @@ void GCamera::Update()
 	if (this->_isFollowing)
 	{
 		cameraX = Simon::getCurrentSimon()->_x;
+		this->x = cameraX - this->width / 2;
 	}
 
 	this->viewMatrix = D3DXMATRIX(

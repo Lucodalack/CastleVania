@@ -15,11 +15,12 @@ class Stair : public GObject {
 private:
 
 public:
-	Stair(int x, int y);
+	Stair(int x, int y,int parentX,int parentY);
 	bool canGoDown();
 	CSweptAABB* swepyAABB;
 	void Collistion(float deltatime);
-
+	int parentX;
+	int parentY;
 	Stair();
 	~Stair();
 };

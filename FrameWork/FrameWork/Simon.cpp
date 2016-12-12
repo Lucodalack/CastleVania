@@ -13,6 +13,8 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 	_isFalling = true;
 	_canGoStair = false;
 	_currentLV = 1;
+	_canGoLeft = true;
+	_canGoRight = true;
 	onGoto = false;
 	_stateCurrent = STATE::IS_FALLING;
 	_vy = GRAVITY;
@@ -32,11 +34,17 @@ void Simon::MoveUpdate(float deltaTime)
 	{
 		this->_x += int(this->_vx * deltaTime);
 		this->_y += int(this->_vy * deltaTime);
-		if (this->_x==this->xDestinate)
+		
+		if ((this->_x >= this->xDestinate) && (this->_vx>0))
 		this->_vx = 0;
-		if (this->_y==this->yDestinate)
-		this->_vy = 0;
-		if (this->_x == this->xDestinate&&this->_y == this->yDestinate)
+		if ((this->_y >= this->yDestinate) && (this->_vy>0))
+			this->_vy = 0;
+		if ((this->_x <= this->xDestinate) && (this->_vx<0))
+			this->_vx = 0;
+		if ((this->_y <= this->yDestinate) && (this->_vy<0))
+			this->_vy = 0;
+		
+		if (this->_vx == 0 && this->_vx == 0)
 			this->onGoto = false;
 	}
 	else
@@ -52,16 +60,19 @@ void Simon::MoveUpdate(float deltaTime)
 			if (this->_isFalling){
 				_vy = GRAVITY;
 				this->_y += int(_vy*deltaTime);
+				if (this->_lastState == STATE::IS_JUMPING)
+				if ((this->_vx>0 && this->_canGoRight) || (this->_vx<0 && this->_canGoLeft))
+				this->_x += int(this->_vx * deltaTime/1.5f );
 			}
 		}
-		if (this->_isMoveleft)
+		if (this->_isMoveleft&&this->_canGoLeft&&!this->_isFalling)
 		{
 			if (this->_vx < 0)
 			{
 				this->_x += int(this->_vx * deltaTime);
 			}
 		}
-		else if (this->_isMoveright)
+		else if (this->_isMoveright&&this->_canGoRight&&!this->_isFalling)
 		{
 			if (this->_vx > 0)
 			{
@@ -70,15 +81,19 @@ void Simon::MoveUpdate(float deltaTime)
 		}
 		if (this->_stateCurrent == STATE::IS_JUMPING){
 			this->_y += int(this->_vy * deltaTime);
-			this->_x += int(this->_vx * deltaTime);
+			if ((this->_vx>0 && this->_canGoRight) || (this->_vx<0 && this->_canGoLeft))
+				this->_x += int(this->_vx * deltaTime / 1.5f);
 			if (_vy < -0.3)
 				_vy += 0.2f;
 			else {
 				this->_stateCurrent = STATE::IS_FALLING;
+				this->_lastState = STATE::IS_JUMPING;
 				_isFalling = true;
 				_isJumping = false;
 			}
 		}
+		_canGoRight = true;
+		_canGoLeft = true;
 		
 	}
 #pragma endregion
@@ -258,7 +273,7 @@ void Simon::InputUpdate(float deltaTime)
 		
 		//this->_vy = 0;
 
-		if (!this->_isOnStair)
+		if (!this->_isOnStair&&!this->_isFalling)
 		{
 			this->_vx = 0;
 			//this->_stateCurrent = STATE::IS_FALLING;
@@ -335,7 +350,7 @@ void Simon::MoveState(){
 			this->_isOnStair = true;
 			this->onGoto = true;
 			this->_x =3841;
-			this->_y = 1136;
+			this->_y = 1140;
 			GCamera::getCurrentCamera()->ChangeState(2);
 			_currentLV = 2;
 			return;
@@ -350,12 +365,13 @@ void Simon::Draw(){
 		this->_sptrite->DrawFlipX(_x-10, _y);
 	}
 	else{
-		this->_sptrite->Draw(_x+10, _y);
+		this->_sptrite->Draw(_x-11, _y);
 	}
 	Whip::getCurrentWhip()->Draw();
 }
 void Simon::ChangeState(int state){
 	//if (_stateCurrent == STATE::IS_UPING&& state == STATE::IS_STANDING) return;
+	_lastState = _stateCurrent;
 	this->_stateCurrent = state;
 	switch (state) {
 	case STATE::IS_STANDING:
@@ -372,7 +388,7 @@ void Simon::ChangeState(int state){
 
 Simon* Simon::getCurrentSimon(){
 	if (!_simon)
-		_simon = new Simon(3750, 1450);
+		_simon = new Simon(3742, 1453);
 	return _simon;
 }
 

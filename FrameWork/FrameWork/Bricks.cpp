@@ -52,16 +52,48 @@ void Bricks::Collistion(float deltatime){
 	{
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
 	}*/
-	if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
+	int stateCollid = swepyAABB->CollideCheck(Simon::getCurrentSimon()->_box, this->_box, x, y);
+	switch (stateCollid)
+	{
+	case COLLIDE_STATE::NONE:
+		if (Simon::getCurrentSimon()->GetState() == STATE::IS_JOGGING&&!Simon::getCurrentSimon()->canGoStair())
+		{
+			Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
+		}
+		/*Simon::getCurrentSimon()->canGoLeft(true);
+		Simon::getCurrentSimon()->canGoRight(true);*/
+		break;
+	case COLLIDE_STATE::LEFT:
+		Simon::getCurrentSimon()->canGoLeft(false);
+		break;
+	case COLLIDE_STATE::RIGHT:
+		Simon::getCurrentSimon()->canGoRight(false);
+	
+		//Simon::getCurrentSimon()->_x += x;
+		break;
+	case COLLIDE_STATE::TOP:
+		break;
+	case COLLIDE_STATE::BOTTOM:
 		if (Simon::getCurrentSimon()->isFighting()){
 			Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
 		}
 		else{
 			Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
 		}
+		break;
+	default:
+		break;
 	}
-	else if (Simon::getCurrentSimon()->GetState() == STATE::IS_JOGGING)
-	{
-		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
-	}
+	//if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
+	//	if (Simon::getCurrentSimon()->isFighting()){
+	//		Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
+	//	}
+	//	else{
+	//		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+	//	}
+	//}
+	//else if (Simon::getCurrentSimon()->GetState() == STATE::IS_JOGGING)
+	//{
+	//	Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
+	//}
 }

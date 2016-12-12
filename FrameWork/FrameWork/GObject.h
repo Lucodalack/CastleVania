@@ -8,7 +8,7 @@
 #include "GSprite.h"
 #include "Box.h"
 
-#define GRAVITY			1.0f
+#define GRAVITY			1.2f
 #define ANIMATIONRATE 30
 enum TypeGame {
 	Boss_Bat = 0,
