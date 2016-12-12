@@ -3,27 +3,58 @@
 
 
 Stair::Stair(int x, int y) :
-Ground(TYPE, x, y)
+GObject(TYPE, x, y,_stairWIDTH,_stairHEIGHT)
 {
 	_box = Box(x, y, _stairWIDTH, _stairHEIGHT);
-	GTexture* texture = new GTexture(_SPRITE, 1, 1, 1);
-	_sprite = new GSprite(texture, _ANIMATE_RATE);
 
 }
 
+bool Stair::canGoDown(){
+	float x, y;
 
-void Stair::SetFrame(float deltaTime)
-{
-#pragma region __XU_LY_CHUYEN_DOI_FRAME__
-	this->_sprite->_start = 0;
-	this->_sprite->_end = 0;
+	if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
+		 return true;
+	}
+	
+	return false;
+}
+void Stair::Collistion(float deltatime){
+	float x, y;
 
-#pragma endregion
+	if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
+		if (Simon::getCurrentSimon()->GetState() != STATE::IS_DOWNING)
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);
+		if (KeyBoard::getCurrentKeyBoard()->keyUp() && !Simon::getCurrentSimon()->onGoto){
+			if (this->_x == Simon::getCurrentSimon()->_x)
+				return;
+			Simon::getCurrentSimon()->onGoto = true;
+			Simon::getCurrentSimon()->xDestinate = this->_x ;
+			Simon::getCurrentSimon()->yDestinate = this->_y - SIMON_HEIGHT;
+			Simon::getCurrentSimon()->_vy = -0.4;
+			Simon::getCurrentSimon()->_vx = 0.4;
+		}
+		if (KeyBoard::getCurrentKeyBoard()->keyDown() && !Simon::getCurrentSimon()->onGoto){
+			if (this->_x + _stairHEIGHT == Simon::getCurrentSimon()->_x)
+				return;
+			Simon::getCurrentSimon()->ChangeState(STATE::IS_DOWNING);
+			Simon::getCurrentSimon()->isMoveLeft(true);
+			Simon::getCurrentSimon()->isMoveRight(false);
+			Simon::getCurrentSimon()->onGoto = true;
+			Simon::getCurrentSimon()->xDestinate = this->_x-_stairHEIGHT*2;
+			Simon::getCurrentSimon()->yDestinate = this->_y + _stairHEIGHT - SIMON_HEIGHT;
+			Simon::getCurrentSimon()->_vy = 0.4;
+			Simon::getCurrentSimon()->_vx = -0.4;
+		}
+	}
+	else
+	{
+		Simon::getCurrentSimon()->canGoStair(false);
+
+	}
+
 }
 
 
 Stair::~Stair(){
-	if (_sprite != NULL){
-		delete _sprite;
-	}
+	
 }

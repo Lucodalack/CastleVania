@@ -4,6 +4,7 @@
 
 #include "GObject.h"
 #include "GSprite.h"
+#include "GCamera.h"
 #include "Whip.h"
 
 
@@ -45,19 +46,26 @@ private:
 	bool _isOnStair; // dang o tren cau thang hay k
 	bool _isJumping; //dang nhay
 	bool _isFalling;// dang roi xuong
-	bool _isFighting; // danh danh nhau nek
+	bool _isFighting; 
+	bool _canGoStair;// danh danh nhau nek
 	int _keyDown; // lưu phím vừa được nhấn.
 	int _keyUp;
 	float _tmp = 0;
-
+	int _currentLV;
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
+
+	int xDestinate;
+	int yDestinate;
+	bool onGoto;
+
 	Simon(int x, int y);
 	void MoveUpdate(float deltatime);
 	void SetFrame(float deltattime);
 	void InputUpdate(float deltatime);
 	void Update(float deltatime);
+	void MoveState();
 	void ChangeState(int state);
 	void ChangeState(float deltatime){ _isFighting = false; SetFrame(deltatime); }
 	void Jump();
@@ -67,8 +75,15 @@ public:
 	}
 	void Draw();
 	bool isFighting(){ return _isFighting; }
+	bool isFalling(){ return _isFalling; }
 	bool isMoveRight(){ return _isMoveright; }
 	bool isMoveLeft(){ return _isMoveleft; }
+	void isMoveRight(bool tamp){ _isMoveright = tamp; }
+	void isMoveLeft(bool tamp){ _isMoveleft=tamp; }
+	bool canGoStair(){ return _canGoStair; }
+	void canGoStair(bool tamp){ _canGoStair = tamp; }
+	bool isOnStair(){ return _isOnStair; }
+	void isOnStair(bool tamp){ _isOnStair = tamp; }
 	Simon();
 	~Simon();
 };

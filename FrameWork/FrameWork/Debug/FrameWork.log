@@ -1,20 +1,17 @@
-﻿Build started 12/10/2016 20:53:33.
-     1>Project "E:\CastleVania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/12/2016 10:29:24.
+     1>Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Whip.cpp
-         Whip.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Simon.cpp
+         Simon.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\castlevania\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
-                 e:\castlevania\castlevania\framework\framework\simon.h(17) : see previous definition of 'TYPE'
-     1>e:\castlevania\castlevania\framework\framework\whip.cpp(7): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\whip.cpp(26): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\whip.cpp(31): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\whip.cpp(37): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\whip.cpp(61): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\whip.cpp(80): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\castlevania\castlevania\framework\framework\whip.cpp(81): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(18): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(19): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(85): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(86): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(321): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\Bat.obj
          Debug\BigHeart.obj
          Debug\Brick.obj
@@ -50,6 +47,7 @@
          Debug\Rect.obj
          Debug\Quadtree.obj
          Debug\Quadnode.obj
+         Debug\Stairs.obj
          Debug\Spearguard.obj
          Debug\SpiritBall.obj
          Debug\Stair.obj
@@ -62,9 +60,9 @@
          Debug\Windows.obj
          Debug\GSprite.obj
          Debug\GTexture.obj
-         FrameWork.vcxproj -> E:\CastleVania\CastleVania\FrameWork\Debug\FrameWork.exe
-     1>Done Building Project "E:\CastleVania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
+         FrameWork.vcxproj -> C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe
+     1>Done Building Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.58
+Time Elapsed 00:00:01.04

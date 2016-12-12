@@ -31,6 +31,7 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bricks.h" />
     <ClInclude Include="Ground.h" />
+    <ClInclude Include="Stairs.h" />
     <ClInclude Include="HolyWater.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemNone.h" />
@@ -96,6 +97,7 @@
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Quadtree.cpp" />
     <ClCompile Include="Quadnode.cpp" />
+    <ClCompile Include="Stairs.cpp" />
     <ClCompile Include="Spearguard.cpp" />
     <ClCompile Include="SpiritBall.cpp" />
     <ClCompile Include="Stair.cpp" />

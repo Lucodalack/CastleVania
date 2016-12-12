@@ -11,6 +11,9 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 	_isOnStair = false;
 	_isJumping = false;
 	_isFalling = true;
+	_canGoStair = false;
+	_currentLV = 1;
+	onGoto = false;
 	_stateCurrent = STATE::IS_FALLING;
 	_vy = GRAVITY;
 	_box = Box(x, y, SIMON_WIDTH, SIMON_HEIGHT,_vx,_vy);
@@ -28,6 +31,13 @@ void Simon::MoveUpdate(float deltaTime)
 	if (this->_isOnStair)
 	{
 		this->_x += int(this->_vx * deltaTime);
+		this->_y += int(this->_vy * deltaTime);
+		if (this->_x==this->xDestinate)
+		this->_vx = 0;
+		if (this->_y==this->yDestinate)
+		this->_vy = 0;
+		if (this->_x == this->xDestinate&&this->_y == this->yDestinate)
+			this->onGoto = false;
 	}
 	else
 	{
@@ -134,18 +144,41 @@ void Simon::SetFrame(float deltaTime)
 	}
 	else //tren cau thang
 	{
+		if (_stateCurrent == STATE::IS_STANDING)
+			_stateCurrent = STATE::IS_DOWNING;
+		if (this->_isMoveleft)
+			_stateCurrent = STATE::IS_DOWNING;
+		if (this->_isMoveright)
+			_stateCurrent = STATE::IS_UPING;
 		switch (this->_stateCurrent)
 		{
+		
 		case STATE::IS_UPING:
 		{
-								this->_sptrite->_start = 12;
-								this->_sptrite->_end = 13;
+								if (onGoto){
+									this->_sptrite->_start = 12;
+									this->_sptrite->_end = 13;
+								}
+								else
+								{
+									this->_sptrite->_start = 12;
+									this->_sptrite->_end = 12;
+								}
+								
 								break;
 		}
 		case STATE::IS_DOWNING:
 		{
-								  this->_sptrite->_start = 10;
-								  this->_sptrite->_end = 11;
+								  if (onGoto){
+									  this->_sptrite->_start = 10;
+									  this->_sptrite->_end = 11;
+								  }
+								  else
+								  {
+									  this->_sptrite->_start = 10;
+									  this->_sptrite->_end = 10;
+								  }
+								
 								  break;
 		}
 		case STATE::IS_UPFIGHT:
@@ -222,18 +255,19 @@ void Simon::InputUpdate(float deltaTime)
 	this->_keyUp = KeyBoard::getCurrentKeyBoard()->GetKeyUp();
 	if (!this->_isJumping)
 	{
-		this->_vx = 0;
+		
 		//this->_vy = 0;
 
 		if (!this->_isOnStair)
 		{
+			this->_vx = 0;
 			//this->_stateCurrent = STATE::IS_FALLING;
 		}
 		else
 		{
 
 		}
-		if (this->_stateCurrent != STATE::IS_FALLING && !this->_isFighting)
+		if (this->_stateCurrent != STATE::IS_FALLING && !this->_isFighting && (this->_stateCurrent != STATE::IS_UPING) && (this->_stateCurrent != STATE::IS_DOWNING))
 			_stateCurrent = STATE::IS_STANDING;
 	}
 #pragma endregion
@@ -266,7 +300,7 @@ void Simon::InputUpdate(float deltaTime)
 		//chua lam
 	}
 	if (KeyBoard::getCurrentKeyBoard()->keyDown()){
-		if (_isOnStair){
+		if (_canGoStair){
 			this->_stateCurrent = STATE::IS_DOWNING;
 		}
 		else{
@@ -283,23 +317,45 @@ void Simon::Update(float deltatime){
 	this->InputUpdate(deltatime);
 	this->SetFrame(deltatime);
 	this->MoveUpdate(deltatime);
-	
+	MoveState();
 	this->_sptrite->Update(deltatime);
 	if (_isFighting){
 		Whip::getCurrentWhip()->Update(deltatime);
 	}
 }
+void Simon::MoveState(){
+
+	switch (_currentLV)
+	{
+	case 1:
+		if (_y < 1220){
+			this->ChangeState(STATE::IS_UPING);
+			this->isMoveLeft(false);
+			this->isMoveRight(true);
+			this->_isOnStair = true;
+			this->onGoto = true;
+			this->_x =3841;
+			this->_y = 1136;
+			GCamera::getCurrentCamera()->ChangeState(2);
+			_currentLV = 2;
+			return;
+		}
+	default:
+		break;
+	}
+}
 
 void Simon::Draw(){
 	if (this->_isMoveright){
-		this->_sptrite->DrawFlipX(_x, _y);
+		this->_sptrite->DrawFlipX(_x-10, _y);
 	}
 	else{
-		this->_sptrite->Draw(_x, _y);
+		this->_sptrite->Draw(_x+10, _y);
 	}
 	Whip::getCurrentWhip()->Draw();
 }
 void Simon::ChangeState(int state){
+	//if (_stateCurrent == STATE::IS_UPING&& state == STATE::IS_STANDING) return;
 	this->_stateCurrent = state;
 	switch (state) {
 	case STATE::IS_STANDING:
@@ -307,12 +363,16 @@ void Simon::ChangeState(int state){
 		this->_isJumping = false; break;
 	case STATE::IS_FALLING: this->_isFalling = true;
 		this->_isJumping = false;  break;
+	case STATE::IS_UPING: this->_isOnStair = true;
+		if (this->_vy == GRAVITY) this->_vy = 0;
+	case STATE::IS_DOWNING: this->_isOnStair = true;
+		if (this->_vy == GRAVITY) this->_vy = 0;
 	}
 }
 
 Simon* Simon::getCurrentSimon(){
 	if (!_simon)
-		_simon = new Simon(3850, 1299);
+		_simon = new Simon(3750, 1450);
 	return _simon;
 }
 

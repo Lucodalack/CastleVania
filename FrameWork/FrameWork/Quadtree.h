@@ -18,6 +18,7 @@
 #include "Fireandle.h"
 #include "Firetower.h"
 #include "Stair.h"
+#include "Stairs.h"
 
 #include "Axe.h"
 #include "BigHeart.h"
