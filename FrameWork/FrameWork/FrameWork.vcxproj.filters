@@ -61,6 +61,9 @@
     <Filter Include="GameObject\Ground">
       <UniqueIdentifier>{ec0eeacf-d09b-4062-9d81-d79bd7997da4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Enemy\BonePillar">
+      <UniqueIdentifier>{7b2313d3-c12a-4f31-8e50-8df5009e521b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -206,6 +209,12 @@
     </ClInclude>
     <ClInclude Include="Stairs.h">
       <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="BonePillar.h">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
+    </ClInclude>
+    <ClInclude Include="FireBall.h">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -355,6 +364,12 @@
     </ClCompile>
     <ClCompile Include="Stairs.cpp">
       <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="BonePillar.cpp">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
+    </ClCompile>
+    <ClCompile Include="FireBall.cpp">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
