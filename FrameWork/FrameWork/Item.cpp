@@ -5,8 +5,8 @@ Item::Item(int type, int x, int y, int x2, int y2) :
 GObject(type, x, y, _WIDTH, _HEIGHT)
 {
 	_isOnGround = false;
-	//_lifeTime = -1;
-	_lifeTime = 0; //cái này để test thôi.
+	_lifeTime = -1;
+	//_lifeTime = 0; //cái này để test thôi.
 	_vy = GRAVITY;
 	_vx = 0;
 	_activeArea.top = y;
@@ -14,7 +14,7 @@ GObject(type, x, y, _WIDTH, _HEIGHT)
 	_activeArea.right = x2;
 	_activeArea.bottom = y2;
 	_box = Box(x, y, _WIDTH, _HEIGHT, _vx, _vy);
-	
+	swepyAABB = new CSweptAABB();
 }
 void Item::MoveUpdate(float deltaTime)
 {
@@ -72,6 +72,12 @@ void Item::ChangeState(int state){
 	else{
 		if (this->_lifeTime<=0)
 			this->_lifeTime = 0;
+	}
+}
+void Item::Collistion(float deltatime){
+	float x, y;
+	if (swepyAABB->AABB(Whip::getCurrentWhip()->_box, this->_box, x, y)){
+		this->WakeUp();
 	}
 }
 Item::~Item(){

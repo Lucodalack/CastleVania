@@ -4,6 +4,7 @@
 #include "Item.h"
 
 #define _SPRITE L"item/0.png"
+#define SIZE 16
 #define TYPE TypeGame::Item_small_heart
 
 class SmallHeart : public Item {
@@ -13,6 +14,7 @@ public:
 	SmallHeart(int x, int y, int x2, int y2);
 	void MoveUpdate(float deltaTime);
 	void Update(float deltatime);
+
 	SmallHeart();
 	~SmallHeart();
 };

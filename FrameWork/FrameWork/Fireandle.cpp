@@ -5,10 +5,10 @@
 Fireandle::Fireandle(int x, int y) :
 Ground(TYPE, x, y)
 {
-	_box = Box(x, y, _WIDTH, _HEIGHT);
+	_box = Box(x, y, _WIDTH, _WIDTH);
 	GTexture* texture = new GTexture(_SPRITE, 2, 1, 2);
 	_sprite = new GSprite(texture, _ANIMATE_RATE);
-
+	swepyAABB = new CSweptAABB();
 }
 
 
@@ -20,7 +20,16 @@ void Fireandle::SetFrame(float deltaTime)
 
 #pragma endregion
 }
-
+void Fireandle::Collistion(float deltatime){
+	float x, y;
+	
+	if (Simon::getCurrentSimon()->isFighting()){
+		if (swepyAABB->AABB(Whip::getCurrentWhip()->_box, this->_box, x, y)){
+			swepyAABB->AABB(Whip::getCurrentWhip()->_box, this->_box, x, y);
+			this->_isDeath = true;
+		}
+	}
+}
 
 Fireandle::~Fireandle(){
 	if (_sprite != NULL){

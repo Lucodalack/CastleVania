@@ -15,6 +15,14 @@ GObject::GObject(int type, int x, int y, int width, int height)
 	_bound.top = _y;
 	_bound.right = _x + width;
 	_bound.bottom = _y + height;
+	_isDeath = false;
+	_timeDeath = 0;
+
+	GTexture* texture = new GTexture(_SPRITE_DEATH, 3, 1, 3);
+	_spriteDeath = new GSprite(texture, 7);
+
+	this->_spriteDeath->_start = 0;
+	this->_spriteDeath->_end = 3;
 }
 
 

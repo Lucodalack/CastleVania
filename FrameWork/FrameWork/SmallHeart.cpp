@@ -7,6 +7,7 @@ Item(TYPE, x, y, x2, y2)
 {
 	GTexture* texture = new GTexture(_SPRITE, 1, 1, 1);
 	_sprite = new GSprite(texture, ANIMATIONRATE);
+	_box =Box(x, y, SIZE, SIZE,_vx,_vy);
 	this->SetFrame(0); // nếu chỉ có 1 ô hình thì quất thế này luôn cho nhanh.
 }
 

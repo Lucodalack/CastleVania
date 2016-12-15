@@ -21,11 +21,19 @@ void Spearguard::SetFrame(float deltaTime)
 }
 void Spearguard::Collistion(float deltaTime)
 {
-	float x, y;
+	if (_isDead) return;
+	float x, y; 
+	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+		return;
 	if (Simon::getCurrentSimon()->isFighting()){
 		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+			if (_hp>0)
 			_hp--;
 		}
+	}
+	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
+		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
+		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
 	}
 	////swepyAABB->SweptAABB(this->_box, Whip::getCurrentWhip()->_box, x, y, deltaTime);
 	//if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){

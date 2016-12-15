@@ -49,8 +49,12 @@ void Enemy::SetFrame(float deltaTime)
 }
 
 void Enemy::Update(float deltatime){
-	if (_hp == 0) 
+	if (_hp == 0) {
 		this->_isDead = true;
+		this->_timeDeath += deltatime;
+		this->_spriteDeath->Update(deltatime);
+	}
+		
 	if (this->_isDead){
 		return;
 	}
@@ -61,6 +65,8 @@ void Enemy::Update(float deltatime){
 
 void Enemy::Draw(){
 	if (this->_isDead){
+		if (_timeDeath<=DEATH_TIME)
+		this->DrawDeath();
 		return;
 	}
 	if (!this->_isMoveleft){

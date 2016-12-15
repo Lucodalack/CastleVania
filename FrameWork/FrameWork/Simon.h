@@ -32,7 +32,8 @@ enum STATE
 	IS_UPFIGHT = 10, //LÊN CẦU THANG VỪA ĐÁH
 	IS_DOWNFIGHT =11, // VỪA XUỐNG CẦU THANG VỪA ĐÁNH.
 	IS_PASSGATE =12, // QUA MANF.
-	IS_FALLING = 13
+	IS_FALLING = 13,
+	CANT_HURT=14
 };
 
 class Simon : public GObject {
@@ -55,6 +56,7 @@ private:
 	float _tmp = 0;
 	int _currentLV;
 	int _lastState;
+	int _hp;
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();

@@ -72,12 +72,17 @@ void Game::_ProcessKeyBoard()
 }
 void Game::OnKeyDown(int KeyCode)
 {
+	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+		return;
 	switch (KeyCode)
 	{
 	case DIK_SPACE:
   		Simon::getCurrentSimon()->Jump(); break;
 	case DIK_C:
 		Simon::getCurrentSimon()->Fight();
+		break;
+	case DIK_X:
+		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
 		break;
 	}
 }

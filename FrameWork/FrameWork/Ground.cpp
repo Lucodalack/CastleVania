@@ -20,19 +20,22 @@ void Ground::SetFrame(float deltaTime)
 }
 
 void Ground::Update(float deltatime){
+	
+	if (_isDeath){
+		this->_timeDeath += deltatime;
+		this->_spriteDeath->Update(deltatime);
+		return;
+	}
 	this->_sprite->Update(deltatime);
 }
 
 void Ground::Draw(){
-	if (this->_lifeTime < 0){
-		return; //chua xuat hien.
-	}
-	if (this->_lifeTime >= _LIFETIME){
+	if (this->_isDeath){
+		if (_timeDeath <= DEATH_TIME)
+			this->DrawDeath();
 		return;
 	}
-	else{
-		this->_sprite->Draw(_x, _y);
-	}
+	this->_sprite->Draw(_x, _y);
 }
 
 void Ground::ChangeState(int state){

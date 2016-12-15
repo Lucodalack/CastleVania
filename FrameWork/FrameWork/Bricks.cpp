@@ -52,6 +52,7 @@ void Bricks::Collistion(float deltatime){
 	{
 		Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
 	}*/
+	if (Simon::getCurrentSimon()->_isDeath) return;
 	int stateCollid = swepyAABB->CollideCheck(Simon::getCurrentSimon()->_box, this->_box, x, y);
 	switch (stateCollid)
 	{

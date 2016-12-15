@@ -7,9 +7,10 @@
 #include <d3dx9.h>
 #include "GSprite.h"
 #include "Box.h"
-
 #define GRAVITY			1.2f
 #define ANIMATIONRATE 30
+#define _SPRITE_DEATH L"other/1.png"
+#define DEATH_TIME 100
 enum TypeGame {
 	Boss_Bat = 0,
 	Boss_Medusa = 1,
@@ -63,11 +64,12 @@ public:
 	int _width;
 	int _height;
 	int _id;
-
+	int _timeDeath;
+	bool _isDeath;
 	float _vx;
 	float _vy;
 	float _gravity;
-
+	GSprite* _spriteDeath;
 	int _type;
 
 	RECT _bound;
@@ -81,7 +83,9 @@ public:
 	virtual void Draw(){}
 	virtual void Collistion(float deltatime){}
 	virtual void ChangeState(int state){}
-
+	void DrawDeath(){
+		this->_spriteDeath->Draw(_x + _width / 2 - 16, _y + _height-44);
+	}
 	/*virtual void LoadResource();
 	virtual void Update(int Delta);
 	virtual void Render();

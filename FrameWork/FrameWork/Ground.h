@@ -19,6 +19,7 @@ protected:
 	bool _isOnGround;
 	bool _isLife;
 
+
 public:
 	GSprite* _sprite;
 	Ground(int type, int x, int y);

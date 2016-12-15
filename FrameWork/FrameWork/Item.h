@@ -3,8 +3,8 @@
 
 #include "GObject.h"
 #include "GSprite.h"
-
-
+#include "Whip.h"
+#include "SweptAABB.h"
 
 #define _WIDTH	32
 #define _HEIGHT	32
@@ -17,7 +17,7 @@ enum ItemState{
 };
 class Item : public GObject {
 protected:
-
+	CSweptAABB* swepyAABB;
 	float _lifeTime; // lifetime <0 là đang ẩn sau gạch hay sau j đó. lifetime >= _LIFETIME thì là biết mất.
 	bool _isOnGround;
 	RECT _activeArea; // ô chữ nhật mà con này chạy trong đó.
@@ -28,7 +28,15 @@ public:
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
 	void ChangeState(int state);
+	void Collistion(float deltatime);
 	void Draw();
+	int GetLifeTime(){
+		return _lifeTime;
+	}
+	void WakeUp(){
+		if (_lifeTime < 0)
+			_lifeTime = 0;
+	}
 	Item();
 	~Item();
 };
