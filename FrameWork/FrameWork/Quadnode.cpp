@@ -6,7 +6,7 @@ QuadNode::~QuadNode(){}
 bool QuadNode::IsContain(){
 
 	return !(GCamera::getCurrentCamera()->x + 515 < bound->x ||
-		GCamera::getCurrentCamera()->y + 350 < bound->y ||
+		GCamera::getCurrentCamera()->y + 440 < bound->y ||
 		GCamera::getCurrentCamera()->x > bound->x + bound->witdh ||
 		GCamera::getCurrentCamera()->y > bound->y + bound->height);
 }

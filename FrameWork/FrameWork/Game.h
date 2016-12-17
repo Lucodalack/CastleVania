@@ -12,6 +12,7 @@
 #include "Quadtree.h"
 #include "GObject.h"
 #include"KeyBoard.h"
+#include "Board.h"
 #include <vector>
 using namespace std;
 

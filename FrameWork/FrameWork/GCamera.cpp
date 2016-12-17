@@ -15,14 +15,24 @@ GCamera::GCamera(int width, int height,int x, int y)
 	D3DXMatrixOrthoLH(&orthographicMatrix, width, -height, 0.0f, 1.0f);
 	D3DXMatrixIdentity(&identityMatrix);
 	_currentState = 1;
+	onGoto = false;
 }
 GCamera::GCamera()
 {
 }
-
-void GCamera::Update()
+void GCamera::Move(){
+	if (onGoto){
+		if (x <= (xDestinate - 0.5*width)){
+			onGoto = false;
+			return;
+		}
+		x -= 1;
+	}
+}
+void GCamera::Update(float deltatime)
 {
 	int cameraX, cameraY;
+	Move();
 	switch (_currentState)
 	{
 	case 1:
@@ -30,6 +40,7 @@ void GCamera::Update()
 		break;
 	case 2:
 		if ((Simon::getCurrentSimon()->_x > (1536 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (4096 - 0.5*width)))
+		if (!((Simon::getCurrentSimon()->_x >3102) && (Simon::getCurrentSimon()->_x < 3328)))
 			_isFollowing = true;
 		else
 		{
@@ -39,6 +50,7 @@ void GCamera::Update()
 		break;
 	case 3:
 		if ((Simon::getCurrentSimon()->_x >(0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3072 - 0.5*width)))
+		if (!((Simon::getCurrentSimon()->_x >1550) && (Simon::getCurrentSimon()->_x < 1777) && (Simon::getCurrentSimon()->_y < 677)))
 			_isFollowing = true;
 		else
 		{
@@ -73,6 +85,7 @@ void GCamera::Update()
 		0, 0, 1, 0,
 		-cameraX, -cameraY, 0, 1
 		);*/
+	if (onGoto) _isFollowing = false;
 	cameraX = x + this->width / 2;
 	cameraY = y + this->height / 2;
 	if (this->_isFollowing)
@@ -113,7 +126,7 @@ void GCamera::SetTransform() const
 }
 GCamera* GCamera::getCurrentCamera(){
 	if (!_camera)
-		_camera = new GCamera(515, 350,STATE1_X,STATE1_Y);
+		_camera = new GCamera(515, 440,STATE1_X,STATE1_Y);
 	return _camera;
 }
 void GCamera::ChangeState(int state){

@@ -18,7 +18,6 @@ private:
 public:
 	Spearguard(int x, int y, int x2, int y2);
 	void SetFrame(float deltaTime);
-	void Collistion(float deltatime);
 	Spearguard();
 	~Spearguard();
 };

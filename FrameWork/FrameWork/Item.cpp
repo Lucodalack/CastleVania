@@ -79,6 +79,20 @@ void Item::Collistion(float deltatime){
 	if (swepyAABB->AABB(Whip::getCurrentWhip()->_box, this->_box, x, y)){
 		this->WakeUp();
 	}
+	if (this->_lifeTime > 0 && this->_lifeTime <= _LIFETIME){
+		if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
+			switch (_type)
+			{
+			case TypeGame::Item_small_heart:
+
+				Simon::getCurrentSimon()->Heal(1);
+				break;
+			default:
+				break;
+			}
+			this->_lifeTime += (_LIFETIME + 1);
+		}
+	}
 }
 Item::~Item(){
 	if (_sprite != NULL){

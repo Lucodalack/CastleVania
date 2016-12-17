@@ -90,7 +90,7 @@ void GSprite::Draw(int X, int Y)
 	D3DXVECTOR3 center(0, 0, 0);
 	//position.x = X - _texture->FrameWidth / 2;
 	position.x = X;
-	position.y = Y;
+	position.y = Y+90;
 	//D3DXMATRIX mat;
 	//D3DXVECTOR2 centers((float)(X + _texture->FrameWidth / 2), (float)(Y + _texture->FrameHeight / 2));
 	//D3DXVECTOR2 scale = D3DXVECTOR2(2.0f, 2.0f);

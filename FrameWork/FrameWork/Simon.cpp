@@ -16,12 +16,13 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 	_canGoLeft = true;
 	_canGoRight = true;
 	onGoto = false;
-	_hp = 2;
+	_hp = 16;
+	_heart = 5;
 	_stateCurrent = STATE::IS_FALLING;
 	_vy = GRAVITY;
 	_box = Box(x, y, SIMON_WIDTH, SIMON_HEIGHT,_vx,_vy);
 	
-	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24);
+	GTexture* simonTT = new GTexture(SIMON_SPRITE, 8, 3, 24,false);
 	_sptrite = new GSprite(simonTT, SIMON_Animation_RATE);
 }
 
@@ -31,11 +32,28 @@ void Simon::MoveUpdate(float deltaTime)
 #pragma region __XU_LY_CHUYEN_DONG__
 	if (this->_isFighting) return;
 	if (this->_stateCurrent == STATE::CANT_HURT){
-		this->_x += int(this->_vx * deltaTime);
+		//this->_x += int(this->_vx * deltaTime);
+		if (_isMoveleft&&_canGoRight){
+			this->_x += int(this->_vx * deltaTime);
+		}
+		if (_isMoveright&&_canGoLeft)
+		{
+			this->_x += int(this->_vx * deltaTime);
+		}
 		this->_y += int(this->_vy * deltaTime);
 		if (_vy<GRAVITY)
 		_vy += 0.2f;
 		this->onGoto = false;
+		_box.x = _x;
+		_box.y = _y;
+		_box.vx = _vx;
+		_box.vy = _vy;
+		return;
+	}
+	if (this->_stateCurrent == STATE::ON_BRICK_MOVING)
+	{
+		this->_x += int(this->_vx * deltaTime);
+		//this->_vx = _currentMoving.vx;
 		_box.x = _x;
 		_box.y = _y;
 		_box.vx = _vx;
@@ -78,6 +96,7 @@ void Simon::MoveUpdate(float deltaTime)
 				this->_x += int(this->_vx * deltaTime/1.5f );
 			}
 		}
+
 		if (this->_isMoveleft&&this->_canGoLeft&&!this->_isFalling)
 		{
 			if (this->_vx < 0)
@@ -308,7 +327,7 @@ void Simon::InputUpdate(float deltaTime)
 		
 		//this->_vy = 0;
 
-		if (!this->_isOnStair&&!this->_isFalling && (this->_stateCurrent != STATE::CANT_HURT))
+		if (!this->_isOnStair&&!this->_isFalling && (this->_stateCurrent != STATE::CANT_HURT) && (this->_stateCurrent != STATE::ON_BRICK_MOVING))
 		{
 			this->_vx = 0;
 			//this->_stateCurrent = STATE::IS_FALLING;
@@ -321,7 +340,8 @@ void Simon::InputUpdate(float deltaTime)
 			&& !this->_isFighting 
 			&& (this->_stateCurrent != STATE::IS_UPING)
 			&& (this->_stateCurrent != STATE::IS_DOWNING)
-			&& (this->_stateCurrent != STATE::CANT_HURT))
+			&& (this->_stateCurrent != STATE::CANT_HURT)
+			&& (this->_stateCurrent != STATE::ON_BRICK_MOVING))
 			_stateCurrent = STATE::IS_STANDING;
 	}
 #pragma endregion
@@ -329,6 +349,7 @@ void Simon::InputUpdate(float deltaTime)
 
 #pragma region __XU_LY_PHIM_DI_QUA_TRAI_HOAC_PHAI__
 	if (this->_stateCurrent == STATE::CANT_HURT) return;
+	if (this->_isOnStair) return;
 	if ((KeyBoard::getCurrentKeyBoard()->keyLeft() || KeyBoard::getCurrentKeyBoard()->keyRight())
 		&& this->_stateCurrent != STATE::IS_JUMPING&& this->_stateCurrent != STATE::IS_FALLING)
 	{
@@ -400,6 +421,35 @@ void Simon::MoveState(){
 			_currentLV = 2;
 			return;
 		}
+		break;
+	case 2:
+		if (_y < 833){
+			this->ChangeState(STATE::IS_UPING);
+			this->isMoveLeft(false);
+			this->isMoveRight(true);
+			this->_isOnStair = true;
+			this->onGoto = true;
+			this->_x = 1664;
+			this->_y = 753;
+			GCamera::getCurrentCamera()->ChangeState(3);
+			_currentLV = 3;
+			return;
+		}
+		break;
+	case 3:
+		if (_y < 450){
+			this->ChangeState(STATE::IS_UPING);
+			this->isMoveLeft(false);
+			this->isMoveRight(true);
+			this->_isOnStair = true;
+			this->onGoto = true;
+			this->_x = 1343;
+			this->_y = 369;
+			GCamera::getCurrentCamera()->ChangeState(4);
+			_currentLV = 4;
+			return;
+		}
+		break;
 	default:
 		break;
 	}
@@ -434,21 +484,28 @@ void Simon::ChangeState(int state){
 		if (this->_vy == GRAVITY) this->_vy = 0; break;
 	case STATE::IS_DOWNING: this->_isOnStair = true;
 		if (this->_vy == GRAVITY) this->_vy = 0; break;
-	case STATE::CANT_HURT: this->_isOnStair = false;
-		if (_isMoveleft){
+	case STATE::CANT_HURT: 
+		this->_isOnStair = false;
+		if (_isMoveleft&&_canGoRight){
 			this->_vx = 1.2f;
+			this->_x += int(this->_vx * 3);
 		}
-		else
+		if (_isMoveright&&_canGoLeft)
 		{
 			this->_vx = -1.2f;
+			this->_x += int(this->_vx * 3);
 		}
 		this->_vy = -2.0f;
-		this->_x += int(this->_vx * 3);
+		
 		this->_y += int(this->_vy * 3);
 		this->_box.x = this->_x;
 		this->_box.y = this->_y;
 		this->_box.vx = this->_vx;
 		this->_box.vy = this->_vy;
+		break;
+	case STATE::ON_BRICK_MOVING:
+		this->_isFalling = false;
+		this->_isJumping = false; break;
 	}
 }
 

@@ -5,6 +5,7 @@
 #include "GObject.h"
 #include "GSprite.h"
 #include "GCamera.h"
+#include "Box.h"
 #include "Whip.h"
 
 
@@ -33,13 +34,16 @@ enum STATE
 	IS_DOWNFIGHT =11, // VỪA XUỐNG CẦU THANG VỪA ĐÁNH.
 	IS_PASSGATE =12, // QUA MANF.
 	IS_FALLING = 13,
-	CANT_HURT=14
+	CANT_HURT=14,
+	ON_BRICK_MOVING=15
 };
 
 class Simon : public GObject {
 private:
 
 	static Simon* _simon;
+
+	Box _currentMoving;
 
 	int _stateCurrent; //trạng thái hiện tại
 	bool _isMoveleft; // quay qua trái hay k
@@ -57,6 +61,7 @@ private:
 	int _currentLV;
 	int _lastState;
 	int _hp;
+	int _heart;
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
@@ -75,10 +80,18 @@ public:
 	void ChangeState(float deltatime){ _isFighting = false; SetFrame(deltatime); }
 	void Jump();
 	void Fight();
+	void Murder(){
+		_hp = 0;
+	}
 	int GetState(){
 		return _stateCurrent;
 	}
 	void Draw();
+	void Heal(int more){ 
+		this->_heart += more;
+	}
+	int getHeart(){ return _heart; }
+	int getHP(){ return _hp; }
 	bool isFighting(){ return _isFighting; }
 	bool isFalling(){ return _isFalling; }
 	bool isMoveRight(){ return _isMoveright; }
@@ -93,6 +106,7 @@ public:
 	void canGoLeft(bool tamp){ _canGoLeft = tamp; }
 	bool canGoRight(){ return _canGoRight; }
 	void canGoRight(bool tamp){ _canGoRight = tamp; }
+	void setBox(Box box){ this->_currentMoving = box; }
 	Simon();
 	~Simon();
 };

@@ -1,12 +1,12 @@
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\vc120.pdb
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\vc120.idb
-c:\users\tient_000\desktop\castlevania\framework\framework\debug\gobject.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\simon.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\gcamera.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\box.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\rect.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\quadtree.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\quadnode.obj
+c:\users\tient_000\desktop\castlevania\framework\framework\debug\door.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\stairs.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\spearguard.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\spiritball.obj
@@ -20,7 +20,6 @@ c:\users\tient_000\desktop\castlevania\framework\framework\debug\whip.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\windows.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\gsprite.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\gtexture.obj
-c:\users\tient_000\desktop\castlevania\framework\framework\debug\doubleshot.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\enemy.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\firetower.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\gameconfig.obj
@@ -39,6 +38,8 @@ c:\users\tient_000\desktop\castlevania\framework\framework\debug\roast.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\rosary.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\smallheart.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\source.obj
+c:\users\tient_000\desktop\castlevania\framework\framework\debug\game.obj
+c:\users\tient_000\desktop\castlevania\framework\framework\debug\gobject.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\axe.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\bat.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\bigheart.obj
@@ -48,10 +49,9 @@ c:\users\tient_000\desktop\castlevania\framework\framework\debug\brickhidden.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\brickmoving.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\fireandle.obj
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\cross.obj
-c:\users\tient_000\desktop\castlevania\framework\framework\debug\game.obj
-c:\users\tient_000\desktop\castlevania\framework\debug\framework.ilk
-c:\users\tient_000\desktop\castlevania\framework\debug\framework.exe
+c:\users\tient_000\desktop\castlevania\framework\framework\debug\doubleshot.obj
 c:\users\tient_000\desktop\castlevania\framework\debug\framework.pdb
+c:\users\tient_000\desktop\castlevania\framework\debug\framework.ilk
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\framework.tlog\cl.command.1.tlog
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\framework.tlog\cl.read.1.tlog
 c:\users\tient_000\desktop\castlevania\framework\framework\debug\framework.tlog\cl.write.1.tlog

@@ -6,7 +6,7 @@
 
 #define _mvbWIDTH	32
 #define _mvbHEIGHT	64
-#define _mvbSPEED	0.2f
+#define _mvbSPEED	0.6f
 #define _SPRITE L"ground/9.png"
 #define TYPE TypeGame::Enemy_Bat
 
@@ -18,6 +18,7 @@ public:
 	void MoveUpdate(float deltatime);
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
+	void Collistion(float deltatime);
 	Brickmoving();
 	~Brickmoving();
 };

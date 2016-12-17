@@ -21,7 +21,7 @@ void State::load(){
 			myfile >> _matrix[i][j];
 		}
 	}
-	_bgTexture = new GTexture(IMAGE_REF_2, _listTileCount, 1, _listTileCount);
+	_bgTexture = new GTexture(IMAGE_REF_2, _listTileCount, 1, _listTileCount,false);
 }
 void State::draw(){
 	for (int i = 0; i < _row; i++) {
@@ -35,7 +35,7 @@ void State::draw(){
 			srect.right = srect.left + SIZE ;
 			srect.bottom = srect.top + SIZE;
 
-			D3DXVECTOR3 position(float(j * SIZE), float(i * SIZE), 0.0f);
+			D3DXVECTOR3 position(float(j * SIZE), float(i * SIZE)+90, 0.0f);
 			/*D3DXMATRIX mat;
 			D3DXVECTOR2 center((float)(j * SIZE * 2 + SIZE), (float)(i * SIZE * 2 + SIZE));
 			D3DXVECTOR2 scale = D3DXVECTOR2(2.0f, 2.0f);

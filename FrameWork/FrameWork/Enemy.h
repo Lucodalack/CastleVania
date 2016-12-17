@@ -20,9 +20,11 @@ protected:
 public:
 	GSprite* _sprite;
 	Enemy(int type,int x, int y, int x2, int y2);
+	Enemy(int type, int x, int y, int x2, int y2,bool left);
 	void MoveUpdate(float deltatime);
 	void SetFrame(float deltattime);
-	void Update(float deltatime); 
+	void Update(float deltatime);
+	void Collistion(float deltatime);
 	void Draw();
 	Enemy();
 	~Enemy();

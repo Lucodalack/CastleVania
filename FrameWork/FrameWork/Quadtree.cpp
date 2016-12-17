@@ -59,7 +59,7 @@ void Quadtree::loadObject(){
 	_listObject = new GObject*[count];
 	for (int i = 0; i < count; i++){
 		
-		int x, y, width, height, type,id = 0;
+	/*	int x, y, width, height, type,id = 0;
 		myfile >> id;
 		myfile >> type;
 		myfile >> x;
@@ -78,6 +78,35 @@ void Quadtree::loadObject(){
 		if (type <= 10 || type >= 23){
 			_listObject[i] = getObject(type, x, y, width, height);
 		}
+		_listObject[i]->_id = id;*/
+		int x, y, width, height, type, id, y2, x2 = 0;
+		myfile >> id;
+		myfile >> type;
+		myfile >> x;
+		myfile >> y;
+		myfile >> width;
+		myfile >> height;
+		if (type>10 && type<23)
+			_listObject[i] = getObject(type, x, y, width, height);
+
+
+
+		myfile >> x2;
+		myfile >> y2;
+		myfile >> width;
+		myfile >> height;
+		if ((type <= 10 || type >= 23) && type != 6){
+			_listObject[i] = getObject(type, x2, y2, width, height);
+		}
+		else if (type == 6){
+			if (x != x2){
+				_listObject[i] = getObject(type, width, height, x2, y2, false);
+			}
+			else
+				_listObject[i] = getObject(type, x2, y2, width, height);
+			
+		}
+
 		_listObject[i]->_id = id;
 	}
 }
@@ -88,7 +117,7 @@ void Quadtree::loadObject(){
 	}
 	return _currentQuadtree;
 }
- GObject* Quadtree::getObject(int type, int x, int y, int width, int height)
+ GObject* Quadtree::getObject(int type, int x, int y, int width, int height,bool left)
  {
 	 GObject* tamp=0;
 	 switch (type){
@@ -96,13 +125,14 @@ void Quadtree::loadObject(){
 	 case TypeGame::Ground_Brick: tamp = new Bricks(x, y, width, height); break;
 	 case TypeGame::Enemy_Spearguard: tamp = new Spearguard(x, y, width, height); break;
 	 case TypeGame::Enemy_Ghost: tamp = new Ghost(x, y, width, height); break;
-	 case TypeGame::Enemy_Medusahead: tamp = new MedusaHead(x, y, width, height); break;
+	 case TypeGame::Enemy_Medusahead: tamp = new MedusaHead(x, y, width, height, left); break;
 
 	 case TypeGame::Ground_Stair_Up: tamp = new Stairs(x, y, width, height); break;
 	 case TypeGame::Ground_Hidden: tamp = new Brickhidden(x, y); break;
 	 case TypeGame::Ground_Moving_Brick: tamp = new Brickmoving(x, y, width, height); break;
 	 case TypeGame::Ground_Fireandle: tamp = new Fireandle(x, y); break;
 	 case TypeGame::Ground_Firetower: tamp = new Firetower(x, y); break;
+	 case TypeGame::Ground_Opendoor:tamp = new Door(x, y); break;
 
 	 case TypeGame::Item_axe: tamp = new Axe(x, y, width, height); break;
 	 case TypeGame::Item_big_heart: tamp = new BigHeart(x, y, width, height); break;
@@ -117,6 +147,8 @@ void Quadtree::loadObject(){
 	 case TypeGame::Item_small_heart: tamp = new SmallHeart(x, y, width, height); break;
 	 case TypeGame::Item_spirit_ball: tamp = new SpiritBall(x, y, width, height); break;
 	 case TypeGame::Item_stop_watch: tamp = new StopWatch(x, y, width, height); break;
+
+	 case TypeGame::Death_Place:tamp = new DeathPlace(x, y, width, height); break;
 	 default: tamp = new GObject(1,x, y, width, height); break;
 	 }
 	 return tamp;

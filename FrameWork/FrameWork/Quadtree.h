@@ -19,6 +19,7 @@
 #include "Firetower.h"
 #include "Stair.h"
 #include "Stairs.h"
+#include "Door.h"
 
 #include "Axe.h"
 #include "BigHeart.h"
@@ -36,6 +37,8 @@
 #include "SpiritBall.h"
 #include "StopWatch.h"
 
+#include "DeathPlace.h"
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -51,5 +54,5 @@ public:
 	static Quadtree* getCurrentQuadtree();
 	void load();
 	void loadObject();
-	GObject* getObject(int type, int x, int y, int width, int height);
+	GObject* getObject(int type, int x, int y, int width, int height,bool left=true);
 };

@@ -15,7 +15,24 @@ GObject(type,x, y, _WIDTH, _HEIGHT)
 	swepyAABB = new CSweptAABB();
 	this->SetFrame(0);
 }
-
+Enemy::Enemy(int type, int x, int y, int x2, int y2,bool left) :
+GObject(type, x, y, _WIDTH, _HEIGHT)
+{
+	if (!left){
+		_x = x2;
+	}
+	_isMoveleft = false;
+	_isDead = false;
+	_vy = GRAVITY;
+	_vx = _SPEED;
+	_box = Box(_x, y, _WIDTH, _HEIGHT, _vx, _vy);
+	_activeArea.top = y;
+	_activeArea.left = x;
+	_activeArea.right = x2;
+	_activeArea.bottom = y2;
+	swepyAABB = new CSweptAABB();
+	this->SetFrame(0);
+}
 void Enemy::MoveUpdate(float deltaTime)
 {
 #pragma region __XU_LY_CHUYEN_DONG__
@@ -69,6 +86,13 @@ void Enemy::Draw(){
 		this->DrawDeath();
 		return;
 	}
+	switch (_type)
+	{
+	case TypeGame::Enemy_Medusahead:
+		int a = 0;
+		break;
+	
+	}
 	if (!this->_isMoveleft){
 		this->_sprite->DrawFlipX(_x, _y);
 	}
@@ -80,4 +104,30 @@ Enemy::~Enemy(){
 	if (_sprite != NULL){
 		delete _sprite;
 	}
+}
+void Enemy::Collistion(float deltaTime)
+{
+	if (_isDead) return;
+	float x, y;
+	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+		return;
+	if (Simon::getCurrentSimon()->isFighting()){
+		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+			if (_hp>0)
+				_hp--;
+		}
+	}
+	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
+		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
+		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+	}
+
+	////swepyAABB->SweptAABB(this->_box, Whip::getCurrentWhip()->_box, x, y, deltaTime);
+	//if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+	//	if (Simon::getCurrentSimon()->isFighting()){
+	//		//Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
+	//		_hp--;
+	//	}
+	//	
+	//}
 }

@@ -5,8 +5,8 @@ Whip::Whip(int x, int y) :
 GObject(TYPE, x, y, _WIDTH, _HEIGHT)
 {
 	_box = Box(x, y, _WIDTH, _HEIGHT, _vx, _vy);
-	GTexture* ttleft = new GTexture(_SPRITE_LEFT, 4, 3, 12);
-	GTexture* ttright = new GTexture(_SPRITE_RIGHT, 4, 3, 12);
+	GTexture* ttleft = new GTexture(_SPRITE_LEFT, 4, 3, 12,false);
+	GTexture* ttright = new GTexture(_SPRITE_RIGHT, 4, 3, 12,false);
 	_sprite_left = new GSprite(ttleft, SIMON_Animation_RATE);
 	_sprite_right = new GSprite(ttright, SIMON_Animation_RATE);
 	SetFrame(0); //1 kieu roi

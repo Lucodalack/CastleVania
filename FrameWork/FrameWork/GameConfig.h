@@ -1,7 +1,7 @@
 #pragma once
 #define GAME_NAME L"CastleVania"
 #define SCREEN_WIDTH 515
-#define SCREEN_HEIGHT 450
+#define SCREEN_HEIGHT 440
 #define FRAME_RATE 30
 
 #define CAMERAX 0

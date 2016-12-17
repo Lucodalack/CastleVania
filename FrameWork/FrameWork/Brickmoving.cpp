@@ -8,6 +8,7 @@ Enemy(TYPE, x, y, x2, y2)
 	_box = Box(x, y, _mvbWIDTH, _mvbHEIGHT, _vx, _vy);
 	GTexture* texture = new GTexture(_SPRITE, 1, 1, 1);
 	_sprite = new GSprite(texture, ANIMATIONRATE);
+	_activeArea.right = x2 - _mvbWIDTH*2;
 }
 
 void Brickmoving::MoveUpdate(float deltaTime)
@@ -51,7 +52,44 @@ void Brickmoving::Update(float deltatime){
 	this->_sprite->Update(deltatime);
 }
 
+void Brickmoving::Collistion(float deltatime){
+	float x, y;
 
+	if (Simon::getCurrentSimon()->_isDeath) return;
+	int stateCollid = swepyAABB->CollideCheck(Simon::getCurrentSimon()->_box, this->_box, x, y);
+	switch (stateCollid)
+	{
+	case COLLIDE_STATE::NONE:
+		if (Simon::getCurrentSimon()->GetState() == STATE::IS_JOGGING&&!Simon::getCurrentSimon()->canGoStair())
+		{
+			Simon::getCurrentSimon()->ChangeState(STATE::IS_FALLING);
+		}
+	
+		break;
+	case COLLIDE_STATE::LEFT:
+		//Simon::getCurrentSimon()->canGoLeft(false);
+		break;
+	case COLLIDE_STATE::RIGHT:
+		//Simon::getCurrentSimon()->canGoRight(false);
+
+		break;
+	case COLLIDE_STATE::TOP:
+		break;
+	case COLLIDE_STATE::BOTTOM:
+		if (Simon::getCurrentSimon()->isFighting()){
+			Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
+		}
+		else{
+			Simon::getCurrentSimon()->setBox(this->_box);
+			Simon::getCurrentSimon()->_vx = this->_vx;
+			Simon::getCurrentSimon()->ChangeState(STATE::ON_BRICK_MOVING);
+		}
+		break;
+	default:
+		break;
+	}
+
+}
 Brickmoving::~Brickmoving(){
 	if (_sprite != NULL){
 		delete _sprite;

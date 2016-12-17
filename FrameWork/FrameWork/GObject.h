@@ -52,7 +52,8 @@ enum TypeGame {
 
 	
 	Other_kill = 37,
-	MxD = 38
+	MxD = 38,
+	Death_Place=39
 };
 
 class GObject {

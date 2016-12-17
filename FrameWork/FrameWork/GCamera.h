@@ -27,10 +27,13 @@ public:
 	GCamera(int width, int height,int x,int y);
 	void ChangeState(int state);
 	int x, y;
+	int xDestinate;
+	bool onGoto;
 	int width;
 	int height;
 	//Game Functions
-	void Update();
+	void Update(float deltatime);
+	void Move();
 	void Follow();
 	void Unfollow();
 	bool IsFollowing() const;

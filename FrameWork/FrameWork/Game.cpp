@@ -95,14 +95,15 @@ void Game::GameRun(float deltatime)
 	{
 		GCamera::getCurrentCamera()->Unfollow();
 	}*/
-	GCamera::getCurrentCamera()->Update();
-
+	GCamera::getCurrentCamera()->Update(deltatime);
+	Board::GetCurrentBoard()->Update();
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
 	for each(GObject* tamp in listObject){
 		tamp->Update(deltatime);
 	}
 	Collision(deltatime);
+	Board::GetCurrentBoard()->Update();
 }
 
 void Game::GameDraw()
@@ -120,6 +121,7 @@ void Game::GameDraw()
 	for each(GObject* tamp in listObject){
 		tamp->Draw();
 	}
+	Board::GetCurrentBoard()->Draw();
 }
 
 

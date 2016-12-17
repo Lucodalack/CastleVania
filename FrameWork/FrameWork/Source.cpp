@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "State.h"
 #include "Brick.h"
+
 int WINAPI WinMain(
 	HINSTANCE hInstance,
 	HINSTANCE hPrevInstace,
