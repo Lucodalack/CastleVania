@@ -21,7 +21,10 @@ protected:
 	bool _isMoveleft;
 	bool _flag1, _flag2, _flag3;
 	bool _isDead;// da chet chua nek.
-	float _time = 0;
+	float _time1 = 0;
+	float _time2 = 0;
+	float _time3 = 0;
+
 public:
 	GSprite* _sprite;
 	FireBall* _fireball1, *_fireball2, *_fireball3;
