@@ -1,17 +1,27 @@
-﻿Build started 12/18/2016 00:08:42.
+﻿Build started 12/18/2016 21:55:52.
      1>Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GCamera.cpp
-         GCamera.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Simon.cpp
+         Simon.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
                  c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\gcamera.cpp(15): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\gcamera.cpp(102): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(23): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(47): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(48): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(57): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(58): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(132): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(133): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(393): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(401): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(502): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(503): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\Bat.obj
          Debug\BigHeart.obj
+         Debug\BonePillar.obj
          Debug\Brick.obj
          Debug\Bricks.obj
          Debug\Brickhidden.obj
@@ -20,6 +30,7 @@
          Debug\Cross.obj
          Debug\DoubleShot.obj
          Debug\Enemy.obj
+         Debug\FireBall.obj
          Debug\Firetower.obj
          Debug\GameConfig.obj
          Debug\Ghost.obj
@@ -66,4 +77,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.07
+Time Elapsed 00:00:01.42

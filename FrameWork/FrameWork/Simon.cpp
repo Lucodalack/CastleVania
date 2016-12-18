@@ -406,6 +406,7 @@ void Simon::Update(float deltatime){
 void Simon::MoveState(){
 	if (_hp <= 0)
 		return;
+	if (!_isOnStair) return;
 	switch (_currentLV)
 	{
 	case 1:

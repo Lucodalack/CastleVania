@@ -126,6 +126,7 @@ void Quadtree::loadObject(){
 	 case TypeGame::Enemy_Spearguard: tamp = new Spearguard(x, y, width, height); break;
 	 case TypeGame::Enemy_Ghost: tamp = new Ghost(x, y, width, height); break;
 	 case TypeGame::Enemy_Medusahead: tamp = new MedusaHead(x, y, width, height, left); break;
+	 case TypeGame::Enemy_Bonepilla:tamp = new BonePillar(x, y); break;
 
 	 case TypeGame::Ground_Stair_Up: tamp = new Stairs(x, y, width, height); break;
 	 case TypeGame::Ground_Hidden: tamp = new Brickhidden(x, y); break;
@@ -133,6 +134,7 @@ void Quadtree::loadObject(){
 	 case TypeGame::Ground_Fireandle: tamp = new Fireandle(x, y); break;
 	 case TypeGame::Ground_Firetower: tamp = new Firetower(x, y); break;
 	 case TypeGame::Ground_Opendoor:tamp = new Door(x, y); break;
+	 case TypeGame::Ground_Trap:tamp = new Trap(x, y); break;
 
 	 case TypeGame::Item_axe: tamp = new Axe(x, y, width, height); break;
 	 case TypeGame::Item_big_heart: tamp = new BigHeart(x, y, width, height); break;

@@ -1,4 +1,4 @@
-#ifndef __OBJECT_H__
+﻿#ifndef __OBJECT_H__
 #define __OBJECT_H__
 
 
@@ -50,7 +50,8 @@ enum TypeGame {
 	Item_spirit_ball = 35,
 	Item_none = 36,
 
-	
+	Item_fire_ball = 40,//Đạn của Bone Pillar
+
 	Other_kill = 37,
 	MxD = 38,
 	Death_Place=39

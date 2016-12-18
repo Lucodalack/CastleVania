@@ -12,6 +12,7 @@
 #include "Bricks.h"
 #include "Ghost.h"
 #include "MedusaHead.h"
+#include "BonePillar.h"
 
 #include "Brickhidden.h"
 #include "Brickmoving.h"
@@ -20,6 +21,7 @@
 #include "Stair.h"
 #include "Stairs.h"
 #include "Door.h"
+#include "Trap.h"
 
 #include "Axe.h"
 #include "BigHeart.h"

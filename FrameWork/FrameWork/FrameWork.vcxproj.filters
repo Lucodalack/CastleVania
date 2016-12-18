@@ -61,10 +61,12 @@
     <Filter Include="GameObject\Ground">
       <UniqueIdentifier>{ec0eeacf-d09b-4062-9d81-d79bd7997da4}</UniqueIdentifier>
     </Filter>
+	<Filter Include="GameObject\Enemy\BonePillar">
+      <UniqueIdentifier>{7b2313d3-c12a-4f31-8e50-8df5009e521b}</UniqueIdentifier>
+    </Filter> 
     <Filter Include="Framework\Board">
       <UniqueIdentifier>{5c07eee0-0c06-4461-8542-f990a3dafa2f}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
+    </Filter>  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
       <Filter>Framework</Filter>
@@ -210,16 +212,22 @@
     <ClInclude Include="Stairs.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="Door.h">
-      <Filter>GameObject\Ground</Filter>
+ 	<ClInclude Include="BonePillar.h">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
     </ClInclude>
+    <ClInclude Include="FireBall.h">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
+    </ClInclude> 
     <ClInclude Include="Board.h">
       <Filter>Framework\Board</Filter>
     </ClInclude>
     <ClInclude Include="DeathPlace.h">
       <Filter>GameObject\Ground</Filter>
-    </ClInclude>
-  </ItemGroup>
+    </ClInclude> 
+       <ClInclude Include="Door.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude> 
+     </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
       <Filter>Framework</Filter>
@@ -368,6 +376,12 @@
     <ClCompile Include="Stairs.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
+   <ClCompile Include="BonePillar.cpp">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
+    </ClCompile>
+    <ClCompile Include="FireBall.cpp">
+      <Filter>GameObject\Enemy\BonePillar</Filter>
+    </ClCompile>
     <ClCompile Include="Door.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
@@ -376,6 +390,5 @@
     </ClCompile>
     <ClCompile Include="DeathPlace.cpp">
       <Filter>GameObject\Ground</Filter>
-    </ClCompile>
-  </ItemGroup>
+    </ClCompile>  </ItemGroup>
 </Project>

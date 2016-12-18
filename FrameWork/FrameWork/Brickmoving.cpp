@@ -56,6 +56,16 @@ void Brickmoving::Collistion(float deltatime){
 	float x, y;
 
 	if (Simon::getCurrentSimon()->_isDeath) return;
+	//if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
+	//	if (Simon::getCurrentSimon()->isFighting()){
+	//		Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
+	//	}
+	//	else{
+	//		Simon::getCurrentSimon()->setBox(this->_box);
+	//		Simon::getCurrentSimon()->_vx = this->_vx;
+	//		Simon::getCurrentSimon()->ChangeState(STATE::ON_BRICK_MOVING);
+	//	}
+	//}
 	int stateCollid = swepyAABB->CollideCheck(Simon::getCurrentSimon()->_box, this->_box, x, y);
 	switch (stateCollid)
 	{
