@@ -8,7 +8,7 @@ Enemy(TYPE, x, y, x2, y2)
 	_box = Box(x, y, _mvbWIDTH, _mvbHEIGHT, _vx, _vy);
 	GTexture* texture = new GTexture(_SPRITE, 1, 1, 1);
 	_sprite = new GSprite(texture, ANIMATIONRATE);
-	_activeArea.right = x2 - _mvbWIDTH*2;
+	_activeArea.right = x2 - _mvbWIDTH;
 }
 
 void Brickmoving::MoveUpdate(float deltaTime)

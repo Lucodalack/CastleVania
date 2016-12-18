@@ -121,6 +121,9 @@ void Quadtree::loadObject(){
  {
 	 GObject* tamp=0;
 	 switch (type){
+
+	 case TypeGame::Boss_Medusa:tamp = new Medusa(x, y); break;
+
 	 case TypeGame::Enemy_Bat: tamp = new Bat(x, y, width, height); break;
 	 case TypeGame::Ground_Brick: tamp = new Bricks(x, y, width, height); break;
 	 case TypeGame::Enemy_Spearguard: tamp = new Spearguard(x, y, width, height); break;

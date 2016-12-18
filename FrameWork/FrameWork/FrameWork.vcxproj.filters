@@ -63,10 +63,14 @@
     </Filter>
 	<Filter Include="GameObject\Enemy\BonePillar">
       <UniqueIdentifier>{7b2313d3-c12a-4f31-8e50-8df5009e521b}</UniqueIdentifier>
-    </Filter> 
+ 	</Filter>
+    <Filter Include="GameObject\Boss">
+      <UniqueIdentifier>{10027022-a4a7-4266-b89f-0f80263a9d41}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Framework\Board">
       <UniqueIdentifier>{5c07eee0-0c06-4461-8542-f990a3dafa2f}</UniqueIdentifier>
-    </Filter>  </ItemGroup>
+    </Filter>
+</ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
       <Filter>Framework</Filter>
@@ -221,13 +225,16 @@
     <ClInclude Include="Board.h">
       <Filter>Framework\Board</Filter>
     </ClInclude>
-    <ClInclude Include="DeathPlace.h">
+	<ClInclude Include="Medusa.h">
+      <Filter>GameObject\Boss</Filter>
+    </ClInclude>
+	<ClInclude Include="DeathPlace.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude> 
        <ClInclude Include="Door.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude> 
-     </ItemGroup>
+</ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
       <Filter>Framework</Filter>
@@ -382,7 +389,10 @@
     <ClCompile Include="FireBall.cpp">
       <Filter>GameObject\Enemy\BonePillar</Filter>
     </ClCompile>
-    <ClCompile Include="Door.cpp">
+	<ClCompile Include="Medusa.cpp">
+      <Filter>GameObject\Boss</Filter>
+    </ClCompile>
+   <ClCompile Include="Door.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
     <ClCompile Include="Board.cpp">

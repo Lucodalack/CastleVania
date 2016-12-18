@@ -4,6 +4,7 @@
 
 #include "GObject.h"
 #include "GSprite.h"
+#include "Simon.h"
 
 
 
@@ -29,7 +30,7 @@ protected:
 	bool _isLive;//Medusa sống
 	bool _isSnake;//Medusa thả rắn
 
-	float _timesleep = 1000;
+	float _timesleep = 200;
 	int last_x;
 	bool flag = false;
 	bool _isMoveleft;

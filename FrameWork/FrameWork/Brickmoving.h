@@ -4,8 +4,8 @@
 
 #include "Enemy.h"
 
-#define _mvbWIDTH	32
-#define _mvbHEIGHT	64
+#define _mvbWIDTH	64
+#define _mvbHEIGHT	16
 #define _mvbSPEED	0.6f
 #define _SPRITE L"ground/9.png"
 #define TYPE TypeGame::Enemy_Bat

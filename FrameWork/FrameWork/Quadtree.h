@@ -39,6 +39,8 @@
 #include "SpiritBall.h"
 #include "StopWatch.h"
 
+#include "Medusa.h"
+
 #include "DeathPlace.h"
 
 #include <string>

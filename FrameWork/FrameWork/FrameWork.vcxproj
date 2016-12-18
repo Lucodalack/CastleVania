@@ -33,10 +33,9 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bricks.h" />
     <ClInclude Include="Ground.h" />
-    <ClInclude Include="Door.h" />
+<ClInclude Include="Medusa.h" /><ClInclude Include="Door.h" />
     <ClInclude Include="Board.h" />
-    <ClInclude Include="DeathPlace.h" />
-    <ClInclude Include="Stairs.h" />
+    <ClInclude Include="DeathPlace.h" />    <ClInclude Include="Stairs.h" />
     <ClInclude Include="HolyWater.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemNone.h" />
@@ -89,6 +88,7 @@
     <ClCompile Include="ItemNone.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="Knife.cpp" />
+    <ClCompile Include="Medusa.cpp" />
     <ClCompile Include="MedusaHead.cpp" />
     <ClCompile Include="MoneyBag.cpp" />
     <ClCompile Include="MorningStar.cpp" />
