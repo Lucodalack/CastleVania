@@ -43,23 +43,34 @@ void BonePillar::SetFrame(float deltaTime)
 }
 
 void BonePillar::Update(float deltatime){
-	_time += deltatime;
+	_time1 += deltatime;
 	if (_flag1 == true)
 		_fireball1->Update(deltatime);
 	if (_flag2 == true)
 		_fireball2->Update(deltatime);
 	if (_flag3 == true)
 		_fireball3->Update(deltatime);
-	if (_time >= 2800)
+	if (_time1 >= 500 || _time2>0)
+		_time2 += deltatime;
+	if (_time2 >= 500 || _time3 > 0)
+		_time3 += deltatime;
+	if (_time1 >= 1500)
 	{
 		_fireball1 = new FireBall(_x, _y + 12);
-		_fireball2 = new FireBall(_x, _y + 12);
-		_fireball3 = new FireBall(_x, _y + 12);
 		_flag1 = false;
+		_time1 = 0;
+	}
+	if (_time2 >= 1500)
+	{
+		_fireball2 = new FireBall(_x, _y + 12);
 		_flag2 = false;
+		_time2 = 0;
+	}
+	if (_time3 >= 1500)
+	{
+		_fireball3 = new FireBall(_x, _y + 12);
 		_flag3 = false;
-
-		_time = 0;
+		_time3 = 0;
 	}
 	this->MoveUpdate(deltatime);
 	this->_sprite->Update(deltatime);
@@ -75,17 +86,17 @@ void BonePillar::Draw(){
 	else{
 		this->_sprite->Draw(_x, _y);
 	}
-	if (_time > 400)
+	if (_time1 > 0)
 	{
 		_fireball1->Draw();
 		_flag1 = true;
 	}
-	if (_time > 800)
+	if (_time2 >  0)
 	{
 		_fireball2->Draw();
 		_flag2 = true;
 	}
-	if (_time > 1200)
+	if (_time3 > 0)
 	{
 		_fireball3->Draw();
 		_flag3 = true;
