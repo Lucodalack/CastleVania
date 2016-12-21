@@ -3,17 +3,18 @@
 
 //Đạn của Bone Pillar
 
-#define _WIDTH	16
-#define _HEIGHT	20
-#define _SPRITE L"other/0.png"
-#define TYPE TypeGame::Item_fire_ball
-#define _SPEED 1.2f
+#define _fbWIDTH	16
+#define _fbHEIGHT	20
+#define _fbSPRITE L"other/0.png"
+#define fbTYPE TypeGame::Item_fire_ball
+#define _fbSPEED 1.2f
 
 #include "GObject.h"
 #include <vector>
 #include <d3d9.h>
 #include <d3dx9.h>
 #include <stdio.h>
+#include "SweptAABB.h"
 
 class FireBall : public GObject {
 protected:
@@ -24,6 +25,7 @@ protected:
 	int last_x;
 
 	int a[10];
+	CSweptAABB* swepyAABB;
 
 
 	int var;
@@ -38,6 +40,7 @@ public:
 	void Update(float deltatime);
 	void ChangeState(int state);
 	void Draw();
+
 	FireBall();
 	~FireBall();
 };

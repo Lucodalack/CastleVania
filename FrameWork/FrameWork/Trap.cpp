@@ -1,15 +1,15 @@
 #include "Trap.h"
-
+#include "Simon.h"
 
 
 Trap::Trap(int x, int y) :
-GObject(TYPE, x, y, 64, 16)
+GObject(trapTYPE, x, y, 64, 16)
 {
 	_Str_Y = y;
 	_Offset = y + 36;
 	var = 4;
 
-	_box = Box(x, y, _trapWIDTH, _trapWIDTH);
+	_box = Box(x, y, _trapWIDTH, _trapHEIGHT);
 	GTexture* texture1 = new GTexture(_SPRITE, 2, 1, 2);
 	GTexture* texture2 = new GTexture(_SPRITE1, 1, 1, 1);
 	_sprite1 = new GSprite(texture1, 1);
@@ -34,9 +34,20 @@ void Trap::Update(float DeltaTime)
 	{
 		var = -1;
 	}
-	_box = Box(_x, _y, _trapWIDTH, _trapWIDTH);
+	_box = Box(_x, _y, _trapWIDTH, _trapHEIGHT);
 
 }
+
+void Trap::Collistion(float deltaTime){
+	float x, y;
+	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+		return;
+	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
+		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
+		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+	}
+}
+
 
 void Trap::Draw()
 {
