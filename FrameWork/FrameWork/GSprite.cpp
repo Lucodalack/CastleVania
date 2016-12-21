@@ -8,7 +8,6 @@ GSprite::GSprite()
 	_timeAni = 0;
 	_index = 0;
 	_timeLocal = 0;
-	Done = -1;
 }
 
 GSprite::GSprite(const GSprite &sprite)
@@ -73,7 +72,7 @@ void GSprite::Update(int ellapseTime)
 	{
 		_timeLocal = 0;
 		this->Next();
-		Done = (Done + 1) % 3;
+		Done =  (Done + 1) % 3;
 	}
 }
 

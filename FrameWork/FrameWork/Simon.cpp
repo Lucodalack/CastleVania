@@ -11,6 +11,7 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 	_isOnStair = false;
 	_isJumping = false;
 	_isFalling = true;
+	_isSiting = false;
 	_canGoStair = false;
 	_currentLV = 1;
 	_canGoLeft = true;
@@ -29,16 +30,28 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 void Simon::MoveUpdate(float deltaTime)
 {
 	if (_hp <= 0) return;
+	float d = 1.0;
+	if (_isJumping && _isFighting)
+		d = 1.0;
 #pragma region __XU_LY_CHUYEN_DONG__
-	if (this->_isFighting) return;
+
+	if (this->_isFighting) {
+		if (Whip::getCurrentWhip()->_done)
+			_isFighting = false;
+		if (!(this->_isJumping||this->_isFalling))
+			return;
+		/*if (!this->_stateCurrent==STATE::IS_JUMPFIGH)
+			return;*/
+	}
+
 	if (this->_stateCurrent == STATE::CANT_HURT){
 		//this->_x += int(this->_vx * deltaTime);
 		if (_isMoveleft&&_canGoRight){
-			this->_x += int(this->_vx * deltaTime);
+			this->_x += int(this->_vx * deltaTime*d);
 		}
 		if (_isMoveright&&_canGoLeft)
 		{
-			this->_x += int(this->_vx * deltaTime);
+			this->_x += int(this->_vx * deltaTime*d);
 		}
 		this->_y += int(this->_vy * deltaTime);
 		if (_vy<GRAVITY)
@@ -52,7 +65,7 @@ void Simon::MoveUpdate(float deltaTime)
 	}
 	if (this->_stateCurrent == STATE::ON_BRICK_MOVING)
 	{
-		this->_x += int(this->_vx * deltaTime);
+		this->_x += int(this->_vx * deltaTime*d);
 		//this->_vx = _currentMoving.vx;
 		_box.x = _x;
 		_box.y = _y;
@@ -63,7 +76,7 @@ void Simon::MoveUpdate(float deltaTime)
 	//Kiem tra doi tuong co nhay duoc hay ko
 	if (this->_isOnStair)
 	{
-		this->_x += int(this->_vx * deltaTime);
+		this->_x += int(this->_vx * deltaTime*d);
 		this->_y += int(this->_vy * deltaTime);
 		
 		if ((this->_x >= this->xDestinate) && (this->_vx>0))
@@ -91,9 +104,9 @@ void Simon::MoveUpdate(float deltaTime)
 			if (this->_isFalling){
 				_vy = GRAVITY;
 				this->_y += int(_vy*deltaTime);
-				if (this->_lastState == STATE::IS_JUMPING)
+				if (this->_lastState == STATE::IS_JUMPING || this->_lastState == STATE::IS_JUMPFIGH)
 				if ((this->_vx>0 && this->_canGoRight) || (this->_vx<0 && this->_canGoLeft))
-				this->_x += int(this->_vx * deltaTime/1.5f );
+				this->_x += int(this->_vx * deltaTime*d/1.5f );
 			}
 		}
 
@@ -101,20 +114,20 @@ void Simon::MoveUpdate(float deltaTime)
 		{
 			if (this->_vx < 0)
 			{
-				this->_x += int(this->_vx * deltaTime);
+				this->_x += int(this->_vx * deltaTime*d);
 			}
 		}
 		else if (this->_isMoveright&&this->_canGoRight&&!this->_isFalling)
 		{
 			if (this->_vx > 0)
 			{
-				this->_x += int(this->_vx * deltaTime);
+				this->_x += int(this->_vx * deltaTime*d);
 			}
 		}
-		if (this->_stateCurrent == STATE::IS_JUMPING){
+		if (this->_stateCurrent == STATE::IS_JUMPING || this->_stateCurrent == STATE::IS_JUMPFIGH){
 			this->_y += int(this->_vy * deltaTime);
 			if ((this->_vx>0 && this->_canGoRight) || (this->_vx<0 && this->_canGoLeft))
-				this->_x += int(this->_vx * deltaTime / 1.5f);
+				this->_x += int(this->_vx * deltaTime*d / 1.5f);
 			if (_vy < -0.3)
 				_vy += 0.2f;
 			else {
@@ -126,7 +139,6 @@ void Simon::MoveUpdate(float deltaTime)
 		}
 		_canGoRight = true;
 		_canGoLeft = true;
-		
 	}
 #pragma endregion
 	_box.x = _x;
@@ -155,6 +167,10 @@ void Simon::SetFrame(float deltaTime)
 		{
 								   this->_sptrite->_start = 0;
 								   this->_sptrite->_end = 0;
+								   if (_isFighting){
+									   this->_sptrite->_start = 5;
+									   this->_sptrite->_end = 7;
+								   }
 								   break;
 		}
 		case STATE::IS_JOGGING://Chay bo
@@ -182,7 +198,8 @@ void Simon::SetFrame(float deltaTime)
 									this->_sptrite->_end = 9;
 									break;
 		}
-		case STATE::IS_SITFIGHT:
+		case STATE::IS_SITFIGHT: 
+		case STATE::IS_JUMPFIGH:
 		{
 								   this->_sptrite->_start = 15;
 								   this->_sptrite->_end = 17;
@@ -261,11 +278,12 @@ void Simon::SetFrame(float deltaTime)
 	}
 #pragma endregion
 }
+
 void Simon::Jump(){
 	if (_hp <= 0)
 		return;
 	if (!_isJumping){
-		if (this->_isFighting){
+		if (this->_isFighting ){
 			this->_stateCurrent = STATE::IS_JUMPFIGH;
 		}
 		else
@@ -284,9 +302,13 @@ void Simon::Jump(){
 void Simon::Fight(){
 	if (_hp <= 0)
 		return;
+	Whip::getCurrentWhip()->_done = false;
 #pragma region __XU_LY_PHIM_DANH__
 	if (!this->_isFighting)
 	{
+		this->_lastState = this->_stateCurrent;
+		this->_isFighting = true;
+
 		switch (this->_stateCurrent)
 		{
 		case STATE::IS_JUMPING:
@@ -302,10 +324,9 @@ void Simon::Fight(){
 			this->_stateCurrent = STATE::IS_UPFIGHT;
 			break;
 		default:
-			this->_stateCurrent = STATE::IS_FIGHTING;
+			this->_stateCurrent = STATE::IS_SITFIGHT;
 			break;
 		}
-		this->_isFighting = true;
 	}
 #pragma endregion
 }
@@ -341,9 +362,11 @@ void Simon::InputUpdate(float deltaTime)
 			&& (this->_stateCurrent != STATE::IS_UPING)
 			&& (this->_stateCurrent != STATE::IS_DOWNING)
 			&& (this->_stateCurrent != STATE::CANT_HURT)
-			&& (this->_stateCurrent != STATE::ON_BRICK_MOVING))
+			&& (this->_stateCurrent != STATE::ON_BRICK_MOVING)
+			)
 			_stateCurrent = STATE::IS_STANDING;
 	}
+	this->_isSiting = false;
 #pragma endregion
 
 
@@ -380,7 +403,8 @@ void Simon::InputUpdate(float deltaTime)
 			this->_stateCurrent = STATE::IS_DOWNING;
 		}
 		else{
-			this->_stateCurrent = STATE::IS_SITTING;
+				this->_stateCurrent = STATE::IS_SITTING;
+				this->_isSiting = true;
 		}
 	}
 #pragma endregion
@@ -403,6 +427,7 @@ void Simon::Update(float deltatime){
 		Whip::getCurrentWhip()->Update(deltatime);
 	}
 }
+
 void Simon::MoveState(){
 	if (_hp <= 0)
 		return;
@@ -459,14 +484,16 @@ void Simon::MoveState(){
 void Simon::Draw(){
 	if (_timeDeath > DEATH_TIME)
 		return;
+	int d = (this->_stateCurrent == STATE::IS_SITFIGHT || this->_stateCurrent == STATE::IS_SITTING) ? 20 : 0;
 	if (this->_isMoveright){
-		this->_sptrite->DrawFlipX(_x-10, _y);
+		this->_sptrite->DrawFlipX(_x-10, _y+d);
 	}
 	else{
-		this->_sptrite->Draw(_x-11, _y);
+		this->_sptrite->Draw(_x-11, _y+d);
 	}
 	Whip::getCurrentWhip()->Draw();
 }
+
 void Simon::ChangeState(int state){
 	//if (_stateCurrent == STATE::IS_UPING&& state == STATE::IS_STANDING) return;
 	_lastState = _stateCurrent;
@@ -478,7 +505,10 @@ void Simon::ChangeState(int state){
 	switch (state) {
 	case STATE::IS_STANDING:
 		this->_isFalling = false; 
-		this->_isJumping = false; break;
+		this->_isJumping = false; 
+		if (this->_isSiting)
+			this->_stateCurrent = STATE::IS_SITTING;
+		break;
 	case STATE::IS_FALLING: this->_isFalling = true;
 		this->_isJumping = false;  break;
 	case STATE::IS_UPING: this->_isOnStair = true;

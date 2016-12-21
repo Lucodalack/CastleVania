@@ -52,6 +52,7 @@ private:
 	bool _isJumping; //dang nhay
 	bool _isFalling;// dang roi xuong
 	bool _isFighting; // danh danh nhau nek
+	bool _isSiting;
 	bool _canGoStair;
 	bool _canGoRight;
 	bool _canGoLeft;
@@ -77,7 +78,11 @@ public:
 	void Update(float deltatime);
 	void MoveState();
 	void ChangeState(int state);
-	void ChangeState(float deltatime){ _isFighting = false; SetFrame(deltatime); }
+	void ChangeState(float deltatime){ 
+		_isFighting = false; 
+		SetFrame(deltatime); 
+		//this->_stateCurrent = this->_lastState;
+	}
 	void Jump();
 	void Fight();
 	void Murder(){

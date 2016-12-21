@@ -7,7 +7,7 @@
 #include <d3dx9.h>
 #include "GSprite.h"
 #include "Box.h"
-#define GRAVITY			1.2f
+#define GRAVITY			1.2f 
 #define ANIMATIONRATE 30
 #define _SPRITE_DEATH L"other/1.png"
 #define DEATH_TIME 100

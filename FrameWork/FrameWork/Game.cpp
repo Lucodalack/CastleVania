@@ -114,7 +114,7 @@ void Game::GameDraw()
 	//_mybackground->Draw(0, 0);
 	
 	State::getCurrentState()->draw();
-	Simon::getCurrentSimon()->Draw();
+	
 	//_bricks->Draw();
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
@@ -122,6 +122,7 @@ void Game::GameDraw()
 		tamp->Draw();
 	}
 	Board::GetCurrentBoard()->Draw();
+	Simon::getCurrentSimon()->Draw();
 }
 
 

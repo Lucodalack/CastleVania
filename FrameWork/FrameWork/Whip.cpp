@@ -1,5 +1,5 @@
 #include "Whip.h"
-
+#include <string>
 Whip* Whip::_whip = 0;
 Whip::Whip(int x, int y) :
 GObject(TYPE, x, y, _WIDTH, _HEIGHT)
@@ -10,6 +10,9 @@ GObject(TYPE, x, y, _WIDTH, _HEIGHT)
 	_sprite_left = new GSprite(ttleft, SIMON_Animation_RATE);
 	_sprite_right = new GSprite(ttright, SIMON_Animation_RATE);
 	SetFrame(0); //1 kieu roi
+
+	//vi tri dau tien theo con simon
+	MoveUpdate(0);
 }
 
 void Whip::MoveUpdate(float deltaTime)
@@ -27,13 +30,13 @@ void Whip::MoveUpdate(float deltaTime)
 				_box.w = 23;
 				_box.h = 58;
 				break;
-			case 0:this->_x -= 80;
+			case 0:this->_x -= 85;
 				_box.x = _x + 120;
 				_box.w = 40;
 				_box.h = 46;
 				break;
 			case 1:case 2:
-				this->_x -= 78;
+				this->_x -= 85;
 				_box.x = _x ;
 				_box.w = 66;
 				_box.h = 31; break;
@@ -53,7 +56,7 @@ void Whip::MoveUpdate(float deltaTime)
 				_box.w = 40;
 				_box.h = 46; break;
 			case 1: case 2:
-				this->_x += 40;
+				this->_x += 35;
 				_box.x = _x;
 				_box.w = 66;
 				_box.h = 31; break;
@@ -87,11 +90,15 @@ void Whip::Update(float deltatime){
 		Simon::getCurrentSimon()->ChangeState(deltatime);
 		this->_sprite_left->Done = -1;
 		this->_sprite_left->Reset();
+		OutputDebugString((LPCWSTR)"\n");
+		this->_done = true;
 	}
 	if (this->_sprite_right->Done == 2){
 		Simon::getCurrentSimon()->ChangeState(deltatime);
 		this->_sprite_right->Done = -1;
 		this->_sprite_right->Reset();
+		OutputDebugString((LPCWSTR)"\n");
+		this->_done = true;
 	}
 }
 
@@ -101,9 +108,16 @@ void Whip::Draw(){
 	
 	if (Simon::getCurrentSimon()->isMoveRight()){
 		this->_sprite_right->Draw(_x, _y);
+		
+		wchar_t buffer[256];
+		wsprintfW(buffer, L"x=%d,done=%d|", _x,_sprite_right->Done);
+		OutputDebugString((LPCWSTR)buffer);
 	}
 	else{
 		this->_sprite_left->Draw(_x, _y);
+		wchar_t buffer[256];
+		wsprintfW(buffer, L"x=%d,done=%d|", _x, _sprite_left->Done);
+		OutputDebugString((LPCWSTR)buffer);
 	}
 }
 
