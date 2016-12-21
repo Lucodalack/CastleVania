@@ -5,6 +5,7 @@
 #include <limits>
 #include "Box.h"
 #include "Simon.h"
+#include "GObject.h"
 enum COLLIDE_STATE {
 	NONE = 0,
 	LEFT = 1,
@@ -31,6 +32,7 @@ public:
 	Box GetSweptBroadphaseBox(Box b);
 	float SweptAABB(Box b1, Box b2, float& normalx, float& normaly,float deltatime);
 	int CollideCheck(Box b1, Box b2, float& moveX, float& moveY);
+	int CollideCheck(GObject* bo1, GObject* bo2, float& moveX, float& moveY);
 	~CSweptAABB();
 };
 

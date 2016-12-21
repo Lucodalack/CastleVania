@@ -18,6 +18,7 @@ void Stairs::Collistion(float deltatime){
 	float x, y;
 	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
 		return;
+	if (Simon::getCurrentSimon()->isOnStair2()) return;
 	if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
 		Simon::getCurrentSimon()->canGoStair(true);
 		if (x + y != 0){
@@ -37,6 +38,8 @@ void Stairs::Collistion(float deltatime){
 				else if (!Simon::getCurrentSimon()->isOnStair()){
 					Simon::getCurrentSimon()->onGoto = true;
 					Simon::getCurrentSimon()->_x += dx / deltatime;
+					if (abs(dx) < deltatime)
+						Simon::getCurrentSimon()->_x += dx;
 				}
 
 			}
@@ -64,9 +67,13 @@ void Stairs::Collistion(float deltatime){
 					return;
 				}
 			}
-			Simon::getCurrentSimon()->isOnStair(false);
-			if (Simon::getCurrentSimon()->GetState() == STATE::IS_UPING || Simon::getCurrentSimon()->GetState() == STATE::IS_DOWNING)
-				Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+			if (!Simon::getCurrentSimon()->onGoto){
+				Simon::getCurrentSimon()->isOnStair(false);
+				Simon::getCurrentSimon()->isOnStair1(false);
+				if (Simon::getCurrentSimon()->GetState() == STATE::IS_UPING || Simon::getCurrentSimon()->GetState() == STATE::IS_DOWNING)
+					Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+			}
+		
 		}
 		
 	}

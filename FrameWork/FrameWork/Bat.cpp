@@ -76,18 +76,19 @@ void Bat::SetFrame(float deltaTime)
 void Bat::Collistion(float deltaTime)
 {
 	if (_isDead) return;
-	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
-		return;
 	float x, y;
-	if (swepyAABB->AABB(this->_awakeBox, Simon::getCurrentSimon()->_box, x, y)){
-		_isSleep = false;
-	}
 	if (Simon::getCurrentSimon()->isFighting()){
 		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
 			if (_hp>0)
 				_hp--;
 		}
 	}
+	if (Simon::getCurrentSimon()->cantHurt())
+		return;
+	if (swepyAABB->AABB(this->_awakeBox, Simon::getCurrentSimon()->_box, x, y)){
+		_isSleep = false;
+	}
+	
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);

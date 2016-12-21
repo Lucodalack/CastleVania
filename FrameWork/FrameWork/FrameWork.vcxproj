@@ -33,9 +33,14 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bricks.h" />
     <ClInclude Include="Ground.h" />
-<ClInclude Include="Medusa.h" /><ClInclude Include="Door.h" />
+    <ClInclude Include="Fleaman.h" />
+    <ClInclude Include="Stair2.h" />
+    <ClInclude Include="Stairs2.h" />
+    <ClInclude Include="Medusa.h" />
+    <ClInclude Include="Door.h" />
     <ClInclude Include="Board.h" />
-    <ClInclude Include="DeathPlace.h" />    <ClInclude Include="Stairs.h" />
+    <ClInclude Include="DeathPlace.h" />
+    <ClInclude Include="Stairs.h" />
     <ClInclude Include="HolyWater.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemNone.h" />
@@ -107,6 +112,9 @@
     <ClCompile Include="Door.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="DeathPlace.cpp" />
+    <ClCompile Include="Fleaman.cpp" />
+    <ClCompile Include="Stair2.cpp" />
+    <ClCompile Include="Stairs2.cpp" />
     <ClCompile Include="Stairs.cpp" />
     <ClCompile Include="Spearguard.cpp" />
     <ClCompile Include="SpiritBall.cpp" />
@@ -157,6 +165,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -189,6 +199,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

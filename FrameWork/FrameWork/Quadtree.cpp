@@ -1,10 +1,26 @@
 #include "Quadtree.h"
-Quadtree::Quadtree(){}
+Quadtree::Quadtree(){
+}
 Quadtree::~Quadtree(){}
 Quadtree* Quadtree::_currentQuadtree = 0;
+int Quadtree::_lastLV = 2;
 void Quadtree :: load(){
 	loadObject();
-	ifstream myfile(QUADTREE_REF);
+	string currentQuad = "";
+	string currentObject = "";
+	switch (Simon::getCurrentSimon()->getCurrentLV())
+	{
+	case 2:
+		currentQuad = QUADTREE_REF;
+		currentObject = OBJECT_REF;
+		break;
+	case 3:
+		currentQuad = QUADTREE_REF_3;
+		currentObject = OBJECT_REF_3;
+	default:
+		break;
+	}
+	ifstream myfile(currentQuad);
 	vector<QuadNode*> list;
 	while (!myfile.eof())
 	{
@@ -52,8 +68,21 @@ void Quadtree :: load(){
 	}
 }
 void Quadtree::loadObject(){
-
-	ifstream myfile(OBJECT_REF);
+	string currentQuad = "";
+	string currentObject = "";
+	switch (Simon::getCurrentSimon()->getCurrentLV())
+	{
+	case 2:
+		currentQuad = QUADTREE_REF;
+		currentObject = OBJECT_REF;
+		break;
+	case 3:
+		currentQuad = QUADTREE_REF_3;
+		currentObject = OBJECT_REF_3;
+	default:
+		break;
+	}
+	ifstream myfile(currentObject);
 	int count = 0;
 	myfile >> count;
 	_listObject = new GObject*[count];
@@ -115,6 +144,9 @@ void Quadtree::loadObject(){
 		_currentQuadtree = new Quadtree();
 		_currentQuadtree->load();
 	}
+	if (Simon::getCurrentSimon()->getCurrentLV()!=_lastLV)
+		_currentQuadtree->load();
+	_lastLV = Simon::getCurrentSimon()->getCurrentLV();
 	return _currentQuadtree;
 }
  GObject* Quadtree::getObject(int type, int x, int y, int width, int height,bool left)
@@ -130,7 +162,9 @@ void Quadtree::loadObject(){
 	 case TypeGame::Enemy_Ghost: tamp = new Ghost(x, y, width, height); break;
 	 case TypeGame::Enemy_Medusahead: tamp = new MedusaHead(x, y, width, height, left); break;
 	 case TypeGame::Enemy_Bonepilla:tamp = new BonePillar(x, y); break;
+	 case TypeGame::Enemy_Fleaman:tamp = new Fleaman(x, y, width, height); break;
 
+	 case TypeGame::Ground_Stair_Down: tamp = new Stairs2(x, y, width, height); break;
 	 case TypeGame::Ground_Stair_Up: tamp = new Stairs(x, y, width, height); break;
 	 case TypeGame::Ground_Hidden: tamp = new Brickhidden(x, y); break;
 	 case TypeGame::Ground_Moving_Brick: tamp = new Brickmoving(x, y, width, height); break;

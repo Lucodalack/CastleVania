@@ -7,7 +7,7 @@
 #include <d3dx9.h>
 #include "GSprite.h"
 #include "Box.h"
-#define GRAVITY			1.2f
+#define GRAVITY			1.5f
 #define ANIMATIONRATE 30
 #define _SPRITE_DEATH L"other/1.png"
 #define DEATH_TIME 100
@@ -54,7 +54,11 @@ enum TypeGame {
 
 	Other_kill = 37,
 	MxD = 38,
-	Death_Place=39
+	Death_Place=39,
+	Enemy_Fleaman=40,
+	Enemy_Raven=41,
+	Enemy_Skeleton=42,
+	Boss_Mummies=43
 };
 
 class GObject {
@@ -85,6 +89,7 @@ public:
 	virtual void Draw(){}
 	virtual void Collistion(float deltatime){}
 	virtual void ChangeState(int state){}
+	virtual void ExtendCollistion(GObject* brick){}
 	void DrawDeath(){
 		this->_spriteDeath->Draw(_x + _width / 2 - 16, _y + _height-44);
 	}

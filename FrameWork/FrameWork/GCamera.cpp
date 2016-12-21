@@ -22,56 +22,108 @@ GCamera::GCamera()
 }
 void GCamera::Move(){
 	if (onGoto){
-		if (x <= (xDestinate - 0.5*width)){
-			onGoto = false;
-			return;
+		if (Simon::getCurrentSimon()->getCurrentLV() == 2){
+			if (x <= (xDestinate - 0.5*width)){
+				onGoto = false;
+				return;
+			}
+			x -= 1;
 		}
-		x -= 1;
+		else{
+			if (x >= (xDestinate - 0.5*width)){
+				onGoto = false;
+				return;
+			}
+			x += 1;
+		}
+		
 	}
 }
 void GCamera::Update(float deltatime)
 {
 	int cameraX, cameraY;
 	Move();
-	switch (_currentState)
-	{
-	case 1:
-		this->_isFollowing = false;
-		break;
-	case 2:
-		if ((Simon::getCurrentSimon()->_x > (1536 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (4096 - 0.5*width)))
-		if (!((Simon::getCurrentSimon()->_x >3102) && (Simon::getCurrentSimon()->_x < 3328)))
-			_isFollowing = true;
-		else
+	if (Simon::getCurrentSimon()->getCurrentLV() == 2){
+		switch (_currentState)
 		{
+		case 1:
 			this->_isFollowing = false;
 			break;
-		}
-		break;
-	case 3:
-		if ((Simon::getCurrentSimon()->_x >(0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3072 - 0.5*width)))
-		if (!((Simon::getCurrentSimon()->_x >1550) && (Simon::getCurrentSimon()->_x < 1777) && (Simon::getCurrentSimon()->_y < 677)))
-			_isFollowing = true;
-		else
-		{
-			this->_isFollowing = false;
+		case 2:
+			if ((Simon::getCurrentSimon()->_x > (1536 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (4096 - 0.5*width)))
+			if (!((Simon::getCurrentSimon()->_x >3102) && (Simon::getCurrentSimon()->_x < 3328)))
+				_isFollowing = true;
+			else
+			{
+				this->_isFollowing = false;
+				break;
+			}
 			break;
-		}
-		
-		break;
-	case 4:
-		if ((Simon::getCurrentSimon()->_x >(0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (1536 - 0.5*width)))
-			_isFollowing = true;
-		else
-		{
-			this->_isFollowing = false;
-			break;
-		}
+		case 3:
+			if ((Simon::getCurrentSimon()->_x >(0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3072 - 0.5*width)))
+			if (!((Simon::getCurrentSimon()->_x >1550) && (Simon::getCurrentSimon()->_x < 1777) && (Simon::getCurrentSimon()->_y < 677)))
+				_isFollowing = true;
+			else
+			{
+				this->_isFollowing = false;
+				break;
+			}
 
-		break;
-	default:
-		break;
+			break;
+		case 4:
+			if ((Simon::getCurrentSimon()->_x >(0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (1536 - 0.5*width)))
+				_isFollowing = true;
+			else
+			{
+				this->_isFollowing = false;
+				break;
+			}
+
+			break;
+		default:
+			break;
+		}
 	}
+	else{
+		switch (_currentState)
+		{
+		case 1:
+			if ((Simon::getCurrentSimon()->_x > (0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (1532 - 0.5*width)))
+				_isFollowing = true;
+			else
+			{
+				this->_isFollowing = false;
+				break;
+			}
+			break;
+		case 2:
+			if ((Simon::getCurrentSimon()->_x > (0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3071 - 0.5*width)))
+			if (!((Simon::getCurrentSimon()->_x >1263) && (Simon::getCurrentSimon()->_x < 1523)))
+				_isFollowing = true;
+			else
+			{
+				this->_isFollowing = false;
+				break;
+			}
+			break;
+		case 3:
+			if ((Simon::getCurrentSimon()->_x >(2047 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (7168 - 0.5*width)) 
+				&& !((Simon::getCurrentSimon()->_x >3831) && (Simon::getCurrentSimon()->_x < 4073)))
+			//if (!((Simon::getCurrentSimon()->_x >3831) && (Simon::getCurrentSimon()->_x < 4073) ))
+				_isFollowing = true;
+			else
+			{
+				this->_isFollowing = false;
+				break;
+			}
+
+			break;
+		
+		default:
+			break;
+		}
+	}
+	
 	/*int cameraX = x+this->width / 2, cameraY = y+this->height / 2;
 	if (this->IsFollowing())
 	{
@@ -131,25 +183,49 @@ GCamera* GCamera::getCurrentCamera(){
 }
 void GCamera::ChangeState(int state){
 	_currentState = state;
-	switch (state)
-	{
-	case 1:
-		x = STATE1_X;
-		y = STATE1_Y;
-		break;
-	case 2:
-		x = STATE2_X;
-		y = STATE2_Y;
-		break;
-	case 3:
-		x = STATE3_X;
-		y = STATE3_Y;
-		break;
-	case 4:
-		x = STATE4_X;
-		y = STATE4_Y;
-		break;
-	default:
-		break;
+	if (Simon::getCurrentSimon()->getCurrentLV() == 2){
+		switch (state)
+		{
+		case 1:
+			x = STATE1_X;
+			y = STATE1_Y;
+			break;
+		case 2:
+			x = STATE2_X;
+			y = STATE2_Y;
+			break;
+		case 3:
+			x = STATE3_X;
+			y = STATE3_Y;
+			break;
+		case 4:
+			x = STATE4_X;
+			y = STATE4_Y;
+			break;
+		default:
+			break;
+		}
 	}
+	else
+	{
+		switch (state)
+		{
+		case 1:
+			x = STATE1_X_3;
+			y = STATE1_Y_3;
+			break;
+		case 2:
+			x = STATE2_X_3;
+			y = STATE2_Y_3;
+			break;
+		case 3:
+			x = STATE3_X_3;
+			y = STATE3_Y_3;
+			break;
+		
+		default:
+			break;
+		}
+	}
+	
 }

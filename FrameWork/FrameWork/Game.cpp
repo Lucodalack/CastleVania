@@ -32,9 +32,8 @@ void Game::GameLoad()
 	
 	//_bricks = new Bricks(0, 1570, 5000, 32);
 	Quadtree::getCurrentQuadtree()->load();
-	GCamera::getCurrentCamera()->x = 3584;
-	GCamera::getCurrentCamera()->y = 1248;
-
+	//Simon::getCurrentSimon()->nextLV();
+	GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
 }
 
 void Game::Collision(float deltatime)
@@ -42,6 +41,18 @@ void Game::Collision(float deltatime)
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
 	for each(GObject* tamp in listObject){
 		tamp->Collistion(deltatime);
+		switch (tamp->_type)
+		{
+		case TypeGame::Enemy_Fleaman:
+			for each(GObject* br in listObject){
+				if (br->_type == TypeGame::Ground_Brick)
+					tamp->ExtendCollistion(br);
+			}
+			break;
+		default:
+			break;
+		}
+		
 	}	
 }
 void Game::_ProcessKeyBoard()
@@ -114,7 +125,6 @@ void Game::GameDraw()
 	//_mybackground->Draw(0, 0);
 	
 	State::getCurrentState()->draw();
-	Simon::getCurrentSimon()->Draw();
 	//_bricks->Draw();
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
@@ -122,6 +132,7 @@ void Game::GameDraw()
 		tamp->Draw();
 	}
 	Board::GetCurrentBoard()->Draw();
+	Simon::getCurrentSimon()->Draw();
 }
 
 

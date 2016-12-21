@@ -14,6 +14,13 @@
 #define STATE4_X 1021
 #define STATE4_Y 98
 
+#define STATE1_X_3 1017
+#define STATE1_Y_3 863
+#define STATE2_X_3 0
+#define STATE2_Y_3 482
+#define STATE3_X_3 2047
+#define STATE3_Y_3 94
+
 class GCamera
 {
 private:

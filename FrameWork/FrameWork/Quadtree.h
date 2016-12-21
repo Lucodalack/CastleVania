@@ -1,6 +1,9 @@
 
-#define QUADTREE_REF "quad.txt"
-#define OBJECT_REF "object.txt"
+#define QUADTREE_REF "Maps/quad.txt"
+#define OBJECT_REF "Maps/object.txt"
+
+#define QUADTREE_REF_3 "Maps/quad2.txt"
+#define OBJECT_REF_3 "Maps/object2.txt"
 
 #include "Rect.h"
 #include "Quadnode.h"
@@ -13,6 +16,7 @@
 #include "Ghost.h"
 #include "MedusaHead.h"
 #include "BonePillar.h"
+#include "Fleaman.h"
 
 #include "Brickhidden.h"
 #include "Brickmoving.h"
@@ -20,6 +24,7 @@
 #include "Firetower.h"
 #include "Stair.h"
 #include "Stairs.h"
+#include "Stairs2.h"
 #include "Door.h"
 #include "Trap.h"
 
@@ -51,6 +56,7 @@ class Quadtree{
 private:
 	GObject** _listObject;
 	static Quadtree* _currentQuadtree;
+	static int _lastLV;
 public:
 	Quadtree();
 	~Quadtree();

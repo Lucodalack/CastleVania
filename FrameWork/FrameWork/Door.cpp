@@ -16,8 +16,13 @@ void Door::Update(float deltatime){
 }
 void Door::Draw(){
 	if ((_lifeTime >= 0) && (_lifeTime <= _LIFETIME)){
+		if (Simon::getCurrentSimon()->getCurrentLV()==2)
 		this->_sprite->Draw(_x - 64, _y);
-		Simon::getCurrentSimon()->Draw();
+		else
+		{
+			this->_sprite->DrawFlipX(_x, _y);
+		}
+	
 	}
 		
 }

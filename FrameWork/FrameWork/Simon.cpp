@@ -12,12 +12,17 @@ GObject(TYPE, x, y, SIMON_WIDTH, SIMON_HEIGHT)
 	_isJumping = false;
 	_isFalling = true;
 	_canGoStair = false;
-	_currentLV = 1;
+	_isOnStair2 = false;
+	_currentStateGame = 1;
 	_canGoLeft = true;
 	_canGoRight = true;
 	onGoto = false;
 	_hp = 16;
 	_heart = 5;
+	_cantHurt = false;
+	_timeCantHurt = false;
+	_currentLV = 2;
+	this->_drawhurt = 0;
 	_stateCurrent = STATE::IS_FALLING;
 	_vy = GRAVITY;
 	_box = Box(x, y, SIMON_WIDTH, SIMON_HEIGHT,_vx,_vy);
@@ -41,7 +46,7 @@ void Simon::MoveUpdate(float deltaTime)
 			this->_x += int(this->_vx * deltaTime);
 		}
 		this->_y += int(this->_vy * deltaTime);
-		if (_vy<GRAVITY)
+		if (_vy<HURT_FALL_SPEED)
 		_vy += 0.2f;
 		this->onGoto = false;
 		_box.x = _x;
@@ -201,12 +206,12 @@ void Simon::SetFrame(float deltaTime)
 	}
 	else //tren cau thang
 	{
-		if (_stateCurrent == STATE::IS_STANDING)
+		/*if (_stateCurrent == STATE::IS_STANDING)
 			_stateCurrent = STATE::IS_DOWNING;
 		if (this->_isMoveleft)
 			_stateCurrent = STATE::IS_DOWNING;
 		if (this->_isMoveright)
-			_stateCurrent = STATE::IS_UPING;
+			_stateCurrent = STATE::IS_UPING;*/
 		switch (this->_stateCurrent)
 		{
 		
@@ -221,7 +226,17 @@ void Simon::SetFrame(float deltaTime)
 									this->_sptrite->_start = 12;
 									this->_sptrite->_end = 12;
 								}
-								
+								/*if(_isOnStair2){
+									if (onGoto){
+										this->_sptrite->_start = 10;
+										this->_sptrite->_end = 11;
+									}
+									else
+									{
+										this->_sptrite->_start = 10;
+										this->_sptrite->_end = 10;
+									}
+								}*/
 								break;
 		}
 		case STATE::IS_DOWNING:
@@ -235,7 +250,17 @@ void Simon::SetFrame(float deltaTime)
 									  this->_sptrite->_start = 10;
 									  this->_sptrite->_end = 10;
 								  }
-								
+								/*  if (_isOnStair2){
+									  if (onGoto){
+										  this->_sptrite->_start = 12;
+										  this->_sptrite->_end = 13;
+									  }
+									  else
+									  {
+										  this->_sptrite->_start = 12;
+										  this->_sptrite->_end = 12;
+									  }
+								  }*/
 								  break;
 		}
 		case STATE::IS_UPFIGHT:
@@ -393,7 +418,13 @@ void Simon::Update(float deltatime){
 		_timeDeath += deltatime;
 		_isDeath = true;
 	}
-		
+	if (_cantHurt){
+		_drawhurt += deltatime;
+	}
+	else
+	{
+		_drawhurt = 0;
+	}
 	this->InputUpdate(deltatime);
 	this->SetFrame(deltatime);
 	this->MoveUpdate(deltatime);
@@ -407,64 +438,120 @@ void Simon::MoveState(){
 	if (_hp <= 0)
 		return;
 	if (!_isOnStair) return;
-	switch (_currentLV)
+	if (_currentLV == 2){
+		switch (_currentStateGame)
+		{
+		case 1:
+			if (_y < 1220){
+				this->ChangeState(STATE::IS_UPING);
+				this->isMoveLeft(false);
+				this->isMoveRight(true);
+				this->_isOnStair = true;
+				this->onGoto = true;
+				this->_x = 3841;
+				this->_y = 1140;
+				GCamera::getCurrentCamera()->ChangeState(2);
+				_currentStateGame = 2;
+				return;
+			}
+			break;
+		case 2:
+			if (_y < 833){
+				this->ChangeState(STATE::IS_UPING);
+				this->isMoveLeft(false);
+				this->isMoveRight(true);
+				this->_isOnStair = true;
+				this->onGoto = true;
+				this->_x = 1664;
+				this->_y = 753;
+				GCamera::getCurrentCamera()->ChangeState(3);
+				_currentStateGame = 3;
+				return;
+			}
+			break;
+		case 3:
+			if (_y < 450){
+				this->ChangeState(STATE::IS_UPING);
+				this->isMoveLeft(false);
+				this->isMoveRight(true);
+				this->_isOnStair = true;
+				this->onGoto = true;
+				this->_x = 1343;
+				this->_y = 369;
+				GCamera::getCurrentCamera()->ChangeState(4);
+				_currentStateGame = 4;
+				return;
+			}
+			break;
+		default:
+			break;
+		}
+	}
+else
+{
+	switch (_currentStateGame)
 	{
 	case 1:
-		if (_y < 1220){
+		if (_y < 852){
 			this->ChangeState(STATE::IS_UPING);
-			this->isMoveLeft(false);
-			this->isMoveRight(true);
+			this->isMoveLeft(true);
+			this->isMoveRight(false);
 			this->_isOnStair = true;
+			this->_isOnStair2 = true;
 			this->onGoto = true;
-			this->_x =3841;
-			this->_y = 1140;
+			this->_x = 162;
+			this->_y = 819-64;
 			GCamera::getCurrentCamera()->ChangeState(2);
-			_currentLV = 2;
+			_currentStateGame = 2;
 			return;
 		}
 		break;
 	case 2:
-		if (_y < 833){
+		if (_y < 472){
 			this->ChangeState(STATE::IS_UPING);
-			this->isMoveLeft(false);
-			this->isMoveRight(true);
+			this->isMoveLeft(true);
+			this->isMoveRight(false);
 			this->_isOnStair = true;
 			this->onGoto = true;
-			this->_x = 1664;
-			this->_y = 753;
+			this->_x = 2721;
+			this->_y = 366;
 			GCamera::getCurrentCamera()->ChangeState(3);
-			_currentLV = 3;
+			_currentStateGame = 3;
 			return;
 		}
 		break;
-	case 3:
-		if (_y < 450){
-			this->ChangeState(STATE::IS_UPING);
-			this->isMoveLeft(false);
-			this->isMoveRight(true);
-			this->_isOnStair = true;
-			this->onGoto = true;
-			this->_x = 1343;
-			this->_y = 369;
-			GCamera::getCurrentCamera()->ChangeState(4);
-			_currentLV = 4;
-			return;
-		}
-		break;
+	
 	default:
 		break;
 	}
 }
 
+}
+
 void Simon::Draw(){
 	if (_timeDeath > DEATH_TIME)
 		return;
+	if (_cantHurt){
+		if (_drawhurt <= TIME_CANT_HURT){
+			if ((_drawhurt % 30) <= (20)){
+				return;
+			}
+		}
+else
+		_cantHurt = !_cantHurt;
+	}
+	/*if ((_drawhurt  %30) <= (20)){
+		_drawhurt +=3;
+		return;
+	}
+	_drawhurt +=3;*/
 	if (this->_isMoveright){
-		this->_sptrite->DrawFlipX(_x-10, _y);
+		this->_sptrite->DrawFlipX(_x - 10, _y);
 	}
 	else{
-		this->_sptrite->Draw(_x-11, _y);
+		this->_sptrite->Draw(_x - 14, _y);
 	}
+	
 	Whip::getCurrentWhip()->Draw();
 }
 void Simon::ChangeState(int state){
@@ -487,6 +574,7 @@ void Simon::ChangeState(int state){
 		if (this->_vy == GRAVITY) this->_vy = 0; break;
 	case STATE::CANT_HURT: 
 		this->_isOnStair = false;
+		this->_cantHurt = true;
 		if (_isMoveleft&&_canGoRight){
 			this->_vx = 1.2f;
 			this->_x += int(this->_vx * 3);

@@ -179,21 +179,71 @@ int CSweptAABB::CollideCheck(Box b1, Box b2, float& moveX, float& moveY)
 	if (moveX>0) return COLLIDE_STATE::TOP;
 	if (moveX>0) return COLLIDE_STATE::LEFT;
 	return COLLIDE_STATE::RIGHT;*/
-	if (moveY<0 && moveY >= -2){
+	if (moveY<0 && moveY >= -3){
 		if (!Simon::getCurrentSimon()->isOnStair())
 			Simon::getCurrentSimon()->_y += moveY;
 		return COLLIDE_STATE::BOTTOM;
 	}
 		
-	if (moveY>0 && moveY <= 2) 
+	if (moveY>0 && moveY <= 3) 
 		return COLLIDE_STATE::TOP;
-	if (moveX>0 && moveX <= 2) 
+	if (moveX>0 && moveX <= 3) 
 		return COLLIDE_STATE::LEFT;
-	if (moveX<0 && moveX >= -2)
+	if (moveX<0 && moveX >= -3)
 		return COLLIDE_STATE::RIGHT;
 	return COLLIDE_STATE::NONE;
 }
+int CSweptAABB::CollideCheck(GObject* bo1, GObject* bo2, float& moveX, float& moveY)
+{
+	Box b1 = bo1->_box;
+	Box b2 = bo2->_box;
+	moveX = moveY = 0.0f;
+	if ((b2.x == 3200) && (b2.y = 1058))
+		int a = 0;
+	float l = b2.x - (b1.x + b1.w);
+	float r = (b2.x + b2.w) - b1.x;
+	float t = b2.y - (b1.y + b1.h);
+	float b = (b2.y + b2.h) - b1.y;
 
+	// check that there was a collision
+	if (l > 0 || r < 0 || t > 0 || b < 0)
+		return COLLIDE_STATE::NONE;
+
+	// find the offset of both sides
+	moveX = abs(l) < r ? l : r;
+	moveY = abs(t) < b ? t : b;
+	if (moveX == 0 && moveY != 0){
+		if (l == 0) return COLLIDE_STATE::RIGHT;
+		return COLLIDE_STATE::LEFT;
+	}
+	if (moveY == 0 && moveX != 0){
+		if (t == 0)return COLLIDE_STATE::BOTTOM;
+		return COLLIDE_STATE::TOP;
+	}
+	// only use whichever offset is the smallest
+	if (abs(moveX) < abs(moveY))
+		moveY = 0.0f;
+	else
+		moveX = 0.0f;
+	int fix = std::min(r, std::min(l, std::min(t, b)));
+	/*if (moveY<0) return COLLIDE_STATE::BOTTOM;
+	if (moveX>0) return COLLIDE_STATE::TOP;
+	if (moveX>0) return COLLIDE_STATE::LEFT;
+	return COLLIDE_STATE::RIGHT;*/
+	if (moveY<0 && moveY >= -3){
+		
+		//bo1->_y += moveY;
+		return COLLIDE_STATE::BOTTOM;
+	}
+
+	if (moveY>0 && moveY <= 3)
+		return COLLIDE_STATE::TOP;
+	if (moveX>0 && moveX <= 3)
+		return COLLIDE_STATE::LEFT;
+	if (moveX<0 && moveX >= -3)
+		return COLLIDE_STATE::RIGHT;
+	return COLLIDE_STATE::NONE;
+}
 CSweptAABB::~CSweptAABB()
 {
 }

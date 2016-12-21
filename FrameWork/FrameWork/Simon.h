@@ -18,7 +18,8 @@
 #define SIMON_Animation_RATE	ANIMATIONRATE
 #define TYPE TypeGame::Boss_Simon
 #define SIMON_JUMPMAX 64
-
+#define TIME_CANT_HURT 300
+#define HURT_FALL_SPEED 1.2f
 enum STATE
 {
 	IS_STANDING = 1, // đứng
@@ -44,7 +45,7 @@ private:
 	static Simon* _simon;
 
 	Box _currentMoving;
-
+	int _drawhurt;
 	int _stateCurrent; //trạng thái hiện tại
 	bool _isMoveleft; // quay qua trái hay k
 	bool _isMoveright;
@@ -55,13 +56,18 @@ private:
 	bool _canGoStair;
 	bool _canGoRight;
 	bool _canGoLeft;
+	bool _cantHurt;
+	bool _isOnStair2;
+	bool _isOnStair1;
 	int _keyDown; // lưu phím vừa được nhấn.
 	int _keyUp;
 	float _tmp = 0;
+	int _currentStateGame;// cai nay la state cua game. ko phai cua simon
 	int _currentLV;
 	int _lastState;
 	int _hp;
 	int _heart;
+	int _timeCantHurt;
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
@@ -98,6 +104,10 @@ public:
 	bool isMoveLeft(){ return _isMoveleft; }
 	void isMoveRight(bool tamp){ _isMoveright = tamp; }
 	void isMoveLeft(bool tamp){ _isMoveleft=tamp; }
+	bool isOnStair2(){ return _isOnStair2; }
+	void isOnStair2(bool tamp){ _isOnStair2 = tamp; }
+	bool isOnStair1(){ return _isOnStair1; }
+	void isOnStair1(bool tamp){ _isOnStair1 = tamp; }
 	bool canGoStair(){ return _canGoStair; }
 	void canGoStair(bool tamp){ _canGoStair = tamp; }
 	bool isOnStair(){ return _isOnStair; }
@@ -106,7 +116,18 @@ public:
 	void canGoLeft(bool tamp){ _canGoLeft = tamp; }
 	bool canGoRight(){ return _canGoRight; }
 	void canGoRight(bool tamp){ _canGoRight = tamp; }
+	bool cantHurt(){ 
+		return _cantHurt; 
+	}
+	int getCurrentLV(){
+		return _currentLV;
+	}
 	void setBox(Box box){ this->_currentMoving = box; }
+	void nextLV(){
+		_currentLV = 3;
+		_x = 1373;
+		_y = 1030;
+	}
 	Simon();
 	~Simon();
 };
