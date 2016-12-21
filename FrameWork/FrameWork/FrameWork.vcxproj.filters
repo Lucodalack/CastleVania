@@ -233,6 +233,12 @@
     </ClInclude>
     <ClInclude Include="Door.h">
       <Filter>GameObject\Ground</Filter>
+ </ClInclude>
+    <ClInclude Include="Snake.h">
+      <Filter>GameObject\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="NextBall.h">
+      <Filter>GameObject\Boss</Filter>
     </ClInclude>
     <ClInclude Include="Stairs2.h">
       <Filter>GameObject\Ground</Filter>
@@ -243,7 +249,7 @@
     <ClInclude Include="Fleaman.h">
       <Filter>GameObject\Enemy</Filter>
     </ClInclude>
-  </ItemGroup>
+</ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
       <Filter>Framework</Filter>
@@ -409,8 +415,14 @@
     </ClCompile>
     <ClCompile Include="DeathPlace.cpp">
       <Filter>GameObject\Ground</Filter>
+    </ClCompile> 
+<ClCompile Include="Snake.cpp">
+      <Filter>GameObject\Boss</Filter>
     </ClCompile>
-    <ClCompile Include="Stairs2.cpp">
+    <ClCompile Include="NextBall.cpp">
+      <Filter>GameObject\Boss</Filter>
+    </ClCompile>
+<ClCompile Include="Stairs2.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
     <ClCompile Include="Stair2.cpp">
@@ -419,5 +431,5 @@
     <ClCompile Include="Fleaman.cpp">
       <Filter>GameObject\Enemy</Filter>
     </ClCompile>
-  </ItemGroup>
+ </ItemGroup>
 </Project>

@@ -1,31 +1,32 @@
-﻿#ifndef __FIREBALL_H__
-#define __FIREBALL_H__
+﻿#ifndef __SNAKE_H__
+#define __SNAKE_H__
 
-//Đạn của Bone Pillar
+//Rắn của Medusa
 
-#define _fbWIDTH	16
-#define _fbHEIGHT	20
-#define _fbSPRITE L"other/0.png"
-#define fbTYPE TypeGame::Item_fire_ball
-#define _fbSPEED 1.2f
+#define _snakeWIDTH	64
+#define _snakeHEIGHT	20
+#define _snakeSPRITE L"boss/2.png"
+#define snakeTYPE TypeGame::Medusa_snake
+#define _snakeSPEED 1.2f
+#define _Y_Sanke 335
 
 #include "GObject.h"
 #include <vector>
 #include <d3d9.h>
 #include <d3dx9.h>
 #include <stdio.h>
-#include "SweptAABB.h"
 
-class FireBall : public GObject {
+class Snake : public GObject {
 protected:
 	int _Str_Y;
 	int _Offset;
 	int check = 30;
 	bool left, right;
 	int last_x;
+	int last_y;
+	float _timelive;
 
 	int a[10];
-	CSweptAABB* swepyAABB;
 
 
 	int var;
@@ -34,15 +35,15 @@ protected:
 
 public:
 	GSprite* _sprite;
-	FireBall(int x, int y);
+	Snake(int x, int y);
 	void MoveUpdate(float deltatime);
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
 	void ChangeState(int state);
 	void Draw();
 
-	FireBall();
-	~FireBall();
+	Snake();
+	~Snake();
 };
 
 #endif

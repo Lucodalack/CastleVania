@@ -4,16 +4,17 @@
 //Bẫy
 
 #define _trapWIDTH	64
-#define _trapHEIGHT	32
+#define _trapHEIGHT	28
 #define _SPRITE1 L"ground/7_2.png"
 #define _SPRITE L"ground/7_3.png"
-#define TYPE TypeGame::Ground_Trap
+#define trapTYPE TypeGame::Ground_Trap
 
 #include "GObject.h"
 #include <vector>
 #include <d3d9.h>
 #include <d3dx9.h>
 #include <stdio.h>
+#include "SweptAABB.h"
 
 class Trap : public GObject {
 protected:
@@ -22,6 +23,7 @@ protected:
 	int check = 30;
 
 	int a[10];
+	CSweptAABB* swepyAABB;
 
 
 	int var;
@@ -35,6 +37,8 @@ public:
 	void Update(float deltatime);
 	void ChangeState(int state);
 	void Draw();
+	void Collistion(float deltaTime);
+
 	Trap();
 	~Trap();
 };

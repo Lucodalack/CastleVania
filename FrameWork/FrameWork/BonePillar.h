@@ -5,15 +5,16 @@
 #include "GObject.h"
 #include "GSprite.h"
 #include "FireBall.h"
+#include "SweptAABB.h"
 
 
-#define _WIDTH	32
-#define _HEIGHT	64
+#define _bplWIDTH	32
+#define _bplHEIGHT	64
 #define _ANIMATE_RATE	7
 #define _ATTACK_RATE	10
-#define _SPRITE L"enemy/8.png"
+#define _bplSPRITE L"enemy/8.png"
 #define _SPRITE1 L"other/0.png"
-
+#define bplHP 5
 
 
 class BonePillar : public GObject {
@@ -24,6 +25,8 @@ protected:
 	float _time1 = 0;
 	float _time2 = 0;
 	float _time3 = 0;
+	CSweptAABB* swepyAABB;
+	int _hp;
 
 public:
 	GSprite* _sprite;
@@ -33,6 +36,8 @@ public:
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
 	void Draw();
+	void Collistion(float deltaTime);
+
 	BonePillar();
 	~BonePillar();
 };

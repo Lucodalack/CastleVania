@@ -51,6 +51,7 @@ enum TypeGame {
 	Item_none = 36,
 
 	Item_fire_ball = 40,//Đạn của Bone Pillar
+	Medusa_snake = 41,//Rắn của Medusa
 
 	Other_kill = 37,
 	MxD = 38,

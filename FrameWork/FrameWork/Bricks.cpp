@@ -75,15 +75,16 @@ void Bricks::Collistion(float deltatime){
 	case COLLIDE_STATE::TOP:
 		break;
 	case COLLIDE_STATE::BOTTOM:
-		if (Simon::getCurrentSimon()->isFighting()){
-			Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
-		}
-		else{
-			/*if ((((Simon::getCurrentSimon()->_x + SIMON_WIDTH) - (this->_x + this->_width)) >= SIMON_WIDTH / 2) ||
-				((this->_x - Simon::getCurrentSimon()->_x) >= SIMON_WIDTH / 2))
-				return;*/
-			Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
-		}
+		//if (Simon::getCurrentSimon()->isFighting()){
+		//	Simon::getCurrentSimon()->ChangeState(STATE::IS_FIGHTING);
+		//}
+		//else{
+		//	/*if ((((Simon::getCurrentSimon()->_x + SIMON_WIDTH) - (this->_x + this->_width)) >= SIMON_WIDTH / 2) ||
+		//		((this->_x - Simon::getCurrentSimon()->_x) >= SIMON_WIDTH / 2))
+		//		return;*/
+		//	Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+		//}
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
 		break;
 	default:
 		break;

@@ -125,6 +125,7 @@ void Game::GameDraw()
 	//_mybackground->Draw(0, 0);
 	
 	State::getCurrentState()->draw();
+	
 	//_bricks->Draw();
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);

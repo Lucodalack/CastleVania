@@ -4,13 +4,13 @@
 
 
 FireBall::FireBall(int x, int y) :
-GObject(TYPE, x, y, _WIDTH, _HEIGHT)
+GObject(fbTYPE, x, y, _fbWIDTH, _fbHEIGHT)
 
 {
 	last_x = x;
-	_vx = _SPEED;
-	_box = Box(x, y, _WIDTH, _WIDTH);
-	GTexture* texture1 = new GTexture(_SPRITE, 1, 1, 1);
+	_vx = _fbSPEED;
+	_box = Box(x, y, _WIDTH, _HEIGHT);
+	GTexture* texture1 = new GTexture(_fbSPRITE, 1, 1, 1);
 	_sprite = new GSprite(texture1, 0);
 
 
@@ -30,19 +30,19 @@ void FireBall::Update(float DeltaTime)
 
 	if (Simon::getCurrentSimon()->_x < this->last_x && flag1 == false)
 	{
-		_vx = -_SPEED;
+		_vx = -_fbSPEED;
 		flag = true;
 	}
 	else
 	if (flag == false)
 	{
-		_vx = _SPEED;
+		_vx = _fbSPEED;
 		flag1 = true;
 	}
 
 	this->_x += int(this->_vx * DeltaTime);
 
-	_box = Box(_x, _y, _WIDTH, _WIDTH);
+	_box = Box(_x, _y, _fbWIDTH, _fbHEIGHT);
 }
 
 void FireBall::Draw()
