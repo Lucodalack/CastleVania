@@ -297,7 +297,7 @@ void Medusa::Update(float deltatime){
 	//	this->_timeDeath += deltatime;
 	//	this->_spriteDeath->Update(deltatime);
 	//}
-
+	UpdateBoard();
 	if (this->_isDead){
 		if (!_checkspirit)
 		{
@@ -403,6 +403,8 @@ void Medusa::Collistion(float deltaTime){
 			if (_checkspirit == true && swepyAABB->AABB(_nextBall->_box, Simon::getCurrentSimon()->_box, x, y)){
 				swepyAABB->AABB(_nextBall->_box, Simon::getCurrentSimon()->_box, x, y);
 				_eatspirit = true;
+				Simon::getCurrentSimon()->nextLV();
+				GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
 			}
 		}
 		return;
@@ -410,10 +412,14 @@ void Medusa::Collistion(float deltaTime){
 	if (_isSleep == false)
 	{
 		if (Simon::getCurrentSimon()->isFighting()){
-			if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+			if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y) && !_isHurting){
+				_isHurting = true;
 				if (_hp > 0)
 					_hp--;
 			}
+		}
+		else {
+			_isHurting = false;
 		}
 
 		if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
@@ -422,6 +428,7 @@ void Medusa::Collistion(float deltaTime){
 		if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 			swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
 			Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+			Simon::getCurrentSimon()->Hurt(DAMAGAE);
 			if (_isMoveleft)
 				_comeback = false;
 			if (_isMoveright)
@@ -431,6 +438,7 @@ void Medusa::Collistion(float deltaTime){
 		if (snake1 == true && swepyAABB->AABB(_snake1->_box, Simon::getCurrentSimon()->_box, x, y)){
 			swepyAABB->AABB(_snake1->_box, Simon::getCurrentSimon()->_box, x, y);
 			Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+			Simon::getCurrentSimon()->Hurt(DAMAGAE);
 			snake1 = false;
 		}
 	}

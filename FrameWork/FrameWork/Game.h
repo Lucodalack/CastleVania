@@ -41,7 +41,7 @@ public:
 	void Collision(float deltatime);
 	void _ProcessKeyBoard();
 	void GameDrawParameter();
-
+	void Sort(vector<GObject*>& listGObject);
 	void OnKeyDown(int KeyCode);
 	void OnKeyUp(int KeyCode){}
 	Game(int screen_width, int screen_height);

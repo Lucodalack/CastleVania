@@ -10,6 +10,7 @@ Enemy(TYPE, x, y, x2, y2)
 	_sprite = new GSprite(texture, ANIMATIONRATE);
 	this->SetFrame(0);
 	_hp = HP;
+	_damage = DAMAGE;
 }
 MedusaHead::MedusaHead(int x, int y, int x2, int y2,bool left) :
 Enemy(TYPE, x, y, x2, y2,left)
@@ -23,6 +24,7 @@ Enemy(TYPE, x, y, x2, y2,left)
 }
 void MedusaHead::MoveUpdate(float deltaTime)
 {
+	if (_isHurting) return;
 #pragma region __XU_LY_CHUYEN_DONG__
 	//int ynek = this->_activeArea.top - (this->_activeArea.bottom - this->_activeArea.top) / 2;
 

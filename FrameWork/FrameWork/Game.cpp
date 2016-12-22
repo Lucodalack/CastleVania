@@ -35,7 +35,25 @@ void Game::GameLoad()
 	//Simon::getCurrentSimon()->nextLV();
 	GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
 }
-
+void Game::Sort(vector<GObject*>& listGObject){
+	vector<GObject*> ground;
+	vector<GObject*> nonground;
+	for each(GObject* tamp in listGObject){
+		if (tamp->_type > 10 && tamp->_type < 23)
+			ground.push_back(tamp);
+		else
+		{
+			nonground.push_back(tamp);
+		}
+	}
+	listGObject.clear();
+	for each(GObject* tamp in ground){
+		listGObject.push_back(tamp);
+	}
+	for each(GObject* tamp in nonground){
+		listGObject.push_back(tamp);
+	}
+}
 void Game::Collision(float deltatime)
 {	
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
@@ -92,8 +110,11 @@ void Game::OnKeyDown(int KeyCode)
 	case DIK_C:
 		Simon::getCurrentSimon()->Fight();
 		break;
-	case DIK_X:
+	/*case DIK_X:
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		break;*/
+	case DIK_G:
+		Simon::getCurrentSimon()->Cheat();
 		break;
 	}
 }
@@ -129,6 +150,7 @@ void Game::GameDraw()
 	//_bricks->Draw();
 	listObject.clear();
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
+	Sort(listObject);
 	for each(GObject* tamp in listObject){
 		tamp->Draw();
 	}

@@ -67,8 +67,10 @@ private:
 	int _currentLV;
 	int _lastState;
 	int _hp;
+	int _bossHP = 16;
 	int _heart;
 	int _timeCantHurt;
+	int _life=3;
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
@@ -101,6 +103,9 @@ public:
 	void Heal(int more){ 
 		this->_heart += more;
 	}
+	void Hurt(int damage){
+		this->_hp -= damage;
+	}
 	int getHeart(){ return _heart; }
 	int getHP(){ return _hp; }
 	bool isFighting(){ return _isFighting; }
@@ -127,12 +132,23 @@ public:
 	int getCurrentLV(){
 		return _currentLV;
 	}
+	void setBossHP(int hp){
+		_bossHP = hp;
+	}
+	int getBossHP(){
+		return _bossHP;
+	}
+	int getLife(){
+		return _life;
+	}
 	void setBox(Box box){ this->_currentMoving = box; }
 	void nextLV(){
 		_currentLV = 3;
 		_x = 1373;
 		_y = 1030;
 	}
+	void Reset();
+	void Cheat();
 	Simon();
 	~Simon();
 };

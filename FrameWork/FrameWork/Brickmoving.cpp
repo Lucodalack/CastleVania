@@ -84,7 +84,7 @@ void Brickmoving::Collistion(float deltatime){
 
 		break;
 	case COLLIDE_STATE::TOP:
-		Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
+		//Simon::getCurrentSimon()->ChangeState(STATE::IS_STANDING);
 		break;
 	case COLLIDE_STATE::BOTTOM:
 		if (Simon::getCurrentSimon()->isFighting()){

@@ -4,6 +4,7 @@
 #include "GCamera.h"
 #include "Simon.h"
 #include "GTexture.h"
+#include "Medusa.h"
 #define SPRITE_BOARD L"other/board.png"
 #define SPRITE_ALL L"other/misc.bmp"
 class Board{

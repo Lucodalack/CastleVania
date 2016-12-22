@@ -12,6 +12,7 @@ GObject(type,x, y, _WIDTH, _HEIGHT)
 	_activeArea.left = x;
 	_activeArea.right = x2;
 	_activeArea.bottom = y2;
+	_isHurting = false;
 	swepyAABB = new CSweptAABB();
 	this->SetFrame(0);
 }
@@ -23,6 +24,7 @@ GObject(type, x, y, _WIDTH, _HEIGHT)
 	}
 	_isMoveleft = false;
 	_isDead = false;
+	_isHurting = false;
 	_vy = GRAVITY;
 	_vx = _SPEED;
 	_box = Box(_x, y, _WIDTH, _HEIGHT, _vx, _vy);
@@ -36,6 +38,7 @@ GObject(type, x, y, _WIDTH, _HEIGHT)
 void Enemy::MoveUpdate(float deltaTime)
 {
 #pragma region __XU_LY_CHUYEN_DONG__
+	if (_isHurting) return;
 	if (_isMoveleft){
 		if (_x <= _activeArea.left){
 			_vx *= -1;
@@ -107,13 +110,18 @@ Enemy::~Enemy(){
 }
 void Enemy::Collistion(float deltaTime)
 {
-	if (_isDead) return;
+	if (_isDead ) return;
 	float x, y;
-	if (Simon::getCurrentSimon()->isFighting()){
-		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+	if (Simon::getCurrentSimon()->isFighting() ){
+		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y) && !_isHurting){
+			_isHurting = true;
 			if (_hp>0)
 				_hp--;
 		}
+		
+	}
+	else{
+		_isHurting = false;
 	}
 	/*if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
 	return;*/
@@ -122,6 +130,7 @@ void Enemy::Collistion(float deltaTime)
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(_damage);
 	}
 
 	////swepyAABB->SweptAABB(this->_box, Whip::getCurrentWhip()->_box, x, y, deltaTime);

@@ -15,11 +15,14 @@
 #define _bplSPRITE L"enemy/8.png"
 #define _SPRITE1 L"other/0.png"
 #define bplHP 5
+#define DAMAGE 2
+
 
 
 class BonePillar : public GObject {
 protected:
 	bool _isMoveleft;
+	int _isHurting = false;
 	bool _flag1, _flag2, _flag3;
 	bool _isDead;// da chet chua nek.
 	float _time1 = 0;

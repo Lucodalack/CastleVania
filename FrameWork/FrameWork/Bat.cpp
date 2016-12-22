@@ -14,10 +14,12 @@ Enemy(TYPE, x, y, x2, y2)
 	_awakeBox = Box(x, y, w, h, 0, 0);
 	_tamp = 0;
 	_hp = HP;
+	_damage = DAMAGE;
 }
 
 void Bat::MoveUpdate(float deltaTime)
 {
+	if (_isHurting) return;
 #pragma region __XU_LY_CHUYEN_DONG__
 	int ynek = Simon::getCurrentSimon()->_y ;
 
@@ -79,9 +81,13 @@ void Bat::Collistion(float deltaTime)
 	float x, y;
 	if (Simon::getCurrentSimon()->isFighting()){
 		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+			_isHurting = true;
 			if (_hp>0)
 				_hp--;
 		}
+	}
+	else{
+		_isHurting = false;
 	}
 	if (Simon::getCurrentSimon()->cantHurt())
 		return;
@@ -92,6 +98,7 @@ void Bat::Collistion(float deltaTime)
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(_damage);
 	}
 }
 void Bat::Update(float deltatime){

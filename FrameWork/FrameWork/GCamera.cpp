@@ -50,8 +50,8 @@ void GCamera::Update(float deltatime)
 			this->_isFollowing = false;
 			break;
 		case 2:
-			if ((Simon::getCurrentSimon()->_x > (1536 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (4096 - 0.5*width)))
-			if (!((Simon::getCurrentSimon()->_x >3102) && (Simon::getCurrentSimon()->_x < 3328)))
+			if (((Simon::getCurrentSimon()->_x > (1536 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (4096 - 0.5*width)))
+			&& (!((Simon::getCurrentSimon()->_x >3102) && (Simon::getCurrentSimon()->_x < 3328))))
 				_isFollowing = true;
 			else
 			{
@@ -60,8 +60,8 @@ void GCamera::Update(float deltatime)
 			}
 			break;
 		case 3:
-			if ((Simon::getCurrentSimon()->_x >(0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3072 - 0.5*width)))
-			if (!((Simon::getCurrentSimon()->_x >1550) && (Simon::getCurrentSimon()->_x < 1777) && (Simon::getCurrentSimon()->_y < 677)))
+			if (((Simon::getCurrentSimon()->_x >(0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3072 - 0.5*width)))
+			&& (!((Simon::getCurrentSimon()->_x >1550) && (Simon::getCurrentSimon()->_x < 1777) && (Simon::getCurrentSimon()->_y < 677))))
 				_isFollowing = true;
 			else
 			{
@@ -97,8 +97,8 @@ void GCamera::Update(float deltatime)
 			}
 			break;
 		case 2:
-			if ((Simon::getCurrentSimon()->_x > (0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3071 - 0.5*width)))
-			if (!((Simon::getCurrentSimon()->_x >1263) && (Simon::getCurrentSimon()->_x < 1523)))
+			if (((Simon::getCurrentSimon()->_x > (0 + 0.5*width)) && (Simon::getCurrentSimon()->_x < (3071 - 0.5*width)))
+			&& (!((Simon::getCurrentSimon()->_x >1263) && (Simon::getCurrentSimon()->_x < 1523))))
 				_isFollowing = true;
 			else
 			{

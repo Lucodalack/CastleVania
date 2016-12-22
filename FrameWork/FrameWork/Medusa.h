@@ -16,8 +16,9 @@
 #define _medusaSPEED	0.5f
 
 #define _medusaSPRITE L"boss/1.png"
-#define _medusaHP 20
+#define _medusaHP 16
 #define _timeDelay 50;
+#define DAMAGAE 2
 enum MEDUSASTATE
 {
 	IS_SLEEPING = 1, // Ngủ
@@ -31,7 +32,6 @@ protected:
 	bool _isSleep;//Medusa ngủ
 	bool _isLive;//Medusa sống
 	bool _isSnake;//Medusa thả rắn
-
 	CSweptAABB* swepyAABB;
 
 
@@ -39,6 +39,7 @@ protected:
 	int last_x;
 	bool flag = false;
 	bool check = false;
+	bool _isHurting = false;
 	bool _isMoveleft, _isMoveright;
 	bool _point_left, _point_right;
 	bool _flag1, _flag2, _flag3;
@@ -72,7 +73,9 @@ public:
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
 	void Collistion(float deltaTime);
-
+	void UpdateBoard(){
+		Simon::getCurrentSimon()->setBossHP(_hp);
+	}
 	void Draw();
 	Medusa();
 	~Medusa();

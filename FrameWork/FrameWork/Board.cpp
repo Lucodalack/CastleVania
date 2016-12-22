@@ -315,4 +315,6 @@ void Board::Draw(){
 void Board::Update(){
 	_heart = Simon::getCurrentSimon()->getHeart();
 	_playerHp = Simon::getCurrentSimon()->getHP();
+	_enemyHP = Simon::getCurrentSimon()->getBossHP();
+	_life = Simon::getCurrentSimon()->getLife();
 }

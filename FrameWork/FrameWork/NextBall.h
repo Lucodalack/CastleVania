@@ -3,6 +3,9 @@
 
 #include "GObject.h"
 #include "GSprite.h"
+#include "Simon.h"
+#include "Simon.h"
+#include "SweptAABB.h"
 #define _WIDTH	28
 #define _HEIGHT	32
 #define _SPRITE L"item/13.png"
@@ -20,12 +23,12 @@ private:
 
 public:
 	GSprite* _sprite;
-
+	CSweptAABB* swepyAABB;
 	NextBall(int x, int y);
 	void MoveUpdate(float deltatime);
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
-
+	void Collistion(float deltatime);
 	void Draw();
 	NextBall();
 	~NextBall();

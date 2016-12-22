@@ -11,6 +11,7 @@ Enemy(TYPE, x, y, x2, y2)
 	_sprite = new GSprite(texture, ANIMATIONRATE);
 	_awakeBox = Box(x-100, y-100, 200, 200, 0, 0);
 	_hp = HP;
+	_damage = DAMAGE;
 }
 
 void Fleaman::MoveUpdate(float deltaTime)
@@ -68,6 +69,7 @@ void Fleaman::Collistion(float deltaTime)
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(_damage);
 	}
 }
 void Fleaman::Update(float deltatime){
