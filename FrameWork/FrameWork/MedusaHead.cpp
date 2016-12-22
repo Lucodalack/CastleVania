@@ -48,31 +48,63 @@ void MedusaHead::MoveUpdate(float deltaTime)
 	//	}
 	//}
 	//this->_x += int(this->_vx * deltaTime);
-	//this->_y += int(15 * sin(float(_x)));
+	////this->_y += int(15 * sin(float(_x)));
+	//if (_isMoveleft){
+	//	if (_x <= _activeArea.left){
+	//		_vx *= -1;
+	//		this->_isMoveleft = !this->_isMoveleft;
+	//		this->_y = _activeArea.top;
+	//	}
+	//}
+	//else{
+	//	if (_x >= _activeArea.right){
+	//		_vx *= -1;
+	//		this->_isMoveleft = !this->_isMoveleft;
+	//		this->_y = _activeArea.top;
+	//		//this->_y = ynek;
+	//	}
+	//}
+
+	//this->_x += int(this->_vx * deltaTime);
+	//this->_tamp += (this->_vx * deltaTime / 10);
+	///*if (_y < _activeArea.top || _y > _activeArea.bottom)
+	//this->_y -= int(3 * sin(float(_tamp)));*/
+	//if (!(_y <= _activeArea.top || _y >= _activeArea.bottom))
+	//	this->_y += int(3 * sin(float(_tamp)));
+	////int sign = abs(sin(float(_tamp))) / sin(float(_tamp));
+	//this->_y += int(3 * sin(float(_tamp)));
+
+#pragma region Fix MedusaHead Move
+
 	if (_isMoveleft){
 		if (_x <= _activeArea.left){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
-			this->_y = _activeArea.top;
+			_tamp = 0;
+			//this->_y = _activeArea.top;
 		}
 	}
 	else{
-		if (_x >= _activeArea.right){
+		if (_x >= _activeArea.right - 25){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
-			this->_y = _activeArea.top;
+			_tamp = 0;
+
+			//this->_y = _activeArea.top;
 			//this->_y = ynek;
 		}
 	}
 
 	this->_x += int(this->_vx * deltaTime);
-	this->_tamp += (this->_vx * deltaTime / 10);
+	this->_tamp += (this->_vx * deltaTime / 30);
 	/*if (_y < _activeArea.top || _y > _activeArea.bottom)
 	this->_y -= int(3 * sin(float(_tamp)));*/
 	if (!(_y <= _activeArea.top || _y >= _activeArea.bottom))
 		this->_y += int(3 * sin(float(_tamp)));
 	//int sign = abs(sin(float(_tamp))) / sin(float(_tamp));
 	this->_y += int(3 * sin(float(_tamp)));
+#pragma endregion
+
 #pragma endregion
 	_box.x = _x;
 	_box.y = _y;
