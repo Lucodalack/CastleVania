@@ -91,14 +91,12 @@ void Whip::Update(float deltatime){
 		this->_sprite_left->Done = -1;
 		this->_sprite_left->Reset();
 		OutputDebugString((LPCWSTR)"\n");
-		this->_done = true;
 	}
 	if (this->_sprite_right->Done == 2){
 		Simon::getCurrentSimon()->ChangeState(deltatime);
 		this->_sprite_right->Done = -1;
 		this->_sprite_right->Reset();
 		OutputDebugString((LPCWSTR)"\n");
-		this->_done = true;
 	}
 }
 

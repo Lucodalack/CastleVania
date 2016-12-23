@@ -1,59 +1,41 @@
-﻿Build started 12/22/2016 03:06:23.
-     1>Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/23/2016 8:49:01 PM.
+     1>Project "C:\Users\Ta\Desktop\New folder\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Axe.cpp Bat.cpp Rosary.cpp
-         Rosary.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Simon.cpp
+         Simon.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\rosary.h(7): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\rosary.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         Bat.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(8): warning C4005: '_WIDTH' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(9): warning C4005: '_HEIGHT' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.h(15): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(9): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(14): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(57): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(58): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(100): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(101): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(109): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-         Axe.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(5): warning C4005: '_WIDTH' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(6): warning C4005: '_HEIGHT' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(8): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         Generating Code...
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\boomerang.h(6): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\new folder\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\boomerang.h(7): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\new folder\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\boomerang.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\new folder\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\weaponknife.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\new folder\castlevania\framework\framework\boomerang.h(8) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\weaponknife.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\new folder\castlevania\framework\framework\boomerang.h(11) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.h(21): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\new folder\castlevania\framework\framework\weaponknife.h(12) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(44): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(45): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(67): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(68): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(77): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(78): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(153): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(154): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(465): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(469): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(479): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(650): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\new folder\castlevania\framework\framework\simon.cpp(651): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ta\Desktop\New folder\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ta\Desktop\New folder\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ta\Desktop\New folder\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\Bat.obj
          Debug\BigHeart.obj
          Debug\BonePillar.obj
+         Debug\Boomerang.obj
          Debug\Brick.obj
          Debug\Bricks.obj
          Debug\Brickhidden.obj
@@ -106,13 +88,14 @@
          Debug\State.obj
          Debug\Surface.obj
          Debug\Trap.obj
+         Debug\WeaponKnife.obj
          Debug\Whip.obj
          Debug\Windows.obj
          Debug\GSprite.obj
          Debug\GTexture.obj
-         FrameWork.vcxproj -> C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe
-     1>Done Building Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
+         FrameWork.vcxproj -> C:\Users\Ta\Desktop\New folder\CastleVania\FrameWork\Debug\FrameWork.exe
+     1>Done Building Project "C:\Users\Ta\Desktop\New folder\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.54
+Time Elapsed 00:00:02.79

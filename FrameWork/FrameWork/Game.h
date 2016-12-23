@@ -43,7 +43,7 @@ public:
 	void GameDrawParameter();
 
 	void OnKeyDown(int KeyCode);
-	void OnKeyUp(int KeyCode){}
+	void OnKeyUp(int KeyCode);
 	Game(int screen_width, int screen_height);
 	Game();
 	~Game();

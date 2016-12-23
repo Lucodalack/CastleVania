@@ -90,10 +90,36 @@ void Game::OnKeyDown(int KeyCode)
 	case DIK_SPACE:
   		Simon::getCurrentSimon()->Jump(); break;
 	case DIK_C:
-		Simon::getCurrentSimon()->Fight();
+		Simon::getCurrentSimon()->Fight(0);
 		break;
 	case DIK_X:
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		break;
+	case DIK_DOWN:
+		if (!Simon::getCurrentSimon()->onGoto)
+		Simon::getCurrentSimon()->dy = 20;
+		break;
+	case DIK_V: //subweapon attack
+		if (!Boomerang::getCurrentBoomerang()->isFlying()
+			&& !WeaponKnife::getCurrentKnife()->isFlying())
+			Simon::getCurrentSimon()->Fight(Simon::getCurrentSimon()->Weapon);
+		break;
+	case DIK_1:
+		Simon::getCurrentSimon()->Weapon = 1; //subweapon boomerang
+		break;
+	case DIK_2:
+		Simon::getCurrentSimon()->Weapon = 2;// subweapon knife
+		break;
+	}
+}
+void Game::OnKeyUp(int KeyCode)
+{
+	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+		return;
+	switch (KeyCode)
+	{
+	case DIK_DOWN:
+		Simon::getCurrentSimon()->dy = -20;
 		break;
 	}
 }

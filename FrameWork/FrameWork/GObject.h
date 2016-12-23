@@ -54,12 +54,16 @@ enum TypeGame {
 	Medusa_snake = 41,//Rắn của Medusa
 
 	Other_kill = 37,
-	MxD = 38,
+	MxD = 38, //roi
 	Death_Place=39,
 	Enemy_Fleaman=40,
 	Enemy_Raven=41,
 	Enemy_Skeleton=42,
-	Boss_Mummies=43
+	Boss_Mummies=43,
+
+	Weapon_Boomerang = 44,
+	Weapon_Kife = 45,
+	Weapon_Holy = 46
 };
 
 class GObject {

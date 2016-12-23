@@ -55,8 +55,13 @@ void Fleaman::Collistion(float deltaTime)
 	if (swepyAABB->AABB(this->_awakeBox, Simon::getCurrentSimon()->_box, x, y)){
 		_firstActive = true;
 	}
-	if (Simon::getCurrentSimon()->isFighting()){
-		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)){
+	if (Simon::getCurrentSimon()->isFighting() 
+		|| Boomerang::getCurrentBoomerang()->isFlying() 
+		|| WeaponKnife::getCurrentKnife()->isFlying()){
+		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)
+			|| swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
+			|| swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+			){
 			if (_hp>0)
 				_hp--;
 		}

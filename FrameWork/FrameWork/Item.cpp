@@ -74,9 +74,13 @@ void Item::ChangeState(int state){
 			this->_lifeTime = 0;
 	}
 }
+
 void Item::Collistion(float deltatime){
 	float x, y;
-	if (swepyAABB->AABB(Whip::getCurrentWhip()->_box, this->_box, x, y)){
+	if (swepyAABB->AABB(Whip::getCurrentWhip()->_box, this->_box, x, y)
+		|| swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
+		|| swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+		){
 		this->WakeUp();
 	}
 	if (this->_lifeTime > 0 && this->_lifeTime <= _LIFETIME){
@@ -94,6 +98,7 @@ void Item::Collistion(float deltatime){
 		}
 	}
 }
+
 Item::~Item(){
 	if (_sprite != NULL){
 		delete _sprite;
