@@ -444,6 +444,8 @@ void Simon::Reset(){
 		_cantHurt = false;
 		_stateCurrent = STATE::IS_FALLING;
 		_isFalling = true;
+		_currentStateGame = 1;
+		reset = true;
 	}
 	else{
 		_x = 1373;
@@ -452,6 +454,8 @@ void Simon::Reset(){
 		_cantHurt = false;
 		_stateCurrent = STATE::IS_FALLING;
 		_isFalling = true;
+		_currentStateGame = 1;
+		reset = true;
 	}
 }
 void Simon::Cheat(){
@@ -618,7 +622,8 @@ int d = (this->_stateCurrent == STATE::IS_SITFIGHT || this->_stateCurrent == STA
 }
 
 void Simon::ChangeState(int state){
-	//if (_stateCurrent == STATE::IS_UPING&& state == STATE::IS_STANDING) return;
+	/*if (_stateCurrent == STATE::IS_UPING&& state == STATE::IS_STANDING &&_canGoStair)
+		return;*/
 	_lastState = _stateCurrent;
 	/*if (_lastState == STATE::CANT_HURT){
 

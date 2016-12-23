@@ -11,6 +11,7 @@ Enemy(TYPE, x, y, x2, y2)
 	_box = Box(x, y, _guardWIDTH, _guardHEIGHT, _vx, _vy);
 	_hp = HP;
 	_damage = DAMAGE;
+	_activeArea.right = x2 - _guardWIDTH;
 }
 
 void Spearguard::SetFrame(float deltaTime)

@@ -1,6 +1,683 @@
-﻿Build started 12/22/2016 16:02:51.
+﻿Build started 12/23/2016 21:22:58.
      1>Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Axe.cpp Bat.cpp BigHeart.cpp Board.cpp BonePillar.cpp Brickhidden.cpp Brickmoving.cpp Bricks.cpp Cross.cpp DeathPlace.cpp Door.cpp DoubleShot.cpp Enemy.cpp FireBall.cpp Fireandle.cpp Fleaman.cpp GCamera.cpp Game.cpp Ghost.cpp HolyWater.cpp Item.cpp ItemNone.cpp Knife.cpp Medusa.cpp MedusaHead.cpp MoneyBag.cpp MorningStar.cpp NextBall.cpp Quadnode.cpp Quadtree.cpp Roast.cpp Rosary.cpp Simon.cpp SmallHeart.cpp Snake.cpp Source.cpp Spearguard.cpp SpiritBall.cpp Stair.cpp Stair2.cpp Stairs.cpp Stairs2.cpp State.cpp StopWatch.cpp SweptAABB.cpp Trap.cpp Whip.cpp
+         Whip.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(7): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(29): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(30): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(35): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(36): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(42): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(54): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(55): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(60): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(61): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(66): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(67): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(93): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.cpp(94): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         SweptAABB.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\sweptaabb.cpp(177): warning C4244: 'initializing' : conversion from 'const float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\sweptaabb.cpp(184): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\sweptaabb.cpp(228): warning C4244: 'initializing' : conversion from 'const float' to 'int', possible loss of data
+         StopWatch.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         State.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+         Stairs2.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs2.cpp(14): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs2.cpp(29): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs2.cpp(40): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs2.cpp(42): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs2.cpp(65): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs2.cpp(66): warning C4305: '=' : truncation from 'double' to 'float'
+         Stairs.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs.cpp(14): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs.cpp(29): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs.cpp(40): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs.cpp(42): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs.cpp(65): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stairs.cpp(66): warning C4305: '=' : truncation from 'double' to 'float'
+         Stair2.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.cpp(38): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.cpp(39): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.cpp(57): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.cpp(58): warning C4305: '=' : truncation from 'double' to 'float'
+         SpiritBall.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Snake.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\snake.cpp(13): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\snake.cpp(70): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\snake.cpp(73): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         SmallHeart.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.cpp(10): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.cpp(29): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.cpp(33): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.cpp(34): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.cpp(41): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Simon.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(65): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(66): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(75): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(76): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(149): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(150): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(481): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(485): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(495): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(661): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.cpp(662): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Rosary.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\rosary.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\rosary.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Roast.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+         Quadnode.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+         NextBall.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.cpp(47): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.cpp(49): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         MorningStar.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\morningstar.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+         MoneyBag.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.cpp(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Medusa.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusa.cpp(10): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusa.cpp(274): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusa.cpp(275): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusa.cpp(326): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusa.cpp(327): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusa.cpp(362): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Knife.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\knife.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         ItemNone.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
+         Compiling...
+         Item.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.cpp(34): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.cpp(37): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.cpp(38): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.cpp(53): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         HolyWater.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\holywater.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+         Game.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(8): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(9): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.h(15): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spearguard.h(11): warning C4005: 'HP' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bat.h(16) : see previous definition of 'HP'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spearguard.h(14): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bat.h(15) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\spearguard.h(14) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusahead.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusahead.h(12): warning C4005: 'HP' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'HP'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.h(14): warning C4005: '_ATTACK_RATE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(11) : see previous definition of '_ATTACK_RATE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.h(14): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\medusahead.h(11) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(8) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(9) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.h(13) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.h(14) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.h(10): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(11) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(12) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.h(10) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.h(11) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\firetower.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(11) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\firetower.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(12) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\firetower.h(9) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\firetower.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair2.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\stair.h(12) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.h(11): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.h(12): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.h(13): warning C4005: '_ANIMATE_RATE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.h(13) : see previous definition of '_ANIMATE_RATE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.h(14): warning C4005: '_LIFETIME' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(13) : see previous definition of '_LIFETIME'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.h(15): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\stair.h(11) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\trap.h(8): warning C4005: '_SPRITE1' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.h(16) : see previous definition of '_SPRITE1'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\trap.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\door.h(15) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\door.h(11) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\door.h(12) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(11): warning C4005: '_SPEED' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(10) : see previous definition of '_SPEED'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(13): warning C4005: '_LIFETIME' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\door.h(14) : see previous definition of '_LIFETIME'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\trap.h(9) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\stair2.h(12) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(8): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(7) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(8) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(9): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\holywater.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(9) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\holywater.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(9) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\holywater.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\holywater.h(7) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\itemnone.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\knife.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\morningstar.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\morningstar.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\moneybag.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\morningstar.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\morningstar.h(7) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\rosary.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\rosary.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\rosary.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\rosary.h(7) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\roast.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\smallheart.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\spiritball.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\stopwatch.h(8) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\medusa.h(14): warning C4005: '_ANIMATE_RATE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\door.h(13) : see previous definition of '_ANIMATE_RATE'
+         Fleaman.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(8): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(9): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.h(14): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(9): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(12): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(24): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(25): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(27): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(33): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(34): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(78): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(79): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(88): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(91): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Fireandle.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireandle.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         FireBall.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireball.cpp(12): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\fireball.cpp(45): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         DoubleShot.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.h(9): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\doubleshot.cpp(21): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Door.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.h(11): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.h(12): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.cpp(5): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\door.cpp(15): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+         DeathPlace.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\deathplace.cpp(5): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Cross.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(8): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\cross.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Bricks.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bricks.cpp(32): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Brickmoving.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(8): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(9): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.cpp(35): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.cpp(36): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickmoving.cpp(52): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Brickhidden.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\brickhidden.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         BonePillar.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.cpp(10): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.cpp(49): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.cpp(50): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.cpp(86): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.cpp(142): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.cpp(151): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bonepillar.cpp(161): warning C4553: '==' : operator has no effect; did you intend '='?
+         Board.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\nextball.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(134): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(135): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(176): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(177): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(235): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(236): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(292): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\board.cpp(293): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+         BigHeart.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bigheart.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Bat.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(8): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(9): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.h(15): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(9): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(14): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(59): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(60): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(107): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(108): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\bat.cpp(116): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Axe.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\axe.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
+         Compiling...
+         Stair.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(19) : see previous definition of 'TYPE'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.cpp(37): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.cpp(38): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.cpp(55): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\tient_000\desktop\castlevania\framework\framework\stair.cpp(56): warning C4305: '=' : truncation from 'double' to 'float'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Trap.cpp
+         Spearguard.cpp
+         Source.cpp
+         Quadtree.cpp
+         MedusaHead.cpp
+         Ghost.cpp
+         GCamera.cpp
+         Enemy.cpp
+       Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\Bat.obj
          Debug\BigHeart.obj
@@ -66,4 +743,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.54
+Time Elapsed 00:00:26.41

@@ -40,13 +40,13 @@ void Enemy::MoveUpdate(float deltaTime)
 #pragma region __XU_LY_CHUYEN_DONG__
 	if (_isHurting) return;
 	if (_isMoveleft){
-		if (_x <= _activeArea.left){
+		if (_x < _activeArea.left){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
 		}
 	}
 	else{
-		if (_x >= _activeArea.right){
+		if (_x > _activeArea.right){
 			_vx *= -1;
 			this->_isMoveleft = !this->_isMoveleft;
 		}
@@ -129,6 +129,7 @@ void Enemy::Collistion(float deltaTime)
 		return;
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
+
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
 		Simon::getCurrentSimon()->Hurt(_damage);
 	}

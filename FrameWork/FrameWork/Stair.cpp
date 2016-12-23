@@ -23,12 +23,12 @@ void Stair::Collistion(float deltatime){
 	float x, y;
 
 	if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
-		/*if (Simon::getCurrentSimon()->GetState() != STATE::IS_DOWNING)
-		Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);*/
-
+		if (Simon::getCurrentSimon()->GetState() != STATE::IS_DOWNING)
+		Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);
+		//Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);
 		Simon::getCurrentSimon()->isOnStair1(true);
 		if (KeyBoard::getCurrentKeyBoard()->keyUp() && !Simon::getCurrentSimon()->onGoto){
-			Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);
+			//Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);
 			if (this->_x == Simon::getCurrentSimon()->_x)
 				return;
 			Simon::getCurrentSimon()->onGoto = true;

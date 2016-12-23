@@ -124,17 +124,19 @@ void Quadtree::loadObject(){
 		myfile >> y2;
 		myfile >> width;
 		myfile >> height;
-		if ((type <= 10 || type >= 23) && type != 6){
+		if ((type <= 10 || type >= 23) && type != 6&&type!=5){
 			_listObject[i] = getObject(type, x2, y2, width, height);
 		}
-		else if (type == 6){
-			if (x != x2){
-				_listObject[i] = getObject(type, width, height, x2, y2, false);
+		else{
+			if (type == 6 || type == 5){
+				if (x != x2){
+					_listObject[i] = getObject(type, width, height, x2, y2, false);
+				}
+				else
+					_listObject[i] = getObject(type, x2, y2, width, height);
+
 			}
-			else
-				_listObject[i] = getObject(type, x2, y2, width, height);
-			
-		}
+		} 
 
 		_listObject[i]->_id = id;
 	}
@@ -154,12 +156,13 @@ void Quadtree::loadObject(){
 	 GObject* tamp=0;
 	 switch (type){
 
-	 case TypeGame::Boss_Medusa:tamp = new Medusa(x, y); break;
+	 case TypeGame::Boss_Medusa:tamp = new Medusa(x, y); 
+		 break;
 
 	 case TypeGame::Enemy_Bat: tamp = new Bat(x, y, width, height); break;
 	 case TypeGame::Ground_Brick: tamp = new Bricks(x, y, width, height); break;
 	 case TypeGame::Enemy_Spearguard: tamp = new Spearguard(x, y, width, height); break;
-	 case TypeGame::Enemy_Ghost: tamp = new Ghost(x, y, width, height); break;
+	 case TypeGame::Enemy_Ghost: tamp = new Ghost(x, y, width, height, left); break;
 	 case TypeGame::Enemy_Medusahead: tamp = new MedusaHead(x, y, width, height, left); break;
 	 case TypeGame::Enemy_Bonepilla:tamp = new BonePillar(x, y); break;
 	 case TypeGame::Enemy_Fleaman:tamp = new Fleaman(x, y, width, height); break;

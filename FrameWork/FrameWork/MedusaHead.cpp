@@ -21,6 +21,7 @@ Enemy(TYPE, x, y, x2, y2,left)
 	_sprite = new GSprite(texture, ANIMATIONRATE);
 	this->SetFrame(0);
 	_hp = HP;
+	_damage = DAMAGE;
 }
 void MedusaHead::MoveUpdate(float deltaTime)
 {

@@ -74,7 +74,7 @@ private:
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
-
+	bool reset = false;
 	int xDestinate;
 	int yDestinate;
 	bool onGoto;

@@ -40,10 +40,9 @@ void Trap::Update(float DeltaTime)
 
 void Trap::Collistion(float deltaTime){
 	float x, y;
-	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+	if (Simon::getCurrentSimon()->cantHurt())
 		return;
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
-		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
 	}
 }

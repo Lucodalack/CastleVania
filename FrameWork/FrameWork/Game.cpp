@@ -57,6 +57,7 @@ void Game::Sort(vector<GObject*>& listGObject){
 void Game::Collision(float deltatime)
 {	
 	Quadtree::getCurrentQuadtree()->_root->Retrieve(listObject);
+	//Sort(listObject);
 	for each(GObject* tamp in listObject){
 		tamp->Collistion(deltatime);
 		switch (tamp->_type)
@@ -120,6 +121,10 @@ void Game::OnKeyDown(int KeyCode)
 }
 void Game::GameRun(float deltatime)
 {
+	if (Simon::getCurrentSimon()->reset){
+		Quadtree::getCurrentQuadtree()->load();
+		Simon::getCurrentSimon()->reset = false;
+	}
 	KeyBoard::getCurrentKeyBoard()->UpdateKeyboard();
 	Simon::getCurrentSimon()->Update(deltatime); 
 	//if (Simon::getCurrentSimon()->_x > 250) GCamera::getCurrentCamera()->Follow();

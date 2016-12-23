@@ -27,20 +27,24 @@ void Whip::MoveUpdate(float deltaTime)
 			{
 			case-1:this->_x -= 80;
 				_box.x = _x+135;
+				_box.y = _y;
 				_box.w = 23;
 				_box.h = 58;
 				break;
 			case 0:this->_x -= 85;
 				_box.x = _x + 120;
+				_box.y = _y;
 				_box.w = 40;
 				_box.h = 46;
 				break;
 			case 1:case 2:
 				this->_x -= 85;
-				_box.x = _x ;
+				_box.x = _x +30;
+				_box.y += 18;
 				_box.w = 66;
 				_box.h = 31; break;
 			}
+
 		}
 		if (Simon::getCurrentSimon()->isMoveRight()){
 			switch (this->_sprite_right->Done)
@@ -48,15 +52,18 @@ void Whip::MoveUpdate(float deltaTime)
 			case-1:
 				this->_x -= 140;
 				_box.x = _x + 135;
+				_box.y = _y;
 				_box.w = 23;
 				_box.h = 58; break;
 			case 0:
 				this->_x -= 140;
+				_box.y = _y;
 				_box.x = _x + 120;
 				_box.w = 40;
 				_box.h = 46; break;
 			case 1: case 2:
 				this->_x += 35;
+				_box.y = _y+18;
 				_box.x = _x;
 				_box.w = 66;
 				_box.h = 31; break;
@@ -64,7 +71,7 @@ void Whip::MoveUpdate(float deltaTime)
 		}
 	}
 #pragma endregion
-	_box.y = _y;
+	//_box.y = _y;
 	_box.vx = _vx;
 	_box.vy = _vy;
 }

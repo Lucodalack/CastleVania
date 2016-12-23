@@ -27,14 +27,14 @@ void GCamera::Move(){
 				onGoto = false;
 				return;
 			}
-			x -= 1;
+			x -= 3;
 		}
 		else{
 			if (x >= (xDestinate - 0.5*width)){
 				onGoto = false;
 				return;
 			}
-			x += 1;
+			x += 3;
 		}
 		
 	}
