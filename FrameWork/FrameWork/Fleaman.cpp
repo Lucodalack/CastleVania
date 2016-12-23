@@ -44,8 +44,8 @@ void Fleaman::SetFrame(float deltaTime)
 		this->_sprite->_end = 0;
 	}
 	else{
-		this->_sprite->_start = 1;
-		this->_sprite->_end = 2;
+		this->_sprite->_start = 0;
+		this->_sprite->_end = 1;
 	}
 #pragma endregion
 }

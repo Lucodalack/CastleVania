@@ -32,7 +32,7 @@ void Game::GameLoad()
 	
 	//_bricks = new Bricks(0, 1570, 5000, 32);
 	Quadtree::getCurrentQuadtree()->load();
-	//Simon::getCurrentSimon()->nextLV();
+	Simon::getCurrentSimon()->nextLV();
 	GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
 }
 void Game::Sort(vector<GObject*>& listGObject){
@@ -118,7 +118,7 @@ void Game::OnKeyDown(int KeyCode)
 		Simon::getCurrentSimon()->Cheat();
 		break;
 	case DIK_DOWN:
-		if (!Simon::getCurrentSimon()->onGoto)
+		if (!Simon::getCurrentSimon()->onGoto&&!(Simon::getCurrentSimon()->canGoStair() || Simon::getCurrentSimon()->isOnStair()))
 		Simon::getCurrentSimon()->dy = 20;
 		break;
 	case DIK_V: //subweapon attack
@@ -143,7 +143,10 @@ void Game::OnKeyUp(int KeyCode)
 	switch (KeyCode)
 	{
 	case DIK_DOWN:
-		Simon::getCurrentSimon()->dy = -20;
+		if (!Simon::getCurrentSimon()->onGoto&&!(Simon::getCurrentSimon()->canGoStair() || Simon::getCurrentSimon()->isOnStair())){
+			Simon::getCurrentSimon()->dy = -20;
+		}
+		
 		break;
 	}
 }

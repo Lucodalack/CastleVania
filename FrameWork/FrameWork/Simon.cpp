@@ -83,6 +83,8 @@ void Simon::MoveUpdate(float deltaTime)
 	//Kiem tra doi tuong co nhay duoc hay ko
 	if (this->_isOnStair)
 	{
+		if (KeyBoard::getCurrentKeyBoard()->keyDown())
+			int a = 0;
 		this->_x += int(this->_vx * deltaTime);
 		this->_y += int(this->_vy * deltaTime);
 		
