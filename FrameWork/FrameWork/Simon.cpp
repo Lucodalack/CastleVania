@@ -459,9 +459,44 @@ void Simon::InputUpdate(float deltaTime)
 
 
 }
-
+void Simon::Reset(){
+	if (_currentLV == 2){
+		_x = 3742;
+		_y = 1453;
+		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
+		_cantHurt = false;
+		_stateCurrent = STATE::IS_FALLING;
+		_isFalling = true;
+	}
+	else{
+		_x = 1373;
+		_y = 1030;
+		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
+		_cantHurt = false;
+		_stateCurrent = STATE::IS_FALLING;
+		_isFalling = true;
+	}
+}
+void Simon::Cheat(){
+	if (_currentLV == 2){
+		_x = 1308;
+		_y = 236;
+		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(4);
+		_cantHurt = false;
+		_stateCurrent = STATE::IS_FALLING;
+		_isFalling = true;
+	}
+}
 void Simon::Update(float deltatime){
 	if (_hp <= 0){
+		_life--;
+		if (_life > 0){
+			_hp = 16;
+			Reset();
+		}
+			
+	}
+	if (_life <= 0){
 		_timeDeath += deltatime;
 		_isDeath = true;
 	}
@@ -613,10 +648,9 @@ if (this->_isMoveright){
 void Simon::ChangeState(int state){
 	//if (_stateCurrent == STATE::IS_UPING&& state == STATE::IS_STANDING) return;
 	_lastState = _stateCurrent;
-	
-	if (_lastState == STATE::CANT_HURT){
+	/*if (_lastState == STATE::CANT_HURT){
 		this->_hp -= 1;
-	}
+	}*/
 	this->_stateCurrent = state;
 	switch (state) {
 	case STATE::IS_STANDING:

@@ -15,6 +15,8 @@ protected:
 	CSweptAABB* swepyAABB;
 	bool _isDead;// da chet chua nek.
 	bool _isMoveleft;
+	bool _isHurting;
+	int _damage;
 	int _hp;
 	RECT _activeArea; // ô chữ nhật mà con này chạy trong đó.
 public:

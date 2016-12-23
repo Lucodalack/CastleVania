@@ -8,7 +8,8 @@
 #define _guardWIDTH	44
 #define _guardHEIGHT	64
 #define _guardSPEED	0.7f
-#define HP 1
+#define HP 2
+#define DAMAGE 2
 #define SPEARGAURD_SPRITE L"enemy/5.png"
 #define TYPE TypeGame::Enemy_Spearguard
 

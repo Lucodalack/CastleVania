@@ -10,6 +10,7 @@
 #define MEDUSAHEAD_SPRITE L"enemy/6.png"
 #define TYPE TypeGame::Enemy_Bat
 #define HP 1
+#define DAMAGE 2
 
 class MedusaHead : public Enemy {
 private:

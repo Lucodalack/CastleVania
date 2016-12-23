@@ -14,6 +14,7 @@
 #define TYPE TypeGame::Enemy_Fleaman
 #define HP 1
 #define TIME_WATING 300
+#define DAMAGE 2
 
 enum FLEAMAN_STATE{
 	WAIT = 0,

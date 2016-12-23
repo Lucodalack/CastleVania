@@ -10,6 +10,7 @@
 #define _snakeSPEED 1.2f
 #define _Y_Sanke 335
 
+
 #include "GObject.h"
 #include <vector>
 #include <d3d9.h>

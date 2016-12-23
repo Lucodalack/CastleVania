@@ -10,6 +10,7 @@ Enemy(TYPE, x, y, x2, y2)
 	this->SetFrame(0);
 	_box = Box(x, y, _guardWIDTH, _guardHEIGHT, _vx, _vy);
 	_hp = HP;
+	_damage = DAMAGE;
 }
 
 void Spearguard::SetFrame(float deltaTime)

@@ -21,7 +21,7 @@ GObject(4, x, y, _bplWIDTH, _bplHEIGHT)
 	_fireball2 = new FireBall(_x, _y + 12);
 	_fireball3 = new FireBall(_x, _y + 12);
 	_hp = bplHP;
-
+	
 
 
 }
@@ -121,13 +121,17 @@ void BonePillar::Collistion(float deltaTime){
 	if (Simon::getCurrentSimon()->isFighting() 
 		|| Boomerang::getCurrentBoomerang()->isFlying() 
 		|| WeaponKnife::getCurrentKnife()->isFlying()){
-		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)
-			|| swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
-			|| swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+		if ((swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y) &&!_isHurting) 
+			|| (swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y) &&!_isHurting )
+			|| (swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y) &&!_isHurting )
 			){
+			_isHurting = true;
 			if (_hp>0)
 				_hp--;
 		}
+	}
+	else{
+		_isHurting = false;
 	}
 	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
 		return;
@@ -139,6 +143,7 @@ void BonePillar::Collistion(float deltaTime){
 	if (_flag1==true && swepyAABB->AABB(_fireball1->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(_fireball1->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(DAMAGE);
 		_flag1 == false;
 		_fireball1 = new FireBall(_x, _y + 12);
 
@@ -147,6 +152,7 @@ void BonePillar::Collistion(float deltaTime){
 	if (_flag2 == true && swepyAABB->AABB(_fireball2->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(_fireball2->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(DAMAGE);
 		_flag2 == false;
 		_fireball2 = new FireBall(_x, _y + 12);
 
@@ -156,6 +162,7 @@ void BonePillar::Collistion(float deltaTime){
 	if (_flag3 == true && swepyAABB->AABB(_fireball1->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(_fireball3->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(DAMAGE);
 		_flag3 == false;
 		_fireball3 = new FireBall(_x, _y + 12);
 

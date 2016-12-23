@@ -18,6 +18,14 @@ void NextBall::SetFrame(float deltaTime)
 	this->_sprite->_end = 1;
 #pragma endregion
 }
+void NextBall::Collistion(float deltaTime)
+{
+	float x, y;
+	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
+		Simon::getCurrentSimon()->nextLV();
+		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
+	}
+}
 void NextBall::Update(float DeltaTime)
 {
 	_time -= DeltaTime;
