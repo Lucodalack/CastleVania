@@ -14,7 +14,7 @@ private:
 	static Whip* _whip;
 	
 public:
-	bool _done = true;
+
 	GSprite* _sprite_right, *_sprite_left;
 	Whip(int x, int y);
 	static Whip* getCurrentWhip();

@@ -40,7 +40,7 @@ void Whip::MoveUpdate(float deltaTime)
 			case 1:case 2:
 				this->_x -= 85;
 				_box.x = _x +30;
-				_box.y += 18;
+				_box.y = _y;
 				_box.w = 66;
 				_box.h = 31; break;
 			}
@@ -63,7 +63,7 @@ void Whip::MoveUpdate(float deltaTime)
 				_box.h = 46; break;
 			case 1: case 2:
 				this->_x += 35;
-				_box.y = _y+18;
+				_box.y = _y;
 				_box.x = _x;
 				_box.w = 66;
 				_box.h = 31; break;
@@ -98,14 +98,12 @@ void Whip::Update(float deltatime){
 		this->_sprite_left->Done = -1;
 		this->_sprite_left->Reset();
 		OutputDebugString((LPCWSTR)"\n");
-		this->_done = true;
 	}
 	if (this->_sprite_right->Done == 2){
 		Simon::getCurrentSimon()->ChangeState(deltatime);
 		this->_sprite_right->Done = -1;
 		this->_sprite_right->Reset();
 		OutputDebugString((LPCWSTR)"\n");
-		this->_done = true;
 	}
 }
 

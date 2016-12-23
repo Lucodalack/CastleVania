@@ -7,6 +7,8 @@
 #include "Medusa.h"
 #define SPRITE_BOARD L"other/board.png"
 #define SPRITE_ALL L"other/misc.bmp"
+#define SPRITE_BUMERANG L"item/8.png"
+#define SPRITE_KNIFE L"item/4.png"
 class Board{
 private:
 	static Board* current;
@@ -17,7 +19,7 @@ private:
 	int _heart;
 	int _life;
 	int _state;
-
+	int _wheapon = 1;
 	D3DXVECTOR3 _scorePosition;
 	D3DXVECTOR3 _playerHpPosition;
 	D3DXVECTOR3 _enemyHPPosition;
@@ -25,6 +27,7 @@ private:
 	D3DXVECTOR3 _heartPosition;
 	D3DXVECTOR3 _lifePosition;
 	D3DXVECTOR3 _statePosition;
+	D3DXVECTOR3 _wheaponPosition;
 
 	RECT rect0;
 	RECT rect1;
@@ -39,6 +42,8 @@ private:
 
 	GTexture* _all;
 	GTexture* _board;
+	GTexture* _boom;
+	GTexture* _knife;
 public:
 
 	Board();
@@ -53,6 +58,8 @@ public:
 	void drawState();
 	void drawHeart();
 	void drawLife();
+	void drawWheapon();
+	void setWheapon(int tamp){ _wheapon = tamp; }
 	void drawNumber(D3DXVECTOR3 position, int numb);
 };
 #endif

@@ -7,6 +7,8 @@
 #include "GCamera.h"
 #include "Box.h"
 #include "Whip.h"
+#include "Boomerang.h"
+#include "WeaponKnife.h"
 
 
 #define SIMON_SPRITE L"simon.png"
@@ -20,6 +22,7 @@
 #define SIMON_JUMPMAX 64
 #define TIME_CANT_HURT 300
 #define HURT_FALL_SPEED 1.2f
+
 enum STATE
 {
 	IS_STANDING = 1, // đứng
@@ -60,6 +63,9 @@ private:
 	bool _cantHurt;
 	bool _isOnStair2;
 	bool _isOnStair1;
+	bool _isOnMovingBrick = false;
+	
+	
 	int _keyDown; // lưu phím vừa được nhấn.
 	int _keyUp;
 	float _tmp = 0;
@@ -78,6 +84,9 @@ public:
 	int xDestinate;
 	int yDestinate;
 	bool onGoto;
+	int dy = 0;
+	int Weapon = 1 ; // 1 = boomerang, 2 = kinfe subweapon
+	int FightWith = 0; // 
 
 	Simon(int x, int y);
 	void MoveUpdate(float deltatime);
@@ -87,12 +96,15 @@ public:
 	void MoveState();
 	void ChangeState(int state);
 	void ChangeState(float deltatime){ 
-		_isFighting = false; 
-		SetFrame(deltatime); 
-		//this->_stateCurrent = this->_lastState;
+		_isFighting = false;
+		SetFrame(deltatime);
+		if (this->_lastState == STATE::IS_UPING
+			|| this->_lastState == STATE::IS_DOWNING				
+			)
+		this->_stateCurrent = this->_lastState;
 	}
 	void Jump();
-	void Fight();
+	void Fight(int weapon);
 	void Murder(){
 		_hp = 0;
 	}

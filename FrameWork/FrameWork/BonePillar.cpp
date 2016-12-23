@@ -118,8 +118,13 @@ void BonePillar::Draw(){
 void BonePillar::Collistion(float deltaTime){
 	if (_isDead) return;
 	float x, y;
-	if (Simon::getCurrentSimon()->isFighting()){
-		if (swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y)&&!_isHurting){
+	if (Simon::getCurrentSimon()->isFighting() 
+		|| Boomerang::getCurrentBoomerang()->isFlying() 
+		|| WeaponKnife::getCurrentKnife()->isFlying()){
+		if ((swepyAABB->AABB(this->_box, Whip::getCurrentWhip()->_box, x, y) &&!_isHurting) 
+			|| (swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y) &&!_isHurting )
+			|| (swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y) &&!_isHurting )
+			){
 			_isHurting = true;
 			if (_hp>0)
 				_hp--;

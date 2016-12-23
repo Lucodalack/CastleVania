@@ -3,6 +3,8 @@ Board* Board::current = 0;
 Board::Board(){
 	_board = new GTexture(SPRITE_BOARD, 1, 1, 1,true);
 	_all = new GTexture(SPRITE_ALL, 8, 2, 16,true);
+	_boom = new GTexture(SPRITE_BUMERANG, 1, 1, 1);
+	_knife = new GTexture(SPRITE_KNIFE, 1, 1, 1);
 	 _score=0;
 	 _playerHp=16;
 	 _enemyHP=16;
@@ -18,6 +20,7 @@ Board::Board(){
 	 _heartPosition = D3DXVECTOR3(350.0, 35.0f, 0.0f);
 	 _lifePosition = D3DXVECTOR3(350.0, 55.0f, 0.0f);
 	 _statePosition = D3DXVECTOR3(450.0, 10.0f, 0.0f);
+	 _wheaponPosition = D3DXVECTOR3(261.0, 40.0f, 0.0f);
 
 	 rect0.left=2;
 	 rect0.top = 4;
@@ -81,6 +84,33 @@ void Board::drawHeart(){
 	tamp.x += 16;
 
 	drawNumber(tamp, _heart % 10 );
+}
+void Board::drawWheapon(){
+	GTexture* currentTexture = NULL;
+	if (_wheapon == 1){
+		currentTexture = _boom;
+	}
+	else{
+		currentTexture = _knife;
+	}
+	RECT tamp;
+	tamp.left = 0;
+	tamp.top = 0;
+	tamp.right = 32;
+	tamp.bottom = 28;
+	float camerax, cameray;
+	D3DXVECTOR3 position = _wheaponPosition;
+	camerax = GCamera::getCurrentCamera()->x;
+	cameray = GCamera::getCurrentCamera()->y;
+	position.x += camerax;
+	position.y += cameray;
+	Graphics::getCurGraphics()->_sprite->Draw(
+		currentTexture->Texture,
+		&tamp,
+		NULL,
+		&position,
+		0xFFFFFFFF
+		);
 }
 void Board::drawLife(){
 	drawNumber(_lifePosition, _life / 10);
@@ -311,6 +341,7 @@ void Board::Draw(){
 	drawLife();
 	drawTime();
 	drawScore();
+	drawWheapon();
 }
 void Board::Update(){
 	_heart = Simon::getCurrentSimon()->getHeart();
