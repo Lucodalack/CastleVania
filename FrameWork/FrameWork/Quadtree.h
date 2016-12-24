@@ -17,6 +17,7 @@
 #include "MedusaHead.h"
 #include "BonePillar.h"
 #include "Fleaman.h"
+#include "Raven.h"
 
 #include "Brickhidden.h"
 #include "Brickmoving.h"

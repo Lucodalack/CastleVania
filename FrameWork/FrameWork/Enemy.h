@@ -12,9 +12,9 @@
 
 class Enemy : public GObject {
 protected:
-	CSweptAABB* swepyAABB;
 	bool _isDead;// da chet chua nek.
 	bool _isMoveleft;
+	CSweptAABB* swepyAABB;
 	bool _isHurting;
 	int _damage;
 	int _hp;
@@ -28,7 +28,7 @@ public:
 	void Update(float deltatime);
 	void Collistion(float deltatime);
 	void Draw();
-	Enemy();
+	Enemy(){}
 	~Enemy();
 };
 

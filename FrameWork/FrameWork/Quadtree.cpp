@@ -166,6 +166,7 @@ void Quadtree::loadObject(){
 	 case TypeGame::Enemy_Medusahead: tamp = new MedusaHead(x, y, width, height, left); break;
 	 case TypeGame::Enemy_Bonepilla:tamp = new BonePillar(x, y); break;
 	 case TypeGame::Enemy_Fleaman:tamp = new Fleaman(x, y, width, height); break;
+	 case TypeGame::Enemy_Raven:tamp = new Raven(x, y); break;
 
 	 case TypeGame::Ground_Stair_Down: tamp = new Stairs2(x, y, width, height); break;
 	 case TypeGame::Ground_Stair_Up: tamp = new Stairs(x, y, width, height); break;

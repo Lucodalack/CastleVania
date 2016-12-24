@@ -255,6 +255,9 @@
     <ClInclude Include="WeaponKnife.h">
       <Filter>GameObject\Simon</Filter>
     </ClInclude>
+    <ClInclude Include="Raven.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
@@ -442,6 +445,9 @@
     </ClCompile>
     <ClCompile Include="WeaponKnife.cpp">
       <Filter>GameObject\Simon</Filter>
+    </ClCompile>
+    <ClCompile Include="Raven.cpp">
+      <Filter>GameObject\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

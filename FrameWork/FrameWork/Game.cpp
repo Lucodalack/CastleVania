@@ -32,7 +32,7 @@ void Game::GameLoad()
 	
 	//_bricks = new Bricks(0, 1570, 5000, 32);
 	Quadtree::getCurrentQuadtree()->load();
-	Simon::getCurrentSimon()->nextLV();
+	//Simon::getCurrentSimon()->nextLV();
 	GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
 }
 void Game::Sort(vector<GObject*>& listGObject){
@@ -123,8 +123,11 @@ void Game::OnKeyDown(int KeyCode)
 		break;
 	case DIK_V: //subweapon attack
 		if (!Boomerang::getCurrentBoomerang()->isFlying()
-			&& !WeaponKnife::getCurrentKnife()->isFlying())
+			&& !WeaponKnife::getCurrentKnife()->isFlying()
+			&& Simon::getCurrentSimon()->getHeart() > 0){
 			Simon::getCurrentSimon()->Fight(Simon::getCurrentSimon()->Weapon);
+			Simon::getCurrentSimon()->Heal(-1);
+		}
 		break;
 	case DIK_1:
 		Simon::getCurrentSimon()->Weapon = 1; //subweapon boomerang

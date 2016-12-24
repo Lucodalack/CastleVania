@@ -492,8 +492,18 @@ void Simon::Cheat(){
 		_stateCurrent = STATE::IS_FALLING;
 		_isFalling = true;
 	}
+
+	if (_currentLV == 3){
+		_x = 300;
+		_y = 650;
+		_cantHurt = false;
+		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(2);
+		_stateCurrent = STATE::IS_FALLING;
+		_isFalling = true;
+	}
 }
 void Simon::Update(float deltatime){
+
 	if (_hp <= 0){
 		_life--;
 		if (_life > 0){
@@ -523,6 +533,7 @@ void Simon::Update(float deltatime){
 	}
 	Boomerang::getCurrentBoomerang()->Update(deltatime);
 	WeaponKnife::getCurrentKnife()->Update(deltatime);
+	
 }
 
 void Simon::MoveState(){
@@ -706,7 +717,4 @@ Simon* Simon::getCurrentSimon(){
 		_simon = new Simon(3742, 1453);
 	return _simon;
 }
-
-
-
 

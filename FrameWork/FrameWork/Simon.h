@@ -11,6 +11,7 @@
 #include "WeaponKnife.h"
 
 
+
 #define SIMON_SPRITE L"simon.png"
 
 #define SIMON_WIDTH			32

@@ -1,40 +1,276 @@
-﻿Build started 12/24/2016 03:31:39.
-     1>Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/25/2016 2:03:50 AM.
+     1>Project "C:\Users\Ta\Desktop\Castlevania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Fleaman.cpp
-         Fleaman.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Axe.cpp Bat.cpp BigHeart.cpp Board.cpp BonePillar.cpp Boomerang.cpp Brickhidden.cpp Brickmoving.cpp Bricks.cpp Cross.cpp DeathPlace.cpp Door.cpp DoubleShot.cpp Enemy.cpp FireBall.cpp Fireandle.cpp Fleaman.cpp GCamera.cpp Game.cpp Ghost.cpp HolyWater.cpp Item.cpp ItemNone.cpp Knife.cpp Medusa.cpp MedusaHead.cpp MoneyBag.cpp MorningStar.cpp NextBall.cpp Quadnode.cpp Quadtree.cpp Raven.cpp Roast.cpp Rosary.cpp Simon.cpp SmallHeart.cpp Snake.cpp Source.cpp Spearguard.cpp SpiritBall.cpp Stair.cpp Stair2.cpp Stairs.cpp Stairs2.cpp State.cpp StopWatch.cpp SweptAABB.cpp Trap.cpp WeaponKnife.cpp Whip.cpp
+         Simon.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\boomerang.h(6): warning C4005: '_WIDTH' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\boomerang.h(7): warning C4005: '_HEIGHT' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\boomerang.h(11): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\weaponknife.h(9): warning C4005: '_SPRITE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\boomerang.h(8) : see previous definition of '_SPRITE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\weaponknife.h(12): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\boomerang.h(11) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(21): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\weaponknife.h(12) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\enemy.h(9): warning C4005: '_HEIGHT' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\boomerang.h(7) : see previous definition of '_HEIGHT'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.h(13): warning C4005: '_SPRITE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\weaponknife.h(9) : see previous definition of '_SPRITE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.h(14): warning C4005: 'TYPE' : macro redefinition
-                 c:\users\tient_000\desktop\castlevania\framework\framework\simon.h(21) : see previous definition of 'TYPE'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(9): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(12): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(24): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(25): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(27): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(33): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(34): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(83): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(84): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(93): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\tient_000\desktop\castlevania\framework\framework\fleaman.cpp(96): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(6): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(7): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\weaponknife.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(8) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\weaponknife.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(11) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.h(22): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\weaponknife.h(12) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(44): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(45): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(67): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(68): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(77): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(78): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(155): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(156): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(516): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(520): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(530): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(702): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.cpp(703): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Game.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(6): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\whip.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(7): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\whip.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\whip.h(10) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\weaponknife.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(8) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\weaponknife.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(11) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.h(22): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\weaponknife.h(12) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\enemy.h(9): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(7) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\bat.h(15): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\simon.h(22) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\spearguard.h(11): warning C4005: 'HP' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bat.h(16) : see previous definition of 'HP'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\spearguard.h(14): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bat.h(15) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\ghost.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\spearguard.h(14) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\medusahead.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\ghost.h(10) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\medusahead.h(12): warning C4005: 'HP' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\spearguard.h(11) : see previous definition of 'HP'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\bonepillar.h(14): warning C4005: '_ATTACK_RATE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\enemy.h(11) : see previous definition of '_ATTACK_RATE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\fleaman.h(13): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\weaponknife.h(9) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\fleaman.h(14): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\medusahead.h(11) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\raven.h(16): warning C4005: 'DAMAGE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bat.h(17) : see previous definition of 'DAMAGE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\ground.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\boomerang.h(6) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\ground.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\enemy.h(9) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickhidden.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\ground.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickhidden.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\fleaman.h(13) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickhidden.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\fleaman.h(14) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickmoving.h(10): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickhidden.h(11) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickmoving.h(11): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickhidden.h(12) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\fireandle.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\ground.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\fireandle.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickmoving.h(10) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\fireandle.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickmoving.h(11) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\firetower.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\fireandle.h(11) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\firetower.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\fireandle.h(12) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\stair.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\firetower.h(9) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\stair.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\firetower.h(10) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\stair2.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\stair.h(12) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(11): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\brickhidden.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(12): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\fireandle.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(13): warning C4005: '_ANIMATE_RATE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bonepillar.h(13) : see previous definition of '_ANIMATE_RATE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(14): warning C4005: '_LIFETIME' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\ground.h(13) : see previous definition of '_LIFETIME'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(15): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\stair.h(11) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\trap.h(8): warning C4005: '_SPRITE1' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bonepillar.h(16) : see previous definition of '_SPRITE1'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\trap.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(15) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\item.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(11) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\item.h(10): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(12) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\item.h(11): warning C4005: '_SPEED' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\enemy.h(10) : see previous definition of '_SPEED'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\item.h(13): warning C4005: '_LIFETIME' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(14) : see previous definition of '_LIFETIME'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\item.h(34): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\item.h(9) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\item.h(10) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\trap.h(9) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\stair2.h(12) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\axe.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(7): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(8): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(9): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(10): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\bigheart.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\doubleshot.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(7) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\doubleshot.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(8) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\doubleshot.h(9): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(10) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\holywater.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\cross.h(9) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\holywater.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\doubleshot.h(9) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\doubleshot.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\doubleshot.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\holywater.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\holywater.h(7) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\itemnone.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\knife.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\morningstar.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\morningstar.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\moneybag.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\morningstar.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\morningstar.h(7) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\rosary.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\rosary.h(7): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\smallheart.h(6): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\rosary.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\smallheart.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\rosary.h(7) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\spiritball.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\spiritball.h(6): warning C4005: '_HEIGHT' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\roast.h(6) : see previous definition of '_HEIGHT'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\spiritball.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\smallheart.h(6) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\spiritball.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\smallheart.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\stopwatch.h(5): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\spiritball.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\stopwatch.h(7): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\spiritball.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\stopwatch.h(8): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\spiritball.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\nextball.h(9): warning C4005: '_WIDTH' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\stopwatch.h(5) : see previous definition of '_WIDTH'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\nextball.h(11): warning C4005: '_SPRITE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\stopwatch.h(7) : see previous definition of '_SPRITE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\nextball.h(12): warning C4005: 'TYPE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\stopwatch.h(8) : see previous definition of 'TYPE'
+     1>c:\users\ta\desktop\castlevania\castlevania\framework\framework\medusa.h(14): warning C4005: '_ANIMATE_RATE' : macro redefinition
+                 c:\users\ta\desktop\castlevania\castlevania\framework\framework\door.h(13) : see previous definition of '_ANIMATE_RATE'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Whip.cpp
+         WeaponKnife.cpp
+         Trap.cpp
+         SweptAABB.cpp
+         StopWatch.cpp
+         State.cpp
+         Stairs2.cpp
+         Stairs.cpp
+         Stair2.cpp
+         Stair.cpp
+         SpiritBall.cpp
+         Spearguard.cpp
+         Source.cpp
+         Snake.cpp
+         SmallHeart.cpp
+         Rosary.cpp
+         Roast.cpp
+         Raven.cpp
+         Quadtree.cpp
+         Quadnode.cpp
+         NextBall.cpp
+         MorningStar.cpp
+         MoneyBag.cpp
+         MedusaHead.cpp
+         Medusa.cpp
+         Knife.cpp
+         ItemNone.cpp
+         Item.cpp
+         HolyWater.cpp
+         Ghost.cpp
+         GCamera.cpp
+         Fleaman.cpp
+         Fireandle.cpp
+         FireBall.cpp
+         Enemy.cpp
+         DoubleShot.cpp
+         Door.cpp
+         DeathPlace.cpp
+         Cross.cpp
+         Bricks.cpp
+         Brickmoving.cpp
+         Brickhidden.cpp
+         Boomerang.cpp
+         BonePillar.cpp
+         Board.cpp
+         BigHeart.cpp
+         Bat.cpp
+         Axe.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ta\Desktop\Castlevania\CastleVania\FrameWork\Debug\FrameWork.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ta\Desktop\Castlevania\CastleVania\FrameWork\Debug\FrameWork.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ta\Desktop\Castlevania\CastleVania\FrameWork\Debug\FrameWork.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\Bat.obj
          Debug\BigHeart.obj
          Debug\BonePillar.obj
@@ -63,6 +299,7 @@
          Debug\MoneyBag.obj
          Debug\MorningStar.obj
          Debug\NextBall.obj
+         Debug\Raven.obj
          Debug\Roast.obj
          Debug\Rosary.obj
          Debug\SmallHeart.obj
@@ -96,9 +333,9 @@
          Debug\Windows.obj
          Debug\GSprite.obj
          Debug\GTexture.obj
-         FrameWork.vcxproj -> C:\Users\tient_000\Desktop\CastleVania\FrameWork\Debug\FrameWork.exe
-     1>Done Building Project "C:\Users\tient_000\Desktop\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
+         FrameWork.vcxproj -> C:\Users\Ta\Desktop\Castlevania\CastleVania\FrameWork\Debug\FrameWork.exe
+     1>Done Building Project "C:\Users\Ta\Desktop\Castlevania\CastleVania\FrameWork\FrameWork\FrameWork.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.37
+Time Elapsed 00:00:05.07

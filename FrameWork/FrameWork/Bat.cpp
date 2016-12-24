@@ -91,7 +91,9 @@ void Bat::Collistion(float deltaTime)
 				_hp--;
 		}
 	}
-	else{
+	if (!swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+		&& !swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
+		&& !Simon::getCurrentSimon()->isFighting()){
 		_isHurting = false;
 	}
 	if (Simon::getCurrentSimon()->cantHurt())
