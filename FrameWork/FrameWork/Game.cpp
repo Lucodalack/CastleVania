@@ -21,6 +21,9 @@ void Game::GameInit()
 	KeyBoard::getCurrentKeyBoard()->InputKeyBoard();
 	swepyAABB = new CSweptAABB();
 
+	//audiio
+	Audio->Init_DirectSound(Windows::getCurrentWindows()->_hWindows);
+
 }
 
 void Game::GameLoad()
@@ -136,6 +139,10 @@ void Game::OnKeyDown(int KeyCode)
 	case DIK_2:
 		Simon::getCurrentSimon()->Weapon = 2;// subweapon knife
 		Board::GetCurrentBoard()->setWheapon(2);
+		THEME(test2);
+		break;
+	case DIK_M:
+		SOUND(test);
 		break;
 	}
 }

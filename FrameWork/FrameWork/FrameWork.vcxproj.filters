@@ -70,6 +70,9 @@
     <Filter Include="Framework\Board">
       <UniqueIdentifier>{5c07eee0-0c06-4461-8542-f990a3dafa2f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Sound">
+      <UniqueIdentifier>{310e055e-2caf-4bef-a98f-245f75b90e86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -257,6 +260,18 @@
     </ClInclude>
     <ClInclude Include="Raven.h">
       <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="dsutil.h">
+      <Filter>Framework\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="dxutil.h">
+      <Filter>Framework\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="GAudio.h">
+      <Filter>Framework\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundPath.h">
+      <Filter>Framework\Sound</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -448,6 +463,12 @@
     </ClCompile>
     <ClCompile Include="Raven.cpp">
       <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="dsutil.cpp">
+      <Filter>Framework\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="GAudio.cpp">
+      <Filter>Framework\Sound</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
