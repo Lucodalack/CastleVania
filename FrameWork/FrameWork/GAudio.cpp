@@ -39,7 +39,7 @@ GSound* GAudio::LoadSound(char *filename)
     //attempt to load the wave file
 
 	//this shit make me so piss off
-	wchar_t wtext[20];
+	wchar_t wtext[100];
 	std::mbstowcs(wtext, filename, strlen(filename) + 1);//Plus null
 	LPWSTR ptr = wtext;
 	//

@@ -62,6 +62,8 @@ protected:
 	bool _checkdelay;//Medusa đến simon lần 2 thì bị delay
 	float _dx;//đoạn đường Medusa đi đc
 	int _old_x;//vị trí cũ của Medusa
+	bool _playing = false;
+	bool _playingwin = false;
 public:
 	Snake *_snake1, *_snake2, *_snake3;
 	GSprite* _sprite;

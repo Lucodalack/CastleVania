@@ -5,6 +5,7 @@
 #include "GObject.h"
 #include "GSprite.h"
 #include "SweptAABB.h"
+#include "GAudio.h"
 #define _WIDTH	32
 #define _HEIGHT	64
 #define _SPEED	1.0f
@@ -19,6 +20,7 @@ protected:
 	int _damage;
 	int _hp;
 	RECT _activeArea; // ô chữ nhật mà con này chạy trong đó.
+	bool _playing = false;
 public:
 	GSprite* _sprite;
 	Enemy(int type,int x, int y, int x2, int y2);

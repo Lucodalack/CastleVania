@@ -89,6 +89,7 @@ void Bat::Collistion(float deltaTime)
 			_isHurting = true;
 			if (_hp>0)
 				_hp--;
+			SOUND(SOUND_HIT);
 		}
 	}
 	if (!swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)

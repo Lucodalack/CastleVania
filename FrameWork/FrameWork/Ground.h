@@ -3,6 +3,7 @@
 
 #include "GObject.h"
 #include "GSprite.h"
+#include "GAudio.h"
 
 
 

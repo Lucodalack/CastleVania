@@ -128,6 +128,7 @@ void BonePillar::Collistion(float deltaTime){
 			_isHurting = true;
 			if (_hp>0)
 				_hp--;
+			SOUND(SOUND_HITCANON);
 		}
 	}
 	if (!swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
@@ -163,8 +164,8 @@ void BonePillar::Collistion(float deltaTime){
 
 	if (_flag3 == true && swepyAABB->AABB(_fireball1->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(_fireball3->_box, Simon::getCurrentSimon()->_box, x, y);
-		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
-		Simon::getCurrentSimon()->Hurt(DAMAGE);
+		//Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		//Simon::getCurrentSimon()->Hurt(DAMAGE);
 		_flag3 == false;
 		_fireball3 = new FireBall(_x, _y + 12);
 

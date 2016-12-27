@@ -37,6 +37,9 @@ void Game::GameLoad()
 	Quadtree::getCurrentQuadtree()->load();
 	//Simon::getCurrentSimon()->nextLV();
 	GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
+	THEME(THEME_STATE1);
+
+	
 }
 void Game::Sort(vector<GObject*>& listGObject){
 	vector<GObject*> ground;
@@ -139,10 +142,8 @@ void Game::OnKeyDown(int KeyCode)
 	case DIK_2:
 		Simon::getCurrentSimon()->Weapon = 2;// subweapon knife
 		Board::GetCurrentBoard()->setWheapon(2);
-		THEME(test2);
 		break;
 	case DIK_M:
-		SOUND(test);
 		break;
 	}
 }

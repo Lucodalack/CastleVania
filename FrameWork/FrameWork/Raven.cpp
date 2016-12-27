@@ -77,6 +77,7 @@ void Raven::Collistion(float deltaTime)
 			_isHurting = true;
 			if (_hp>0)
 				_hp--;
+			SOUND(SOUND_HIT);
 		}
 	}
 	else{

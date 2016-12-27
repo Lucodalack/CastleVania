@@ -123,6 +123,7 @@ void Enemy::Collistion(float deltaTime)
 			
 			if (_hp>0)
 				_hp--;
+			SOUND(SOUND_HIT);
 		}
 		
 		

@@ -31,6 +31,7 @@ void Fireandle::Collistion(float deltatime){
 			|| swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
 			){
 			this->_isDeath = true;
+			//SOUND(SOUND_HIT);
 		}
 	}
 	/*if (Boomerang::getCurrentBoomerang()->isFlying()){

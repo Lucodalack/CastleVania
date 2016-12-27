@@ -345,6 +345,7 @@ void Simon::Jump(){
 void Simon::Fight(int weapon){
 	if (_hp <= 0)
 		return;
+	SOUND(SOUND_WHIPATK);
 	FightWith = weapon;
 #pragma region __XU_LY_PHIM_DANH <state va frame>__
 	if (!this->_isFighting )
@@ -461,6 +462,7 @@ void Simon::InputUpdate(float deltaTime)
 
 
 }
+
 void Simon::Reset(){
 	if (_currentLV == 2){
 		_x = 3742;
@@ -471,6 +473,7 @@ void Simon::Reset(){
 		_isFalling = true;
 		_currentStateGame = 1;
 		reset = true;
+		THEME(THEME_STATE1);
 	}
 	else{
 		_x = 1373;
@@ -481,9 +484,12 @@ void Simon::Reset(){
 		_isFalling = true;
 		_currentStateGame = 1;
 		reset = true;
+		THEME(THEME_STATE4);
 	}
 }
+
 void Simon::Cheat(){
+	SOUND(SOUND_CHEATE);
 	if (_currentLV == 2){
 		_x = 1308;
 		_y = 236;
@@ -502,6 +508,7 @@ void Simon::Cheat(){
 		_isFalling = true;
 	}
 }
+
 void Simon::Update(float deltatime){
 
 	if (_hp <= 0){

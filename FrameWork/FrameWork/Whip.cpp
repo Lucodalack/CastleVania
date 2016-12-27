@@ -60,7 +60,8 @@ void Whip::MoveUpdate(float deltaTime)
 				_box.y = _y;
 				_box.x = _x + 120;
 				_box.w = 40;
-				_box.h = 46; break;
+				_box.h = 46; 
+				break;
 			case 1: case 2:
 				this->_x += 35;
 				_box.y = _y;

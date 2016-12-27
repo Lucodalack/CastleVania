@@ -9,6 +9,7 @@
 #include "Whip.h"
 #include "Boomerang.h"
 #include "WeaponKnife.h"
+#include "GAudio.h"
 
 
 
@@ -118,6 +119,7 @@ public:
 	}
 	void Hurt(int damage){
 		this->_hp -= damage;
+		SOUND(SOUND_AHH);
 	}
 	int getHeart(){ return _heart; }
 	int getHP(){ return _hp; }
@@ -159,6 +161,7 @@ public:
 		_currentLV = 3;
 		_x = 1373;
 		_y = 1030;
+		THEME(THEME_STATE4);
 	}
 	void Reset();
 	void Cheat();
