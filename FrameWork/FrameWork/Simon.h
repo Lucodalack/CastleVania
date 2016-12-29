@@ -79,6 +79,9 @@ private:
 	int _heart;
 	int _timeCantHurt;
 	int _life=3;
+
+	int _countMum = 0;//Đếm số con Mummies đã ra đi
+
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
@@ -141,6 +144,27 @@ public:
 	void canGoLeft(bool tamp){ _canGoLeft = tamp; }
 	bool canGoRight(){ return _canGoRight; }
 	void canGoRight(bool tamp){ _canGoRight = tamp; }
+
+
+#pragma region Xử lý Mummies
+
+	void MumDeath()
+	{
+		this->_countMum++;
+	}
+
+	int getCountMum()
+	{
+		return _countMum;
+	}
+
+	void DameMum()
+	{
+		this->_bossHP--;
+	}
+
+#pragma endregion
+
 	bool cantHurt(){ 
 		return _cantHurt; 
 	}

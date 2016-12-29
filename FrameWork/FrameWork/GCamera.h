@@ -30,6 +30,8 @@ private:
 	D3DXMATRIX viewMatrix;
 	bool _isFollowing;
 	int _currentState;
+	bool checkBoss = false;
+
 public:
 	GCamera(int width, int height,int x,int y);
 	void ChangeState(int state);

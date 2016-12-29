@@ -500,10 +500,10 @@ void Simon::Cheat(){
 	}
 
 	if (_currentLV == 3){
-		_x = 300;
-		_y = 650;
+		_x = 6625;
+		_y = 150;
 		_cantHurt = false;
-		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(2);
+		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(3);
 		_stateCurrent = STATE::IS_FALLING;
 		_isFalling = true;
 	}

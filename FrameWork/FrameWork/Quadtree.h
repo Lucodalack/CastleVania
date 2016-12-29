@@ -18,6 +18,7 @@
 #include "BonePillar.h"
 #include "Fleaman.h"
 #include "Raven.h"
+#include "Skeleton.h"
 
 #include "Brickhidden.h"
 #include "Brickmoving.h"
@@ -46,6 +47,7 @@
 #include "StopWatch.h"
 
 #include "Medusa.h"
+#include "Mummies.h"
 
 #include "DeathPlace.h"
 

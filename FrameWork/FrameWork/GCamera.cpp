@@ -114,9 +114,10 @@ void GCamera::Update(float deltatime)
 			else
 			{
 				this->_isFollowing = false;
-				break;
 			}
-
+			if (checkBoss) _isFollowing = false;
+			if ((Simon::getCurrentSimon()->_x >6910) && !checkBoss)
+				checkBoss = true;
 			break;
 		
 		default:

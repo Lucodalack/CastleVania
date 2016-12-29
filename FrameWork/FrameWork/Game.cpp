@@ -74,6 +74,13 @@ void Game::Collision(float deltatime)
 					tamp->ExtendCollistion(br);
 			}
 			break;
+
+		case TypeGame::Enemy_Skeleton:
+			for each(GObject* br in listObject){
+				if (br->_type == TypeGame::Ground_Brick)
+					tamp->ExtendCollistion(br);
+			}
+			break;
 		default:
 			break;
 		}
