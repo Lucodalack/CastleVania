@@ -89,9 +89,17 @@ void Item::Collistion(float deltatime){
 			{
 			case TypeGame::Item_small_heart:
 
-				Simon::getCurrentSimon()->Heal(1);
+				Simon::getCurrentSimon()->Heal(1); 
+				SOUND(SOUND_EATITEM);
+				break;
+			case TypeGame::Item_axe:
+			case TypeGame::Item_knife:
+			case TypeGame::Item_cross:
+			case TypeGame::Item_holy_water:
+				SOUND(SOUND_EATWEAPON);
 				break;
 			default:
+				SOUND(SOUND_EATITEM);
 				break;
 			}
 			this->_lifeTime += (_LIFETIME + 1);

@@ -31,6 +31,9 @@ void Stair::Collistion(float deltatime){
 			//Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);
 			if (this->_x == Simon::getCurrentSimon()->_x)
 				return;
+			Simon::getCurrentSimon()->ChangeState(STATE::IS_UPING);
+			Simon::getCurrentSimon()->isMoveLeft(false);
+			Simon::getCurrentSimon()->isMoveRight(true);
 			Simon::getCurrentSimon()->onGoto = true;
 			Simon::getCurrentSimon()->xDestinate = this->_x ;
 			Simon::getCurrentSimon()->yDestinate = this->_y - SIMON_HEIGHT;

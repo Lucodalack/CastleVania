@@ -5,6 +5,7 @@
 #include "GSprite.h"
 #include "Whip.h"
 #include "SweptAABB.h"
+#include "GAudio.h"
 
 #define _WIDTH	32
 #define _HEIGHT	32

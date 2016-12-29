@@ -89,9 +89,12 @@ void Bat::Collistion(float deltaTime)
 			_isHurting = true;
 			if (_hp>0)
 				_hp--;
+			SOUND(SOUND_HIT);
 		}
 	}
-	else{
+	if (!swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+		&& !swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
+		&& !Simon::getCurrentSimon()->isFighting()){
 		_isHurting = false;
 	}
 	if (Simon::getCurrentSimon()->cantHurt())

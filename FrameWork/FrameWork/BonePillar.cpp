@@ -8,6 +8,7 @@ GObject(4, x, y, _bplWIDTH, _bplHEIGHT)
 	_isMoveleft = false;
 	_isDead = false;
 	_box = Box(x, y, _bplWIDTH, _bplHEIGHT);
+	_awakeBox = Box(x - 170, y, 340, _bplHEIGHT);
 	_flag1 = false;
 	_flag2 = false;
 	_flag3 = false;
@@ -49,7 +50,7 @@ void BonePillar::Update(float deltatime){
 		this->_timeDeath += deltatime;
 		this->_spriteDeath->Update(deltatime);
 	}
-	if (this->_isDead){
+	if (this->_isDead||this->_isSleep){
 		return;
 	}
 
@@ -98,6 +99,7 @@ void BonePillar::Draw(){
 	else{
 		this->_sprite->Draw(_x, _y);
 	}
+	if (_isSleep) return;
 	if (_time1 > 0)
 	{
 		_fireball1->Draw();
@@ -128,16 +130,25 @@ void BonePillar::Collistion(float deltaTime){
 			_isHurting = true;
 			if (_hp>0)
 				_hp--;
+			SOUND(SOUND_HITCANON);
 		}
 	}
-	else{
+	if (!swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+		&& !swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
+		&& !Simon::getCurrentSimon()->isFighting()){
 		_isHurting = false;
 	}
-	if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+	if (Simon::getCurrentSimon()->cantHurt())
 		return;
+	if (swepyAABB->AABB(this->_awakeBox, Simon::getCurrentSimon()->_box, x, y)){
+		_isSleep = false;
+	}
+	if (_isSleep) return;
+	
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 		swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y);
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(DAMAGE);
 	}
 
 	if (_flag1==true && swepyAABB->AABB(_fireball1->_box, Simon::getCurrentSimon()->_box, x, y)){

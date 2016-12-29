@@ -13,7 +13,7 @@
 #define _SPRITE L"enemy/Fleaman.png"
 #define TYPE TypeGame::Enemy_Fleaman
 #define HP 1
-#define TIME_WATING 300
+#define TIME_WATING 200
 #define DAMAGE 2
 
 enum FLEAMAN_STATE{

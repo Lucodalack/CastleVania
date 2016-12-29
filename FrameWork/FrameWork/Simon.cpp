@@ -345,6 +345,7 @@ void Simon::Jump(){
 void Simon::Fight(int weapon){
 	if (_hp <= 0)
 		return;
+	SOUND(SOUND_WHIPATK);
 	FightWith = weapon;
 #pragma region __XU_LY_PHIM_DANH <state va frame>__
 	if (!this->_isFighting )
@@ -461,6 +462,7 @@ void Simon::InputUpdate(float deltaTime)
 
 
 }
+
 void Simon::Reset(){
 	if (_currentLV == 2){
 		_x = 3742;
@@ -470,7 +472,9 @@ void Simon::Reset(){
 		_stateCurrent = STATE::IS_FALLING;
 		_isFalling = true;
 		_currentStateGame = 1;
+		_bossHP = 16;
 		reset = true;
+		THEME(THEME_STATE1);
 	}
 	else{
 		_x = 1373;
@@ -480,10 +484,14 @@ void Simon::Reset(){
 		_stateCurrent = STATE::IS_FALLING;
 		_isFalling = true;
 		_currentStateGame = 1;
+		_bossHP = 16;
 		reset = true;
+		THEME(THEME_STATE4);
 	}
 }
+
 void Simon::Cheat(){
+	SOUND(SOUND_CHEATE);
 	if (_currentLV == 2){
 		_x = 1308;
 		_y = 236;
@@ -492,8 +500,19 @@ void Simon::Cheat(){
 		_stateCurrent = STATE::IS_FALLING;
 		_isFalling = true;
 	}
+
+	if (_currentLV == 3){
+		_x = 6625;
+		_y = 150;
+		_cantHurt = false;
+		GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(3);
+		_stateCurrent = STATE::IS_FALLING;
+		_isFalling = true;
+	}
 }
+
 void Simon::Update(float deltatime){
+
 	if (_hp <= 0){
 		_life--;
 		if (_life > 0){
@@ -523,6 +542,7 @@ void Simon::Update(float deltatime){
 	}
 	Boomerang::getCurrentBoomerang()->Update(deltatime);
 	WeaponKnife::getCurrentKnife()->Update(deltatime);
+	
 }
 
 void Simon::MoveState(){
@@ -706,7 +726,4 @@ Simon* Simon::getCurrentSimon(){
 		_simon = new Simon(3742, 1453);
 	return _simon;
 }
-
-
-
 

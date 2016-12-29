@@ -9,5 +9,6 @@ void DeathPlace::Collistion(float deltatime){
 	float x, y;
 	if (swepyAABB->AABB(Simon::getCurrentSimon()->_box, this->_box, x, y)){
 		Simon::getCurrentSimon()->Murder();
+		THEME(THEME_GAMEOVER);
 	}
 }

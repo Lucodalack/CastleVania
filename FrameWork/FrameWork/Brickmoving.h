@@ -19,6 +19,7 @@ public:
 	void SetFrame(float deltattime);
 	void Update(float deltatime);
 	void Collistion(float deltatime);
+	void Draw();
 	Brickmoving();
 	~Brickmoving();
 };

@@ -7,6 +7,7 @@
 #include <d3dx9.h>
 #include "GSprite.h"
 #include "Box.h"
+#include "GAudio.h"
 #define GRAVITY			1.5f
 #define ANIMATIONRATE 30
 #define _SPRITE_DEATH L"other/1.png"
@@ -58,8 +59,12 @@ enum TypeGame {
 	Death_Place=39,
 	Enemy_Fleaman=40,
 	Enemy_Raven=41,
+
 	Enemy_Skeleton=42,
+	Skeleton_Bone = 55,//Xương của Skeleton
+
 	Boss_Mummies=43,
+	Mummies_Blade = 56,//Dao của Mummies
 
 	Weapon_Boomerang = 44,
 	Weapon_Kife = 45,

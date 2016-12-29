@@ -21,6 +21,9 @@ void Game::GameInit()
 	KeyBoard::getCurrentKeyBoard()->InputKeyBoard();
 	swepyAABB = new CSweptAABB();
 
+	//audiio
+	Audio->Init_DirectSound(Windows::getCurrentWindows()->_hWindows);
+
 }
 
 void Game::GameLoad()
@@ -32,8 +35,11 @@ void Game::GameLoad()
 	
 	//_bricks = new Bricks(0, 1570, 5000, 32);
 	Quadtree::getCurrentQuadtree()->load();
-	Simon::getCurrentSimon()->nextLV();
+	//Simon::getCurrentSimon()->nextLV();
 	GCamera::getCurrentCamera()->getCurrentCamera()->ChangeState(1);
+	THEME(THEME_STATE1);
+
+	
 }
 void Game::Sort(vector<GObject*>& listGObject){
 	vector<GObject*> ground;
@@ -63,6 +69,13 @@ void Game::Collision(float deltatime)
 		switch (tamp->_type)
 		{
 		case TypeGame::Enemy_Fleaman:
+			for each(GObject* br in listObject){
+				if (br->_type == TypeGame::Ground_Brick)
+					tamp->ExtendCollistion(br);
+			}
+			break;
+
+		case TypeGame::Enemy_Skeleton:
 			for each(GObject* br in listObject){
 				if (br->_type == TypeGame::Ground_Brick)
 					tamp->ExtendCollistion(br);
@@ -123,8 +136,11 @@ void Game::OnKeyDown(int KeyCode)
 		break;
 	case DIK_V: //subweapon attack
 		if (!Boomerang::getCurrentBoomerang()->isFlying()
-			&& !WeaponKnife::getCurrentKnife()->isFlying())
+			&& !WeaponKnife::getCurrentKnife()->isFlying()
+			&& Simon::getCurrentSimon()->getHeart() > 0){
 			Simon::getCurrentSimon()->Fight(Simon::getCurrentSimon()->Weapon);
+			Simon::getCurrentSimon()->Heal(-1);
+		}
 		break;
 	case DIK_1:
 		Simon::getCurrentSimon()->Weapon = 1; //subweapon boomerang
@@ -133,6 +149,9 @@ void Game::OnKeyDown(int KeyCode)
 	case DIK_2:
 		Simon::getCurrentSimon()->Weapon = 2;// subweapon knife
 		Board::GetCurrentBoard()->setWheapon(2);
+		break;
+	case DIK_R:
+		Simon::getCurrentSimon()->Regen();
 		break;
 	}
 }

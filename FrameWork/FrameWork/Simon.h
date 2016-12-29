@@ -9,6 +9,8 @@
 #include "Whip.h"
 #include "Boomerang.h"
 #include "WeaponKnife.h"
+#include "GAudio.h"
+
 
 
 #define SIMON_SPRITE L"simon.png"
@@ -77,6 +79,9 @@ private:
 	int _heart;
 	int _timeCantHurt;
 	int _life=3;
+
+	int _countMum = 0;//Đếm số con Mummies đã ra đi
+
 public:
 	GSprite* _sptrite;
 	static Simon* getCurrentSimon();
@@ -117,6 +122,7 @@ public:
 	}
 	void Hurt(int damage){
 		this->_hp -= damage;
+		SOUND(SOUND_AHH);
 	}
 	int getHeart(){ return _heart; }
 	int getHP(){ return _hp; }
@@ -138,6 +144,27 @@ public:
 	void canGoLeft(bool tamp){ _canGoLeft = tamp; }
 	bool canGoRight(){ return _canGoRight; }
 	void canGoRight(bool tamp){ _canGoRight = tamp; }
+
+
+#pragma region Xử lý Mummies
+
+	void MumDeath()
+	{
+		this->_countMum++;
+	}
+
+	int getCountMum()
+	{
+		return _countMum;
+	}
+
+	void DameMum()
+	{
+		this->_bossHP--;
+	}
+
+#pragma endregion
+
 	bool cantHurt(){ 
 		return _cantHurt; 
 	}
@@ -158,6 +185,13 @@ public:
 		_currentLV = 3;
 		_x = 1373;
 		_y = 1030;
+		THEME(THEME_STATE4);
+		_bossHP = 16;
+		_hp = 16;
+	}
+	void Regen(){
+		_hp = 16;
+		_heart = 30;
 	}
 	void Reset();
 	void Cheat();

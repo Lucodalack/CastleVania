@@ -15,6 +15,7 @@
 #include "Fleaman.h"
 #include "Board.h"
 #include <vector>
+#include "GAudio.h"
 using namespace std;
 
 

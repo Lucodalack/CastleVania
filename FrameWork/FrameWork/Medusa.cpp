@@ -360,6 +360,10 @@ void Medusa::Update(float deltatime){
 	this->MoveUpdate(deltatime);
 	this->SetFrame(deltatime);
 	this->_sprite->Update(deltatime);
+	if (!this->_playing ){
+		THEME(THEME_BOSS );
+		this->_playing = true;
+	}
 }
 
 void Medusa::ChangeState(int state){
@@ -373,11 +377,26 @@ void Medusa::ChangeState(int state){
 }
 
 void Medusa::Draw(){
+	//audio
+	int x = Simon::getCurrentSimon()->_x;
+	int y = Simon::getCurrentSimon()->_y;
+	if (!this->_playing && !_isSleep && !_isDead){
+		if (std::abs(x - this->_x)+400 == 0 && std::abs(y - this->_y)+50 == 0){
+			this->_playing = true;
+			THEME(THEME_BOSS);
+		}
+	}
+	else if (_isDead && !_playingwin){
+		{
+			THEME(THEME_STATECLEAR);
+			_playingwin = true;
+		}
+	}
+	//
 	if (this->_isDead){
 		if (_timeDeath <= DEATH_TIME)
 		{
 			this->DrawDeath();
-
 			//Vẽ Spirit Ball
 			if (_checkspirit)
 			{
@@ -386,12 +405,14 @@ void Medusa::Draw(){
 		}
 		return;
 	}
+	this->_playing = 1;
 	this->_sprite->Draw(_x, _y);
 	if (_time1 > 0)
 	{
 		_snake1->Draw();
 		snake1 = true;
 	}
+	
 }
 
 void Medusa::Collistion(float deltaTime){
@@ -418,15 +439,23 @@ void Medusa::Collistion(float deltaTime){
 				|| (swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)&& !_isHurting)
 				|| (swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y) && !_isHurting)
 				){
+				_isHurting = true;
 				if (_hp > 0)
 					_hp--;
 			}
 		}
-		else {
+		/*if (!swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+			&& !swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
+			&& !Simon::getCurrentSimon()->isFighting()){
+			_isHurting = false;
+		}*/
+		if (!swepyAABB->AABB(WeaponKnife::getCurrentKnife()->_box, this->_box, x, y)
+			&& !swepyAABB->AABB(Boomerang::getCurrentBoomerang()->_box, this->_box, x, y)
+			&& !swepyAABB->AABB(Whip::getCurrentWhip()->_box, this->_box, x, y)){
 			_isHurting = false;
 		}
 
-		if (Simon::getCurrentSimon()->GetState() == STATE::CANT_HURT)
+		if (Simon::getCurrentSimon()->cantHurt())
 			return;
 
 		if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
@@ -449,7 +478,6 @@ void Medusa::Collistion(float deltaTime){
 	else
 		return;
 }
-
 
 Medusa::~Medusa(){
 	if (_sprite != NULL){

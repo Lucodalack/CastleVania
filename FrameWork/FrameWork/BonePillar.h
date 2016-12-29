@@ -6,6 +6,7 @@
 #include "GSprite.h"
 #include "FireBall.h"
 #include "SweptAABB.h"
+#include "Box.h"
 
 
 #define _bplWIDTH	32
@@ -28,6 +29,8 @@ protected:
 	float _time1 = 0;
 	float _time2 = 0;
 	float _time3 = 0;
+	bool _isSleep = true;
+	Box _awakeBox;
 	CSweptAABB* swepyAABB;
 	int _hp;
 

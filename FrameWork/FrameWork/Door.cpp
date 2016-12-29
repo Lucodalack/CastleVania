@@ -36,6 +36,7 @@ void Door::Collistion(float deltatime){
 		if (!_isShow){
 			Simon::getCurrentSimon()->canGoLeft(false);
 			this->_isShow = true;
+			SOUND(SOUND_OPENDOOR);
 			return;
 		}
 	

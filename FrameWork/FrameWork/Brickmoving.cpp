@@ -101,6 +101,9 @@ void Brickmoving::Collistion(float deltatime){
 	}
 
 }
+void Brickmoving::Draw(){
+	this->_sprite->Draw(_x , _y);
+}
 Brickmoving::~Brickmoving(){
 	if (_sprite != NULL){
 		delete _sprite;

@@ -60,7 +60,7 @@ void Stairs2::Collistion(float deltatime){
 					Simon::getCurrentSimon()->isMoveLeft(false);
 					Simon::getCurrentSimon()->isMoveRight(true);
 					Simon::getCurrentSimon()->onGoto = true;
-					Simon::getCurrentSimon()->xDestinate = this->_x;
+					Simon::getCurrentSimon()->xDestinate = this->_x - SIMON_HEIGHT;
 					Simon::getCurrentSimon()->yDestinate = this->_y + _stairHEIGHT - SIMON_HEIGHT;
 					Simon::getCurrentSimon()->_vy = 0.4;
 					Simon::getCurrentSimon()->_vx = 0.4;

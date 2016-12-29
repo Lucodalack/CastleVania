@@ -60,7 +60,8 @@ void Whip::MoveUpdate(float deltaTime)
 				_box.y = _y;
 				_box.x = _x + 120;
 				_box.w = 40;
-				_box.h = 46; break;
+				_box.h = 46; 
+				break;
 			case 1: case 2:
 				this->_x += 35;
 				_box.y = _y;
@@ -69,6 +70,12 @@ void Whip::MoveUpdate(float deltaTime)
 				_box.h = 31; break;
 			}
 		}
+	}
+	else{
+		_box.y = 0;
+		_box.x = 0;
+		_box.w = 0;
+		_box.h = 0;
 	}
 #pragma endregion
 	//_box.y = _y;
