@@ -5,8 +5,8 @@
 
 #define _trapWIDTH	64
 #define _trapHEIGHT	28
-#define _SPRITE1 L"ground/7_2.png"
-#define _SPRITE L"ground/7_3.png"
+#define _trapSPRITE1 L"ground/7_2.png"
+#define _trapSPRITE L"ground/7_3.png"
 #define trapTYPE TypeGame::Ground_Trap
 
 #include "GObject.h"
