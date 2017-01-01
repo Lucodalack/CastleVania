@@ -8,6 +8,7 @@
 #define _trapSPRITE1 L"ground/7_2.png"
 #define _trapSPRITE L"ground/7_3.png"
 #define trapTYPE TypeGame::Ground_Trap
+#define _trapDamage 2
 
 #include "GObject.h"
 #include <vector>

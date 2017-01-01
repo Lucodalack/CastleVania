@@ -8,7 +8,7 @@ GObject(4, x, y, _bplWIDTH, _bplHEIGHT)
 	_isMoveleft = false;
 	_isDead = false;
 	_box = Box(x, y, _bplWIDTH, _bplHEIGHT);
-	_awakeBox = Box(x - 170, y, 340, _bplHEIGHT);
+	_awakeBox = Box(x - 170, y, 340, 191);
 	_flag1 = false;
 	_flag2 = false;
 	_flag3 = false;

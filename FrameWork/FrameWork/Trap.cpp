@@ -44,6 +44,7 @@ void Trap::Collistion(float deltaTime){
 		return;
 	if (swepyAABB->AABB(this->_box, Simon::getCurrentSimon()->_box, x, y)){
 		Simon::getCurrentSimon()->ChangeState(STATE::CANT_HURT);
+		Simon::getCurrentSimon()->Hurt(_trapDamage);
 	}
 }
 
